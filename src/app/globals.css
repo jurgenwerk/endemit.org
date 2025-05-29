@@ -1,16 +1,24 @@
+@import './styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  font-family: var(--font-geist-sans);
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "DIN", sans-serif;
 }
 
 /* Brutalist styles */
@@ -23,10 +31,19 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles */
+/* Remove focus outline from all links */
+a:focus {
+  outline: none;
+}
+
+/* Remove focus outline from buttons */
+button:focus {
+  outline: none;
+}
+
+/* Remove focus outline from all focusable elements */
 *:focus {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
+  outline: none;
 }
 
 /* Transitions */
