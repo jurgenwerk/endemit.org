@@ -1,146 +1,101 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import clsx from "clsx";
+import EventSidebar from "@/app/components/EventSidebar";
 
 export default function Artists() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const close = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
-      <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
-        <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-          <Link href="/" onClick={close} className="lg:mx-3 lg:ml-auto">
-            <img src="/endemit.png" alt=" ENDEMIT" className="w-24" />
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div
-            className="font-medium text-gray-100 group-hover:text-gray-400"
-            style={{ fontSize: "14px", paddingTop: "4px" }}
-          >
-            MENU
-          </div>
-          {isMenuOpen ? <div>x</div> : <div>y</div>}
-        </button>
-
-        <div
-          className={clsx("overflow-y-auto lg:static lg:block", {
-            "fixed inset-x-0 bottom-0 top-14 mt-px bg-black": isMenuOpen,
-            hidden: !isMenuOpen,
-          })}
-        >
-          <nav className="space-y-6 px-5 pb-7 pt-5 text-xl">
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Home
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/artists"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Artists
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/location"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Location
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/tickets"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Tickets
-            </Link>
-          </nav>
-        </div>
-      </div>
-      <div className="lg:pl-72" style={{ height: "100vh" }}>
-        <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-          <div className="border-2 border-white p-8">
-            <h1 className="text-4xl font-bold text-white mb-6">Artists</h1>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Artist cards */}
-              <div className="border-2 border-white p-6">
-                <div className="aspect-square bg-gray-800 mb-4"></div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Artist Name
-                </h3>
-                <p className="text-white mb-4">Genre: Techno</p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-white hover:text-gray-300">
-                    SoundCloud
-                  </a>
-                  <a href="#" className="text-white hover:text-gray-300">
-                    Instagram
-                  </a>
+      <EventSidebar
+        eventName={"Ius Primae Noctis"}
+        eventPath={"/events/ius-primae-noctis"}
+        fbUrl={"https://www.facebook.com/events/985739330046224"}
+      />
+      <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
+        <div className="m-auto  max-w-5xl space-y-6 p-5 text-black ">
+          <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
+            Artists
+          </h2>
+          <div className="mx-auto max-w-5xl pt-6">
+            <div className="flex flex-col space-y-12">
+              <div className="mb-0 text-3xl font-bold">MOKILOK</div>
+              <div className="flex flex-col gap-8 md:flex-row">
+                <img
+                  src="/events/ius-primae-noctis/mokilok.jpeg"
+                  alt="Mokilok"
+                  className="w-full md:w-1/3"
+                />
+                <div className="text-xl">
+                  Mokilok, our beloved festival resident, returns—this time for
+                  his long-awaited debut in the castle cellar. Until now, his
+                  sets have always resonated under open skies, but now we're
+                  bringing his sound indoors, where stone walls will trap the
+                  pressure. Expect a time-warping clash: classic '90s techno and
+                  gritty hard house face off against a darker, modern edge. Back
+                  to the future—under vaulted ceilings.
                 </div>
               </div>
 
-              <div className="border-2 border-white p-6">
-                <div className="aspect-square bg-gray-800 mb-4"></div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Artist Name
-                </h3>
-                <p className="text-white mb-4">Genre: Techno</p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-white hover:text-gray-300">
-                    SoundCloud
-                  </a>
-                  <a href="#" className="text-white hover:text-gray-300">
-                    Instagram
-                  </a>
+              <div className="mb-4 text-3xl font-bold uppercase">
+                UNKNOWN TEXTURE
+              </div>
+              <div className="flex flex-col gap-8 md:flex-row">
+                <img
+                  src="/events/ius-primae-noctis/unknown texture.jpeg"
+                  alt="Unknown Texture"
+                  className="w-full md:w-1/3"
+                />
+                <div className="text-xl">
+                  Unknown Texture is another one of Slovenia's rising hopes in
+                  techno—an ever-present face at our events, now finally
+                  stepping behind the booth. Known for his deep dedication to
+                  the craft, he shapes his sound through analog and modular
+                  hypnotic rhythms, deep frequencies, and abstract textures. A
+                  true digger and sound explorer, he plays vinyl only—letting
+                  the rawness of wax guide the journey. Miha is ready to
+                  translate his passion into a set that resonates far beyond the
+                  cellar walls.
                 </div>
               </div>
 
-              <div className="border-2 border-white p-6">
-                <div className="aspect-square bg-gray-800 mb-4"></div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  Artist Name
-                </h3>
-                <p className="text-white mb-4">Genre: Techno</p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-white hover:text-gray-300">
-                    SoundCloud
-                  </a>
-                  <a href="#" className="text-white hover:text-gray-300">
-                    Instagram
-                  </a>
+              <div className="mb-4 text-3xl font-bold uppercase">RHAEGAL</div>
+              <div className="flex flex-col gap-8 md:flex-row">
+                <img
+                  src="/events/ius-primae-noctis/rhaegal.jpeg"
+                  alt="Rhaegal"
+                  className="w-full md:w-1/3"
+                />
+                <div className="text-xl">
+                  Rhaegal is heading into a packed June, with shows lined up
+                  every weekend, and he's more than ready for it. He's been
+                  preparing for this moment, promising to deliver something
+                  fresh and out of the ordinary at every stop. Even with
+                  multiple appearances, expect no repetition—just pure, evolving
+                  energy. One of our own and one of the best, Bobi's about to
+                  remind us exactly where the kick hits hardest.
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                About the Line-up
-              </h2>
-              <p className="text-white">
-                Our carefully curated selection of artists represents the finest
-                in techno music, bringing together both established names and
-                emerging talents for an unforgettable night of music.
-              </p>
+              <div className="mb-4 text-3xl font-bold uppercase">MMALI</div>
+              <div className="flex flex-col gap-8 md:flex-row">
+                <img
+                  src="/events/ius-primae-noctis/mmali.jpeg"
+                  alt="MMALI"
+                  className="w-full md:w-1/3"
+                />
+                <div className="text-xl">
+                  MMali is landing on the castle terrace this time, taking over
+                  the afternoon shift on the year's longest day. Known for
+                  embracing every slot—from openings to closings—he uses each
+                  moment to share exactly the music he feels matters most. This
+                  time, expect forgotten gems and overlooked treasures, brought
+                  back to life and made to resonate once more under the
+                  sun-drenched stone.
+                </div>
+              </div>
+
+              <br />
+              <br />
+              <br />
             </div>
           </div>
         </div>

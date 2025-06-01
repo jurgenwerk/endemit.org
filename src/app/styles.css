@@ -2,3 +2,13 @@
   font-family: "DIN";
   src: url("/fonts/DIN_Condensed_Bold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Metamorphous-Regular";
+  src: url("/fonts/Metamorphous-Regular.ttf") format("truetype");
+}
+
+
+.font-metamorphous {
+  font-family: 'Metamorphous-Regular';
+}

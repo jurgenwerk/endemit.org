@@ -1,122 +1,89 @@
 "use client";
 
-import { useState } from "react";
+import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
-import Image from "next/image";
-import clsx from "clsx";
 
 export default function IusPrimaeNoctis() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const close = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
-      <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
-        <div className="flex h-14 items-center px-4 py-4 lg:h-auto lg:mt-12">
-          <Link href="/" onClick={close} className="lg:mx-3 lg:ml-auto">
-            <img src="/endemit.png" alt=" ENDEMIT" className="w-24" />
-          </Link>
-        </div>
-
-        <button
-          type="button"
-          className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div
-            className="font-medium text-gray-100 group-hover:text-gray-400"
-            style={{ fontSize: "14px", paddingTop: "4px" }}
-          >
-            MENU
-          </div>
-          {isMenuOpen ? <div>x</div> : <div>y</div>}
-        </button>
-
-        <div
-          className={clsx("overflow-y-auto lg:static lg:block", {
-            "fixed inset-x-0 bottom-0 top-14 mt-px bg-black": isMenuOpen,
-            hidden: !isMenuOpen,
-          })}
-        >
-          <nav className="space-y-6 px-5 pb-7 pt-5 text-xl">
-            <Link
-              onClick={close}
-              href="/"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              ← Home
-            </Link>
-            <Link
-              onClick={close}
-              href="/"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Ius Primae Noctis
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/artists"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Artists
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/location"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Location
-            </Link>
-
-            <Link
-              onClick={close}
-              href="/events/ius-primae-noctis/tickets"
-              className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
-            >
-              Tickets
-            </Link>
-          </nav>
-          <div className="social-icons flex justify-end pr-6">
-            <a href="https://www.facebook.com/endemit.crew" target="_blank">
-              <img
-                src="/../facebook.png"
-                className="mx-2"
-                style={{ width: "28px" }}
-              ></img>
-            </a>
-            <a href="https://instagram.com/ende.mit" target="_blank">
-              <img
-                src="/../instagram.png"
-                className="mx-2"
-                style={{ width: "28px" }}
-              ></img>
-            </a>
-            <a href="mailto:endemit@endemit.org" target="_blank">
-              <img
-                src="/../email.png"
-                className="mx-2"
-                style={{ width: "28px" }}
-              ></img>
-            </a>
-          </div>
-        </div>
-      </div>
+      <EventSidebar
+        eventName={"Ius Primae Noctis"}
+        eventPath={"/events/ius-primae-noctis"}
+        fbUrl={"https://www.facebook.com/events/985739330046224"}
+      />
       <div
-        className="lg:pl-72"
-        style={{ height: "100vh", background: "rgb(47, 65, 109)" }}
+        className="lg:pl-72 min-h-screen"
+        style={{ background: "rgb(47, 65, 109)" }}
       >
-        <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
+        <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full font-metamorphous">
           <img
             src="/events/ius-primae-noctis/main.jpg"
             alt="Ius Primae Noctis"
-            className="main-img mx-auto w-4/5 pt-20"
+            className="lg:max-w-[500px] mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16"
             style={{ marginTop: "0px" }}
           />
+
+          <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
+
+          <Link href={`/events/ius-primae-noctis/artists`} className="pt-2">
+            <h3 className="main-text-color mt-6 text-center text-xl md:text-2xl ">
+              MOKILOK
+            </h3>
+            <h3 className="main-text-color pt-2 text-center text-xl md:text-2xl ">
+              UNKNOWN TEXTURE
+            </h3>
+            <h3 className="main-text-color pt-2 text-center text-xl md:text-2xl ">
+              RHAEGAL
+            </h3>
+            <h3 className="main-text-color pt-2 text-center text-xl md:text-2xl ">
+              MMALI
+            </h3>
+          </Link>
+
+          <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
+
+          <div className="mt-4 flex items-center justify-center space-x-2 text-sm">
+            <img src="/kader.png" alt="Kader" className="w-4" />
+            <span>Kader - Grad Kodeljevo</span>
+          </div>
+
+          <div className="pt-8">
+            <p className="text-center">
+              Nedovžnost endemitskega plemena
+              <br />
+              je ostavo v vzvratnem ogledalo.
+              <br />
+              Mokre sanje o domački pod Kodelskim nebom
+              <br />
+              in vinilskem razdevičenjo pod grajsko streho
+              <br />
+              se bojo matrjalizirale še predn jih
+              <br />
+              Suzana pokaže na poletnem roko.
+            </p>
+            <p className="pt-4 text-center">
+              Pleme si jemle pravico prve poletne noči -<br />
+              manifestacija globokih zvočnih odnosov
+              <br />
+              ob sončevem obrato ne rabi privolitve.
+              <br />
+              Raztegni prepono za najdalšo predigro pod soncem
+              <br />
+              in trikratni vrhunec v mgli
+              <br />
+              klti, pa prpraj si robčke, da nevš spt
+              <br />
+              briso sokov telesnih užitkov z zoknom.
+            </p>
+            <p className="pt-4 text-center">
+              <b>Nizek štart ob 17.00 na grajski terasi.</b>
+            </p>
+
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
         </div>
       </div>
     </body>
