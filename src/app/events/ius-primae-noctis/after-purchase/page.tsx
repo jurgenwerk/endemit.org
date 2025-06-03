@@ -2,6 +2,7 @@
 
 import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AfterPurchase() {
   return (
@@ -22,21 +23,24 @@ export default function AfterPurchase() {
                 <h2 className="text-center text-3xl font-bold">
                   Haha, yes! Purchase confirmed.
                 </h2>
-                <img
+                <Image
                   src="/rener-thumbs-up.jpg"
                   alt="Tickets"
+                  width={400}
+                  height={400}
                   className="m-auto w-1/2"
                 />
                 <p>
                   You should have received a ticket to the email address you
-                  specified. If you can't see it, check your spam folder, or
-                  contact us at endemit@endemit.org.
+                  specified. If you can&apos;t see it, check your spam folder,
+                  or contact us at endemit@endemit.org.
                 </p>
 
                 <p className="pt-4">
-                  ‼️ There is a known issue where we're having trouble sending
-                  tickets to hotmail email accounts. While we're working on a
-                  fix, please email us if you haven't received your ticket.
+                  ‼️ There is a known issue where we&apos;re having trouble
+                  sending tickets to hotmail email accounts. While we&apos;re
+                  working on a fix, please email us if you haven&apos;t received
+                  your ticket.
                 </p>
 
                 <p className="pt-4">See you at the event! </p>

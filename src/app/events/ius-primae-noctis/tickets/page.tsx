@@ -1,7 +1,6 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
-import Link from "next/link";
 
 export default function Tickets() {
   return (
@@ -22,11 +21,14 @@ export default function Tickets() {
                 <h2 className="text-4xl font-bold uppercase text-center pt-16 lg:pt-10">
                   Tickets
                 </h2>
+                {/* @ts-expect-error - Stripe buy button is a custom element */}
                 <stripe-buy-button
                   buy-button-id="buy_btn_1RRbaVIr2nqko6q4LrlG9Xd8"
                   publishable-key="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
                   className="mx-auto mt-8"
-                ></stripe-buy-button>
+                >
+                  {/* @ts-expect-error - Stripe buy button is a custom element */}
+                </stripe-buy-button>
               </div>
               <script
                 async
@@ -38,15 +40,4 @@ export default function Tickets() {
       </div>
     </body>
   );
-}
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "stripe-buy-button": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement>,
-        HTMLElement
-      >;
-    }
-  }
 }

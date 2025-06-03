@@ -1,18 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const close = () => {
-    setIsMenuOpen(false);
-  };
-
   return (
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <LandingPageSidebar />
@@ -27,7 +19,6 @@ export default function Home() {
           </h1>
           <div>
             <Link
-              onClick={close}
               href="/events/ius-primae-noctis"
               className="block focus:outline-none"
             >
@@ -53,7 +44,6 @@ export default function Home() {
             </Link>
 
             <Link
-              onClick={close}
               href="/events/endemit-festival"
               className="block focus:outline-none mt-2"
             >

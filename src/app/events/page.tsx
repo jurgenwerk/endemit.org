@@ -1,15 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
 
 export default function Events() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const close = () => {
-    setIsMenuOpen(false);
+    // Remove the unused isMenuOpen variable
   };
 
   return (

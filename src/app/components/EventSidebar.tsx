@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
 
 interface EventSidebarProps {
@@ -33,7 +34,13 @@ export default function EventSidebar({
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto lg:mt-12">
         <Link href="/" onClick={close} className="lg:mx-3 lg:ml-auto">
-          <img src="/endemit.png" alt=" ENDEMIT" className="w-24" />
+          <Image
+            src="/endemit.png"
+            alt="ENDEMIT"
+            width={96}
+            height={24}
+            className="w-24"
+          />
         </Link>
       </div>
 
@@ -129,25 +136,31 @@ export default function EventSidebar({
         </nav>
         <div className="social-icons flex justify-end pr-6">
           <a href={fbUrl} target="_blank">
-            <img
-              src="/../facebook.png"
+            <Image
+              src="/facebook.png"
+              alt="Facebook"
+              width={28}
+              height={28}
               className="mx-2"
-              style={{ width: "28px" }}
-            ></img>
+            />
           </a>
           <a href="https://instagram.com/ende.mit" target="_blank">
-            <img
-              src="/../instagram.png"
+            <Image
+              src="/instagram.png"
+              alt="Instagram"
+              width={28}
+              height={28}
               className="mx-2"
-              style={{ width: "28px" }}
-            ></img>
+            />
           </a>
           <a href="mailto:endemit@endemit.org" target="_blank">
-            <img
-              src="/../email.png"
+            <Image
+              src="/email.png"
+              alt="Email"
+              width={28}
+              height={28}
               className="mx-2"
-              style={{ width: "28px" }}
-            ></img>
+            />
           </a>
         </div>
 

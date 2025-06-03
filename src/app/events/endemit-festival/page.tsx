@@ -1,7 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function EndemitFestival() {
   return (
@@ -17,9 +17,11 @@ export default function EndemitFestival() {
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-          <img
+          <Image
             src="/events/festival-2025/cover.jpg"
             alt="Endemit Festival"
+            width={500}
+            height={300}
             className="lg:max-w-[500px] mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16"
             style={{ marginTop: "0px" }}
           />

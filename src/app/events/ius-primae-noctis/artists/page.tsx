@@ -1,6 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import Image from "next/image";
 
 export default function Artists() {
   return (
@@ -19,19 +20,22 @@ export default function Artists() {
             <div className="flex flex-col space-y-12">
               <div className="mb-0 text-3xl font-bold">MOKILOK</div>
               <div className="flex flex-col gap-8 md:flex-row">
-                <img
+                <Image
                   src="/events/ius-primae-noctis/mokilok.jpeg"
                   alt="Mokilok"
+                  width={400}
+                  height={400}
                   className="w-full md:w-1/3"
                 />
                 <div className="text-xl">
                   Mokilok, our beloved festival resident, returns—this time for
                   his long-awaited debut in the castle cellar. Until now, his
-                  sets have always resonated under open skies, but now we're
-                  bringing his sound indoors, where stone walls will trap the
-                  pressure. Expect a time-warping clash: classic '90s techno and
-                  gritty hard house face off against a darker, modern edge. Back
-                  to the future—under vaulted ceilings.
+                  sets have always resonated under open skies, but now
+                  we&apos;re bringing his sound indoors, where stone walls will
+                  trap the pressure. Expect a time-warping clash: classic
+                  &apos;90s techno and gritty hard house face off against a
+                  darker, modern edge. Back to the future—under vaulted
+                  ceilings.
                 </div>
               </div>
 
@@ -39,14 +43,16 @@ export default function Artists() {
                 UNKNOWN TEXTURE
               </div>
               <div className="flex flex-col gap-8 md:flex-row">
-                <img
+                <Image
                   src="/events/ius-primae-noctis/unknown texture.jpeg"
                   alt="Unknown Texture"
+                  width={400}
+                  height={400}
                   className="w-full md:w-1/3"
                 />
                 <div className="text-xl">
-                  Unknown Texture is another one of Slovenia's rising hopes in
-                  techno—an ever-present face at our events, now finally
+                  Unknown Texture is another one of Slovenia&apos;s rising hopes
+                  in techno—an ever-present face at our events, now finally
                   stepping behind the booth. Known for his deep dedication to
                   the craft, he shapes his sound through analog and modular
                   hypnotic rhythms, deep frequencies, and abstract textures. A
@@ -59,32 +65,36 @@ export default function Artists() {
 
               <div className="mb-4 text-3xl font-bold uppercase">RHAEGAL</div>
               <div className="flex flex-col gap-8 md:flex-row">
-                <img
+                <Image
                   src="/events/ius-primae-noctis/rhaegal.jpeg"
                   alt="Rhaegal"
+                  width={400}
+                  height={400}
                   className="w-full md:w-1/3"
                 />
                 <div className="text-xl">
                   Rhaegal is heading into a packed June, with shows lined up
-                  every weekend, and he's more than ready for it. He's been
-                  preparing for this moment, promising to deliver something
+                  every weekend, and he&apos;s more than ready for it. He&apos;s
+                  been preparing for this moment, promising to deliver something
                   fresh and out of the ordinary at every stop. Even with
                   multiple appearances, expect no repetition—just pure, evolving
-                  energy. One of our own and one of the best, Bobi's about to
-                  remind us exactly where the kick hits hardest.
+                  energy. One of our own and one of the best, Bobi&apos;s about
+                  to remind us exactly where the kick hits hardest.
                 </div>
               </div>
 
               <div className="mb-4 text-3xl font-bold uppercase">MMALI</div>
               <div className="flex flex-col gap-8 md:flex-row">
-                <img
+                <Image
                   src="/events/ius-primae-noctis/mmali.jpeg"
                   alt="MMALI"
+                  width={400}
+                  height={400}
                   className="w-full md:w-1/3"
                 />
                 <div className="text-xl">
                   MMali is landing on the castle terrace this time, taking over
-                  the afternoon shift on the year's longest day. Known for
+                  the afternoon shift on the year&apos;s longest day. Known for
                   embracing every slot—from openings to closings—he uses each
                   moment to share exactly the music he feels matters most. This
                   time, expect forgotten gems and overlooked treasures, brought
