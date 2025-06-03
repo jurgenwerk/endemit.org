@@ -13,8 +13,11 @@ export default function Artists() {
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="m-auto  max-w-5xl space-y-6 p-5 text-black ">
-          <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
-            IUS PRIMAE NOCTIS | Artists
+          <h2 className="font-bold uppercase pt-16 lg:pt-10">
+            <div className="flex flex-col">
+              <div className="text-gray-600 text-sm">IUS PRIMAE NOCTIS</div>
+              <div className="text-4xl font-bold uppercase">Artists</div>
+            </div>
           </h2>
           <div className="mx-auto max-w-5xl pt-6">
             <div className="flex flex-col space-y-12">
