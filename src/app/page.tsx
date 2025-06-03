@@ -132,6 +132,10 @@ export default function Home() {
               >
                 Subscribe
               </button>
+
+              <br />
+              <br />
+              <br />
             </form>
           </div>
         </div>
