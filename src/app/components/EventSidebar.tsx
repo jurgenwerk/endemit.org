@@ -8,12 +8,20 @@ interface EventSidebarProps {
   eventName: string;
   eventPath: string;
   fbUrl: string;
+  location?: {
+    name: string;
+    address?: string;
+  };
 }
 
 export default function EventSidebar({
   eventName,
   eventPath,
   fbUrl,
+  location = {
+    name: "Grad Kodeljevo",
+    address: "Ul. Carla Benza 20",
+  },
 }: EventSidebarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -159,8 +167,8 @@ export default function EventSidebar({
               style={{ paddingTop: "3px" }}
             >
               <a className="" href={`${eventPath}/location`}>
-                <div className="text-right">Grad Kodeljevo</div>
-                <div>Ul. Carla Benza 20</div>
+                <div className="text-right">{location.name}</div>
+                {location.address && <div>{location.address}</div>}
               </a>
             </div>
           </div>
