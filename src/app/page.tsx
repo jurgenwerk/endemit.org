@@ -82,7 +82,7 @@ export default function Home() {
           <p className="text-gray-400 mb-8">
             Receive updates about our next events
           </p>
-          <div className="max-w-md">
+          <div className="max-w-md mb-12">
             <form
               onSubmit={async (e) => {
                 e.preventDefault();

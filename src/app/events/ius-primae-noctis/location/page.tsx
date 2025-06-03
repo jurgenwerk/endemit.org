@@ -19,7 +19,7 @@ export default function Location() {
           <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
             <div className="m-auto max-w-5xl space-y-6 p-5 text-black ">
               <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
-                Location
+                IUS PRIMAE NOCTIS | Location
               </h2>
               <p className="text-xl">
                 The event will be held at Kader, Grad Kodeljevo, Ul. Carla Benza
