@@ -13,7 +13,7 @@ export default function Home() {
         className="lg:pl-72 bg-[radial-gradient(ellipse_1200px_800px_at_50%_50%,_var(--tw-gradient-stops))] from-gray-950 via-black to-black"
         style={{ height: "100vh" }}
       >
-        <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-4 lg:pt-16">
+        <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-6 lg:pt-16">
           <h1 className="text-3xl font-bold text-white mb-8">
             UPCOMING EVENTS
           </h1>
@@ -33,11 +33,15 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-xl font-bold mb-6">
+                    <h3 className="text-2xl font-bold mb-2 text-white">
                       IUS PRIMAE NOCTIS
                     </h3>
-                    <p className="mb-6">Jun 20 2025</p>
-                    <p>Kader Kodeljevo</p>
+                    <p className="text-gray-400 mb-3">
+                      Jun 20 2025 • Grad Kodeljevo
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      MOKILOK • UNKNOWN TEXTURE • RHAEGAL • MMALI
+                    </p>
                   </div>
                 </div>
               </div>
@@ -58,9 +62,16 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-xl font-bold mb-6">ENDEMIT FESTIVAL</h3>
-                    <p className="mb-6">15-18 Aug 2025</p>
-                    <p>Libeliče</p>
+                    <h3 className="text-2xl font-bold mb-2 text-white">
+                      ENDEMIT FESTIVAL
+                    </h3>
+                    <p className="text-gray-400 mb-3">
+                      15-18 Aug 2025 • Libeliče
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      RENE WISE • BESTE HIRA • PVTR • BEKO • VINTER • RHAEGAL •
+                      MATERIAL OBJECT • TONSKE • OBSCUR • MMALI
+                    </p>
                   </div>
                 </div>
               </div>
