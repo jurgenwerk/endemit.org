@@ -42,25 +42,6 @@ const QR_GRADIENTS = {
   },
 };
 
-// Function to deterministically select a gradient based on input
-function selectGradient(
-  input: string
-): (typeof QR_GRADIENTS)[keyof typeof QR_GRADIENTS] {
-  const colors = Object.values(QR_GRADIENTS);
-
-  // Create a more sensitive hash
-  const hash = input.split("").reduce((acc, char, i) => {
-    // Use position in string to affect hash differently
-    const charCode = char.charCodeAt(0);
-    const position = i + 1;
-    return (acc * 31 + charCode * position) >>> 0;
-  }, 0);
-
-  // Use modulo to select color
-  const index = hash % colors.length;
-  return colors[index];
-}
-
 async function generateQRWithLogo(data: string): Promise<string> {
   const qrCodeDataUrl = await QRCode.toDataURL(data, {
     errorCorrectionLevel: "H",
