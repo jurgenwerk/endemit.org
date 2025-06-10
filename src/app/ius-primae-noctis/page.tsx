@@ -8,7 +8,7 @@ export default function IusPrimaeNoctis() {
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <EventSidebar
         eventName={"Ius Primae Noctis"}
-        eventPath={"/events/ius-primae-noctis"}
+        eventPath={"/ius-primae-noctis"}
         fbUrl={"https://www.facebook.com/events/985739330046224"}
       />
       <div
@@ -17,7 +17,7 @@ export default function IusPrimaeNoctis() {
       >
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full font-metamorphous">
           <img
-            src="/events/ius-primae-noctis/main.jpg"
+            src="/ius-primae-noctis/main.jpg"
             alt="Ius Primae Noctis"
             className="lg:max-w-[500px] mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16"
             style={{ marginTop: "0px" }}
@@ -25,7 +25,7 @@ export default function IusPrimaeNoctis() {
 
           <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
 
-          <Link href={`/events/ius-primae-noctis/artists`} className="pt-2">
+          <Link href={`/ius-primae-noctis/artists`} className="pt-2">
             <h3 className="main-text-color mt-6 text-center text-xl md:text-2xl ">
               MOKILOK
             </h3>

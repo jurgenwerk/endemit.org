@@ -8,7 +8,7 @@ export default function EndemitFestival() {
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <EventSidebar
         eventName={"Endemit Festival"}
-        eventPath={"/events/endemit-festival"}
+        eventPath={"/endemit-festival"}
         fbUrl={"https://www.facebook.com/endemit.crew"}
         location={{
           name: "Libeliče, Koroška",
@@ -18,7 +18,7 @@ export default function EndemitFestival() {
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
           <Image
-            src="/events/festival-2025/cover.jpg"
+            src="/endemit-festival/cover.jpg"
             alt="Endemit Festival"
             width={500}
             height={300}

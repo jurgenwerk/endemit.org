@@ -10,7 +10,7 @@ export default function AfterPurchase() {
       <div className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
         <EventSidebar
           eventName={"Ius Primae Noctis"}
-          eventPath={"/events/ius-primae-noctis"}
+          eventPath={"/ius-primae-noctis"}
           fbUrl={"https://www.facebook.com/events/985739330046224"}
         />
         <div
@@ -47,13 +47,13 @@ export default function AfterPurchase() {
               </div>
               <div className="flex justify-center space-x-4">
                 <Link
-                  href={`/events/ius-primae-noctis/artists`}
+                  href={`/ius-primae-noctis/artists`}
                   className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
                 >
                   View Artists
                 </Link>
                 <Link
-                  href={`/events/ius-primae-noctis/location`}
+                  href={`/ius-primae-noctis/location`}
                   className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
                 >
                   View Location

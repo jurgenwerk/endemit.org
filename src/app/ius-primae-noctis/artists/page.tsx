@@ -8,7 +8,7 @@ export default function Artists() {
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <EventSidebar
         eventName={"Ius Primae Noctis"}
-        eventPath={"/events/ius-primae-noctis"}
+        eventPath={"/ius-primae-noctis"}
         fbUrl={"https://www.facebook.com/events/985739330046224"}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
@@ -24,7 +24,7 @@ export default function Artists() {
               <div className="mb-0 text-3xl font-bold">MOKILOK</div>
               <div className="flex flex-col gap-8 md:flex-row">
                 <Image
-                  src="/events/ius-primae-noctis/mokilok.jpeg"
+                  src="/ius-primae-noctis/mokilok.jpeg"
                   alt="Mokilok"
                   width={400}
                   height={400}
@@ -47,7 +47,7 @@ export default function Artists() {
               </div>
               <div className="flex flex-col gap-8 md:flex-row">
                 <Image
-                  src="/events/ius-primae-noctis/unknown texture.jpeg"
+                  src="/ius-primae-noctis/unknown texture.jpeg"
                   alt="Unknown Texture"
                   width={400}
                   height={400}
@@ -69,7 +69,7 @@ export default function Artists() {
               <div className="mb-4 text-3xl font-bold uppercase">RHAEGAL</div>
               <div className="flex flex-col gap-8 md:flex-row">
                 <Image
-                  src="/events/ius-primae-noctis/rhaegal.jpeg"
+                  src="/ius-primae-noctis/rhaegal.jpeg"
                   alt="Rhaegal"
                   width={400}
                   height={400}
@@ -89,7 +89,7 @@ export default function Artists() {
               <div className="mb-4 text-3xl font-bold uppercase">MMALI</div>
               <div className="flex flex-col gap-8 md:flex-row">
                 <Image
-                  src="/events/ius-primae-noctis/mmali.jpeg"
+                  src="/ius-primae-noctis/mmali.jpeg"
                   alt="MMALI"
                   width={400}
                   height={400}

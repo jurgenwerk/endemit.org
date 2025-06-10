@@ -6,15 +6,12 @@ export default function UpcomingEvents() {
     <div>
       <h1 className="text-3xl font-bold text-white mb-8">UPCOMING EVENTS</h1>
       <div>
-        <Link
-          href="/events/ius-primae-noctis"
-          className="block focus:outline-none"
-        >
+        <Link href="/ius-primae-noctis" className="block focus:outline-none">
           <div className="border-b border-[#333333] pt-6 pb-6 h-[220px]">
             <div className="grid grid-cols-2 gap-6 h-full">
               <div className="relative h-full">
                 <Image
-                  src="/events/ius-primae-noctis/cover.jpg"
+                  src="/ius-primae-noctis/cover.jpg"
                   alt="IUS PRIMAE NOCTIS"
                   fill
                   className="object-cover"
@@ -36,14 +33,14 @@ export default function UpcomingEvents() {
         </Link>
 
         <Link
-          href="/events/endemit-festival"
+          href="/endemit-festival"
           className="block focus:outline-none mt-2"
         >
           <div className="border-b border-[#333333] pt-4 pb-6 h-[220px]">
             <div className="grid grid-cols-2 gap-6 h-full">
               <div className="relative h-full">
                 <Image
-                  src="/events/festival-2025/cover.jpg"
+                  src="/endemit-festival/cover.jpg"
                   alt="Endemit Festival 2025"
                   fill
                   className="object-cover"

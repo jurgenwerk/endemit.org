@@ -9,7 +9,7 @@ export default function Location() {
       <div className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
         <EventSidebar
           eventName={"Ius Primae Noctis"}
-          eventPath={"/events/ius-primae-noctis"}
+          eventPath={"/ius-primae-noctis"}
           fbUrl={"https://www.facebook.com/events/985739330046224"}
         />
         <div
@@ -264,95 +264,34 @@ export default function Location() {
                             }}
                           ></div>
                         </div>
-                      </div>{" "}
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "column",
-                          flexGrow: 1,
-                          justifyContent: "center",
-                          marginBottom: "24px",
-                        }}
-                      >
-                        {" "}
-                        <div
-                          style={{
-                            backgroundColor: "#F4F4F4",
-                            borderRadius: "4px",
-                            flexGrow: 0,
-                            height: "14px",
-                            marginBottom: "6px",
-                            width: "224px",
-                          }}
-                        ></div>{" "}
-                        <div
-                          style={{
-                            backgroundColor: "#F4F4F4",
-                            borderRadius: "4px",
-                            flexGrow: 0,
-                            height: "14px",
-                            width: "144px",
-                          }}
-                        ></div>
                       </div>
                     </a>
                     <p
                       style={{
-                        color: "#c9c8cd",
-                        fontFamily: "Arial,sans-serif",
-                        fontSize: "14px",
-                        lineHeight: "17px",
-                        marginBottom: 0,
-                        marginTop: "8px",
-                        overflow: "hidden",
-                        padding: "8px 0 7px",
-                        textAlign: "center",
-                        textOverflow: "ellipsis",
-                        whiteSpace: "nowrap",
+                        margin: "8px 0 0 0",
+                        padding: "0 4px",
                       }}
                     >
                       <a
                         href="https://www.instagram.com/p/C_UseyGIibg/?utm_source=ig_embed&amp;utm_campaign=loading"
                         style={{
-                          color: "#c9c8cd",
+                          color: "#000",
                           fontFamily: "Arial,sans-serif",
                           fontSize: "14px",
                           fontStyle: "normal",
                           fontWeight: "normal",
                           lineHeight: "17px",
                           textDecoration: "none",
+                          wordWrap: "break-word",
                         }}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        A post shared by Kader / Lunapark (@kader.kodeljevo)
+                        A post shared by @endemit
                       </a>
                     </p>
                   </div>
                 </blockquote>
-              </div>
-              <script async src="//www.instagram.com/embed.js"></script>
-            </div>
-          </div>
-          <div className="fixed sm:hidden bottom-0 m-0 w-full">
-            <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
-              <div className="my-auto flex">
-                <Link
-                  href="/tickets"
-                  className="block rounded-md border px-5 py-1 font-medium hover:text-gray-100"
-                  style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
-                >
-                  TICKETS
-                </Link>
-              </div>
-              <div
-                className="flex flex-col justify-between text-sm"
-                style={{ paddingTop: "3px" }}
-              >
-                <Link href="/location" className="">
-                  <div className="text-right">Grad Kodeljevo</div>
-                  <div>Ul. Carla Benza 20</div>
-                </Link>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function Tickets() {
       <div className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
         <EventSidebar
           eventName={"Ius Primae Noctis"}
-          eventPath={"/events/ius-primae-noctis"}
+          eventPath={"/ius-primae-noctis"}
           fbUrl={"https://www.facebook.com/events/985739330046224"}
         />
         <div
