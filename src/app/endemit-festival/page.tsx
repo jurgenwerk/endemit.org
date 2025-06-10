@@ -29,7 +29,9 @@ export default function EndemitFestival() {
 
           <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
 
-          <div className="text-center text-2xl text-gray-600">COMING SOON</div>
+          <div className="text-center text-2xl text-gray-600">
+            INFO COMING SOON
+          </div>
 
           <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
 
