@@ -9,6 +9,7 @@ interface EventSidebarProps {
   eventName: string;
   eventPath: string;
   fbUrl: string;
+  ticketsText?: string;
   location?: {
     name: string;
     address?: string;
@@ -19,6 +20,7 @@ export default function EventSidebar({
   eventName,
   eventPath,
   fbUrl,
+  ticketsText = "TICKETS",
   location = {
     name: "Grad Kodeljevo",
     address: "Ul. Carla Benza 20",
@@ -130,7 +132,7 @@ export default function EventSidebar({
               href={`${eventPath}/tickets`}
               className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
             >
-              Tickets
+              {ticketsText}
             </Link>
           </div>
         </nav>
@@ -172,7 +174,7 @@ export default function EventSidebar({
                 style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
                 href={`${eventPath}/tickets`}
               >
-                TICKETS
+                {ticketsText}
               </a>
             </div>
             <div

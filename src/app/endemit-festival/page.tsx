@@ -14,6 +14,7 @@ export default function EndemitFestival() {
           name: "Libeliče, Koroška",
           address: "Slovenia",
         }}
+        ticketsText={"GET INVITED"}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
