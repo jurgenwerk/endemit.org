@@ -1,22 +1,6 @@
 import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
 import Image from "next/image";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Ius Primae Noctis",
-  description:
-    "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025. Featuring MOKILOK, UNKNOWN TEXTURE, RHAEGAL, and MMALI.",
-  openGraph: {
-    title: "Ius Primae Noctis",
-    description:
-      "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025. Featuring MOKILOK, UNKNOWN TEXTURE, RHAEGAL, and MMALI.",
-    images: ["/ius-primae-noctis/main.jpg"],
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};
 
 export default function IusPrimaeNoctis() {
   return (
