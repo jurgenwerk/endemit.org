@@ -2,6 +2,7 @@
 
 import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function IusPrimaeNoctis() {
   return (
@@ -16,9 +17,11 @@ export default function IusPrimaeNoctis() {
         style={{ background: "rgb(47, 65, 109)" }}
       >
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full font-metamorphous">
-          <img
+          <Image
             src="/ius-primae-noctis/main.jpg"
             alt="Ius Primae Noctis"
+            width={500}
+            height={300}
             className="lg:max-w-[500px] mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16"
             style={{ marginTop: "0px" }}
           />
@@ -43,7 +46,13 @@ export default function IusPrimaeNoctis() {
           <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
 
           <div className="mt-4 flex items-center justify-center space-x-2 text-sm">
-            <img src="/kader.png" alt="Kader" className="w-4" />
+            <Image
+              src="/kader.png"
+              alt="Kader"
+              width={16}
+              height={16}
+              className="w-4"
+            />
             <span>Kader - Grad Kodeljevo</span>
           </div>
 
@@ -65,7 +74,7 @@ export default function IusPrimaeNoctis() {
               Pleme si jemle pravico prve poletne noči -<br />
               manifestacija globokih zvočnih odnosov
               <br />
-              ob sončevem obrato ne rabi privolitve.
+              ob sončevem obratu ne rabi privolitve.
               <br />
               Raztegni prepono za najdalšo predigro pod soncem
               <br />

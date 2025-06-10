@@ -1,7 +1,6 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
-import Link from "next/link";
 
 export default function Location() {
   return (

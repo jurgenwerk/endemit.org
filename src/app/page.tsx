@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
 import UpcomingEvents from "@/app/components/UpcomingEvents";
 
