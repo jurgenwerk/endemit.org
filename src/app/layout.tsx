@@ -2,8 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Endemit",
-  description: "Endemit",
+  title: {
+    default: "Endemit",
+    template: "%s | Endemit",
+  },
+  description: "Series of events curated by Endemit crew.",
+  openGraph: {
+    title: "Endemit",
+    description: "Series of events curated by Endemit crew.",
+    images: ["/endemit-logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
   icons: {
     icon: "/endemit-logo.png",
   },
