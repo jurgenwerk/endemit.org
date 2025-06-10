@@ -34,13 +34,13 @@ export default function UpcomingEvents() {
 
         <Link
           href="/endemit-festival"
-          className="block focus:outline-none mt-2"
+          className="block focus:outline-none mt-2 pointer-events-none touch-none select-none"
         >
           <div className="border-b border-[#333333] pt-4 pb-6 h-[220px]">
             <div className="grid grid-cols-2 gap-6 h-full">
               <div className="relative h-full">
                 <Image
-                  src="/endemit-festival/cover.jpg"
+                  src="/endemit-festival/cover-without-border.jpg"
                   alt="Endemit Festival 2025"
                   fill
                   className="object-cover"
@@ -51,10 +51,13 @@ export default function UpcomingEvents() {
                   ENDEMIT FESTIVAL
                 </h3>
                 <p className="text-gray-400 mb-3">15-17 Aug 2025 • Libeliče</p>
-                <p className="text-sm text-gray-400">
+                {/* <p className="text-sm text-gray-400">
                   RENE WISE • BESTE HIRA • PVTR • BEKO • VINTER • RHAEGAL •
                   MATERIAL OBJECT • TONSKE • OBSCUR • MMALI
-                </p>
+                </p> */}
+                <div className="text-sm text-gray-400">
+                  More info coming soon
+                </div>
               </div>
             </div>
           </div>
