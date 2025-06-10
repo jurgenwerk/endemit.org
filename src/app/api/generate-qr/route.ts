@@ -3,45 +3,6 @@ import QRCode from "qrcode";
 import sharp from "sharp";
 import path from "path";
 
-// QR code gradient configurations
-const QR_GRADIENTS = {
-  red: {
-    start: "#FF0000",
-    middle: "#FF3333",
-    end: "#FF6666",
-  },
-  blue: {
-    start: "#0066CC",
-    middle: "#1A75D1",
-    end: "#3384D6",
-  },
-  green: {
-    start: "#008000",
-    middle: "#1A8C1A",
-    end: "#339933",
-  },
-  orange: {
-    start: "#FF8C00",
-    middle: "#FF981A",
-    end: "#FFA333",
-  },
-  purple: {
-    start: "#800080",
-    middle: "#8C1A8C",
-    end: "#993399",
-  },
-  teal: {
-    start: "#008080",
-    middle: "#1A8C8C",
-    end: "#339999",
-  },
-  pink: {
-    start: "#FF1493",
-    middle: "#FF2D9D",
-    end: "#FF47A7",
-  },
-};
-
 async function generateQRWithLogo(data: string): Promise<string> {
   const qrCodeDataUrl = await QRCode.toDataURL(data, {
     errorCorrectionLevel: "H",
