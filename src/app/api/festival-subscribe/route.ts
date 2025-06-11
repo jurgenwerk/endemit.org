@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 const EMAIL_OCTOPUS_API_KEY = process.env.EMAIL_OCTOPUS_API_KEY;
 const EMAIL_OCTOPUS_FESTIVAL_EARLY_SUBSCRIBER_LIST =
   process.env.EMAIL_OCTOPUS_FESTIVAL_EARLY_SUBSCRIBER_LIST;
-const DISCORD_WEB_NOTIFICATIONS_WEBHOOK =
-  process.env.DISCORD_WEB_NOTIFICATIONS_WEBHOOK;
+const DISCORD_WEB_NOTIFICATIONS_WEBHOOK! =
+  process.env.DISCORD_WEB_NOTIFICATIONS_WEBHOOK!;
 
 export async function POST(request: Request) {
   try {
@@ -40,11 +40,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const discordHookWebsiteNotifications =
-      "https://discord.com/api/webhooks/1382438535558070302/U8D8rWyVdUALkWwuKsdNJKRKbqbXzVesYZb2TS3fvg2p2uyMQpaL5XVAnzWUxQWP7Uqx";
-
     try {
-      await fetch(discordHookWebsiteNotifications, {
+      await fetch(DISCORD_WEB_NOTIFICATIONS_WEBHOOK!, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
