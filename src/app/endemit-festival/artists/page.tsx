@@ -9,6 +9,7 @@ export default function Artists() {
         eventName={"Endemit Festival"}
         eventPath={"/endemit-festival"}
         fbUrl={"https://www.facebook.com/endemit.crew"}
+        ticketsEnabled={false}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="m-auto max-w-5xl space-y-6 p-5 text-black">

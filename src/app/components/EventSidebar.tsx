@@ -10,6 +10,7 @@ interface EventSidebarProps {
   eventPath: string;
   fbUrl: string;
   ticketsText?: string;
+  ticketsEnabled?: boolean;
   location?: {
     name: string;
     address?: string;
@@ -21,6 +22,7 @@ export default function EventSidebar({
   eventPath,
   fbUrl,
   ticketsText = "TICKETS",
+  ticketsEnabled = true,
   location = {
     name: "Grad Kodeljevo",
     address: "Ul. Carla Benza 20",
@@ -127,13 +129,15 @@ export default function EventSidebar({
             >
               Location
             </Link>
-            <Link
-              onClick={close}
-              href={`${eventPath}/tickets`}
-              className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
-            >
-              {ticketsText}
-            </Link>
+            {ticketsEnabled && (
+              <Link
+                onClick={close}
+                href={`${eventPath}/tickets`}
+                className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
+              >
+                {ticketsText}
+              </Link>
+            )}
           </div>
         </nav>
         <div className="social-icons flex justify-end pr-6">
@@ -169,13 +173,15 @@ export default function EventSidebar({
         <div className="hidden sm:block absolute fixed bottom-0 m-0 w-full">
           <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
             <div className="my-auto flex">
-              <a
-                className="block rounded-md border px-5 py-1 font-medium hover:text-gray-100"
-                style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
-                href={`${eventPath}/tickets`}
-              >
-                {ticketsText}
-              </a>
+              {ticketsEnabled && (
+                <a
+                  className="block rounded-md border px-5 py-1 font-medium hover:text-gray-100"
+                  style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
+                  href={`${eventPath}/tickets`}
+                >
+                  {ticketsText}
+                </a>
+              )}
             </div>
             <div
               className="flex flex-col justify-between text-sm"
