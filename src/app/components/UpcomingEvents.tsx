@@ -34,7 +34,7 @@ export default function UpcomingEvents() {
 
         <Link
           href="/endemit-festival"
-          className="block focus:outline-none mt-2 pointer-events-none touch-none select-none"
+          className="block focus:outline-none mt-2 "
         >
           <div className="border-b border-[#333333] pt-4 pb-6 h-[220px]">
             <div className="grid grid-cols-2 gap-6 h-full">
