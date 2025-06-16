@@ -1,6 +1,7 @@
 import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
 import Image from "next/image";
+import EventFooter from "@/components/EventFooter";
 
 export default function IusPrimaeNoctis() {
   return (
@@ -93,6 +94,8 @@ export default function IusPrimaeNoctis() {
           </div>
         </div>
       </div>
+
+      <EventFooter ticketsLink={"/ius-primae-noctis/tickets"} />
     </body>
   );
 }

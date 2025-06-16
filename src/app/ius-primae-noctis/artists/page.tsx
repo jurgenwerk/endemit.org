@@ -1,6 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import EventFooter from "@/components/EventFooter";
 import Image from "next/image";
 
 export default function Artists() {
@@ -113,6 +114,7 @@ export default function Artists() {
           </div>
         </div>
       </div>
+      <EventFooter ticketsLink={"/ius-primae-noctis/tickets"} />
     </body>
   );
 }

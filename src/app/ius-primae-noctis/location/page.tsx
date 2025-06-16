@@ -1,6 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import EventFooter from "@/components/EventFooter";
 
 export default function Location() {
   return (
@@ -296,6 +297,7 @@ export default function Location() {
           </div>
         </div>
       </div>
+      <EventFooter ticketsLink={"/ius-primae-noctis/tickets"} />
     </body>
   );
 }
