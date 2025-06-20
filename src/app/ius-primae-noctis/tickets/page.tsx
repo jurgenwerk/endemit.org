@@ -26,19 +26,7 @@ export default function Tickets() {
                 <div className="text-center text-2xl font-bold mt-8">
                   Online tickets are sold out. You can get tickets at the door.
                 </div>
-                {/* @ts-expect-error - Stripe buy button is a custom element */}
-                {/* <stripe-buy-button
-                  buy-button-id="buy_btn_1RRbaVIr2nqko6q4LrlG9Xd8"
-                  publishable-key="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
-                  className="mx-auto mt-8"
-                > */}
-                {/* @ts-expect-error - Stripe buy button is a custom element */}
-                {/* </stripe-buy-button> */}
               </div>
-              <script
-                async
-                src="https://js.stripe.com/v3/buy-button.js"
-              ></script>
             </div>
           </div>
         </div>
