@@ -20,7 +20,7 @@ export default function Artists() {
               <div className="text-4xl font-bold uppercase">Artists</div>
             </div>
           </h2>
-          <div className="mx-auto max-w-5xl pt-6">
+          <div className="mx-auto max-w-5xl pt-4">
             <div className="flex flex-col space-y-12">
               <div className="mb-0 text-3xl font-bold">MOKILOK</div>
               <div className="flex flex-col gap-8 md:flex-row">
