@@ -14,7 +14,7 @@ export default function Home() {
       >
         <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-6 lg:pt-16">
           <UpcomingEvents />
-          <h1 className="text-3xl font-bold text-white mb-2 mt-12">
+          <h1 className="text-3xl font-bold text-white mb-2 mt-20">
             SUBSCRIBE
           </h1>
           <p className="text-gray-400 mb-8">
@@ -85,21 +85,6 @@ export default function Home() {
               <br />
               <br />
             </form>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-800">
-            <h1 className="text-3xl font-bold text-white mb-4">ABOUT</h1>
-            <p className="text-gray-400 mb-6">
-              Endemit is a collective of individuals drawn to sound, code, and
-              image — quietly crafting in their own time. Each project is a
-              reflection of personal obsessions and shared values.
-            </p>
-            <a
-              href="/about"
-              className="inline-block px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-            >
-              Learn More
-            </a>
           </div>
         </div>
       </div>
