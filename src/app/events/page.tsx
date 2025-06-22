@@ -2,6 +2,7 @@
 
 import UpcomingEvents from "@/app/components/UpcomingEvents";
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
+import PastEvents from "../components/PastEvents";
 
 export default function EventsPage() {
   return (
@@ -13,6 +14,7 @@ export default function EventsPage() {
       >
         <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-6 lg:pt-16">
           <UpcomingEvents />
+          <PastEvents />
         </div>
       </div>
     </body>

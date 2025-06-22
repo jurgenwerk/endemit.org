@@ -34,7 +34,7 @@ export default function EndemitFestival() {
             <p className="text-gray-600 mb-8">
               Receive more info and updates about the festival
             </p>
-            <div className="max-w-md mx-auto mb-12">
+            <div className="max-w-md mx-auto mb-12 px-4">
               <form
                 onSubmit={async (e) => {
                   e.preventDefault();
