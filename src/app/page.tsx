@@ -2,6 +2,7 @@
 
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
 import UpcomingEvents from "@/app/components/UpcomingEvents";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,6 +15,14 @@ export default function Home() {
       >
         <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-6 lg:pt-16">
           <UpcomingEvents />
+          <div className="mt-4">
+            <Link
+              href="/events"
+              className="text-sm text-gray-500 hover:text-gray-400"
+            >
+              + See past events
+            </Link>
+          </div>
           <h1 className="text-3xl font-bold text-white mb-2 mt-20">
             SUBSCRIBE
           </h1>
