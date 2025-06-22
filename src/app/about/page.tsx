@@ -32,8 +32,8 @@ export default function About() {
             </p>
 
             <p className="text-lg leading-relaxed">
-              We'll keep creating as long as there's something inside worth
-              expressing. No more. No less.
+              We&apos;ll keep creating as long as there&apos;s something inside
+              worth expressing. No more. No less.
             </p>
 
             <div className="mt-12 pt-8 border-t border-gray-800">
