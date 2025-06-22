@@ -103,6 +103,14 @@ export default function LandingPageSidebar() {
           >
             Merch
           </Link>
+
+          <Link
+            onClick={close}
+            href="/about"
+            className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
+          >
+            About
+          </Link>
         </nav>
         <div className="social-icons flex justify-end pr-6">
           <a href="https://www.facebook.com/endemit.crew" target="_blank">
