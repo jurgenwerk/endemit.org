@@ -16,19 +16,19 @@ export default function About() {
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
               Endemit is a collective of individuals drawn to sound, code, and
-              image — quietly crafting in their own time. Each project is a
+              image, quietly crafting in their own time. Each project is a
               reflection of personal obsessions and shared values.
             </p>
 
             <p className="text-lg leading-relaxed">
-              Our gatherings are rare moments when these inner worlds surface —
+              Our gatherings are rare moments when these inner worlds surface,
               shaped with care, emotion, and intent. No two are the same, but
               all come from the same place.
             </p>
 
             <p className="text-lg leading-relaxed">
               We move only when the moment is right. When we do, we build spaces
-              that invite presence — for ourselves, and for those who find us.
+              that invite presence for ourselves, and for those who find us.
             </p>
 
             <p className="text-lg leading-relaxed">
