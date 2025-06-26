@@ -30,7 +30,9 @@ export default function UpcomingEvents() {
                   MATERIAL OBJECT • TONSKE • OBSCUR • MMALI
                 </p> */}
                 <div className="text-sm text-gray-400">
-                  More info coming soon
+                  RENE WISE • BESTE HIRA • PVTR • BEKO • VINTER • MMALI •
+                  RHAEGAL • DJ LABRANA • OMNIA VOX • MATERIAL OBJECT • TONSKE •
+                  OBSCUR
                 </div>
               </div>
             </div>

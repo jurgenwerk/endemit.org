@@ -16,7 +16,10 @@ export default function EndemitFestival() {
         }}
         ticketsEnabled={false}
       />
-      <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
+      <div
+        className="lg:pl-72 min-h-screen"
+        style={{ background: "rgb(226 221 255)" }}
+      >
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
           <Image
             src="/endemit-festival/cover.jpg"
@@ -99,10 +102,10 @@ export default function EndemitFestival() {
           </div>
 
           <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
-
-          <div className="mt-4 flex items-center justify-center space-x-2 text-sm">
-            <span>Libeliče, Slovenia</span>
-          </div>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </body>

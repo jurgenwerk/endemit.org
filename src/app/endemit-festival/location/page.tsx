@@ -11,7 +11,10 @@ export default function Location() {
         fbUrl={"https://www.facebook.com/endemit.crew"}
         ticketsEnabled={false}
       />
-      <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
+      <div
+        className="lg:pl-72 min-h-screen"
+        style={{ background: "rgb(226 221 255)" }}
+      >
         <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
           <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
             Location
