@@ -1,6 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import EventFooter from "@/components/EventFooter";
 
 export default function Tickets() {
   return (
@@ -9,6 +10,8 @@ export default function Tickets() {
         eventName={"Endemit Festival"}
         eventPath={"/endemit-festival"}
         fbUrl={"https://www.facebook.com/endemit.crew"}
+        ticketsPath={"/endemit-festival/subscribe"}
+        ticketsText={"SUBSCRIBE"}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
@@ -18,6 +21,13 @@ export default function Tickets() {
           <div className="text-2xl text-gray-600">COMING SOON</div>
         </div>
       </div>
+      <EventFooter
+        ticketsLink="/endemit-festival/subscribe"
+        ticketsText="SUBSCRIBE"
+        locationName="Libeliče, Koroška"
+        locationAddress="15-17 Aug 2025"
+        locationLink="/endemit-festival/location"
+      />
     </body>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import EventFooter from "@/components/EventFooter";
 import Image from "next/image";
 
 interface Artist {
@@ -91,7 +92,8 @@ export default function Artists() {
         eventName={"Endemit Festival"}
         eventPath={"/endemit-festival"}
         fbUrl={"https://www.facebook.com/endemit.crew"}
-        ticketsEnabled={false}
+        ticketsPath={"/endemit-festival/subscribe"}
+        ticketsText={"SUBSCRIBE"}
       />
       <div
         className="lg:pl-72 min-h-screen"
@@ -169,6 +171,13 @@ export default function Artists() {
           </div>
         </div>
       </div>
+      <EventFooter
+        ticketsLink="/endemit-festival/subscribe"
+        ticketsText="SUBSCRIBE"
+        locationName="Libeliče, Koroška"
+        locationAddress="15-17 Aug 2025"
+        locationLink="/endemit-festival/location"
+      />
     </body>
   );
 }

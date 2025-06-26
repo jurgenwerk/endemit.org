@@ -2,9 +2,19 @@ import Link from "next/link";
 
 interface EventFooterProps {
   ticketsLink?: string;
+  ticketsText?: string;
+  locationName?: string;
+  locationAddress?: string;
+  locationLink?: string;
 }
 
-export default function EventFooter({ ticketsLink = "" }: EventFooterProps) {
+export default function EventFooter({
+  ticketsLink = "",
+  ticketsText = "TICKETS",
+  locationName = "Grad Kodeljevo",
+  locationAddress = "Ul. Carla Benza 20",
+  locationLink = "/ius-primae-noctis/location",
+}: EventFooterProps) {
   return (
     <div className="fixed bottom-0 m-0 w-full md:hidden">
       <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
@@ -14,7 +24,7 @@ export default function EventFooter({ ticketsLink = "" }: EventFooterProps) {
             className="block rounded-md border px-5  py-1 font-medium hover:text-gray-100"
             style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
           >
-            TICKETS
+            {ticketsText}
           </Link>
         </div>
 
@@ -22,9 +32,9 @@ export default function EventFooter({ ticketsLink = "" }: EventFooterProps) {
           className="flex flex-col justify-between text-sm"
           style={{ paddingTop: "3px" }}
         >
-          <Link href="/ius-primae-noctis/location" className="">
-            <div className="text-right">Grad Kodeljevo</div>
-            <div>Ul. Carla Benza 20</div>
+          <Link href={locationLink} className="">
+            <div className="text-right">{locationName}</div>
+            <div>{locationAddress}</div>
           </Link>
         </div>
       </div>

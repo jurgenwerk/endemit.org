@@ -10,7 +10,7 @@ interface EventSidebarProps {
   eventPath: string;
   fbUrl: string;
   ticketsText?: string;
-  ticketsEnabled?: boolean;
+  ticketsPath?: string;
   location?: {
     name: string;
     address?: string;
@@ -22,7 +22,7 @@ export default function EventSidebar({
   eventPath,
   fbUrl,
   ticketsText = "TICKETS",
-  ticketsEnabled = true,
+  ticketsPath,
   location = {
     name: "Grad Kodeljevo",
     address: "Ul. Carla Benza 20",
@@ -129,10 +129,11 @@ export default function EventSidebar({
             >
               Location
             </Link>
-            {ticketsEnabled && (
+
+            {ticketsPath && (
               <Link
                 onClick={close}
-                href={`${eventPath}/tickets`}
+                href={ticketsPath}
                 className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
               >
                 {ticketsText}
@@ -173,11 +174,11 @@ export default function EventSidebar({
         <div className="hidden sm:block absolute fixed bottom-0 m-0 w-full">
           <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
             <div className="my-auto flex">
-              {ticketsEnabled && (
+              {ticketsPath && (
                 <a
                   className="block rounded-md border px-5 py-1 font-medium hover:text-gray-100"
                   style={{ paddingTop: "7px", letterSpacing: "0.6px" }}
-                  href={`${eventPath}/tickets`}
+                  href={ticketsPath}
                 >
                   {ticketsText}
                 </a>

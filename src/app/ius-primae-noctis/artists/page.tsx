@@ -11,6 +11,7 @@ export default function Artists() {
         eventName={"Ius Primae Noctis"}
         eventPath={"/ius-primae-noctis"}
         fbUrl={"https://www.facebook.com/events/985739330046224"}
+        ticketsPath={"/ius-primae-noctis/tickets"}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="m-auto  max-w-5xl space-y-6 p-5 text-black ">

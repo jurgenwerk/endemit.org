@@ -10,6 +10,7 @@ export default function IusPrimaeNoctis() {
         eventName={"Ius Primae Noctis"}
         eventPath={"/ius-primae-noctis"}
         fbUrl={"https://www.facebook.com/events/985739330046224"}
+        ticketsPath={"/ius-primae-noctis/tickets"}
       />
       <div
         className="lg:pl-72 min-h-screen"

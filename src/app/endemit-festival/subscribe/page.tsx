@@ -1,9 +1,10 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
+import FestivalSubscribe from "@/app/components/FestivalSubscribe";
 import EventFooter from "@/components/EventFooter";
 
-export default function Location() {
+export default function Subscribe() {
   return (
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <EventSidebar
@@ -17,11 +18,12 @@ export default function Location() {
         className="lg:pl-72 min-h-screen"
         style={{ background: "rgb(226 221 255)" }}
       >
-        <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
+        <div className="m-auto max-w-6xl space-y-8 p-5 text-black">
           <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
-            Location
+            Subscribe
           </h2>
-          <div className="text-2xl text-gray-600">COMING SOON</div>
+
+          <FestivalSubscribe />
         </div>
       </div>
       <EventFooter
