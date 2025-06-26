@@ -15,14 +15,10 @@ export default function Subscribe() {
         ticketsText={"SUBSCRIBE"}
       />
       <div
-        className="lg:pl-72 min-h-screen"
+        className="lg:pl-72 min-h-screen "
         style={{ background: "rgb(226 221 255)" }}
       >
-        <div className="m-auto max-w-6xl space-y-8 p-5 text-black">
-          <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
-            Subscribe
-          </h2>
-
+        <div className="m-auto max-w-6xl space-y-8 p-5 text-black pt-20">
           <FestivalSubscribe />
         </div>
       </div>
