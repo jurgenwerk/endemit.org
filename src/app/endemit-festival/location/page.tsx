@@ -62,15 +62,15 @@ export default function Location() {
             </div>
 
             <p className="text-xl leading-relaxed">
-              The event kicks off at 18:00. You'll have ample time to settle in,
-              pitch your tent, and prepare for the festivities.
+              The event kicks off at 18:00. You&apos;ll have ample time to
+              settle in, pitch your tent, and prepare for the festivities.
             </p>
 
             <p className="text-xl leading-relaxed">
               ℹ️ For more information about camping and other accommodations,
               check the{" "}
               <a
-                className="underline hover:text-blue-600 transition-colors"
+                className=" hover:text-blue-600 transition-colors"
                 href="/accommodation"
               >
                 Accommodation
@@ -81,6 +81,83 @@ export default function Location() {
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/endemit-festival/festival-decor.jpg"
+                alt="Libelice festival camp"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-4xl font-bold uppercase mt-12">
+              Accommodation
+            </h2>
+
+            <p className="text-xl leading-relaxed">
+              The camping area encircles the entire venue, allowing everyone to
+              find the perfect spot. Feel at home, but to maintain harmony with
+              your neighbors, please respect the rules of nature and keep the
+              area clean.
+            </p>
+
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/endemit-festival/izvir - šotori.jpeg"
+                alt="Libelice festival camp"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/endemit-festival/camp-1.jpg"
+                alt="Libelice festival camp"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+
+            <p className="text-xl leading-relaxed">
+              For camper vans, there&apos;s a designated parking area (with
+              electric plugs) available on a first-come, first-served basis –
+              it&apos;s the law of nature!
+            </p>
+
+            <p className="text-xl leading-relaxed">
+              For those seeking more comfort, we recommend nearby accommodations
+              such as Korošica Hotel, Ta Fabrika lodgings, Hostel Punkl, and
+              more. Feel free to reach out if you need help finding the perfect
+              spot.
+            </p>
+
+            <h2 className="text-4xl font-bold uppercase">Toilet and Showers</h2>
+
+            <p className="text-xl leading-relaxed">
+              Pleasant and clean restrooms and showers will provide comfortable
+              and private facilities for personal hygiene. The structure is
+              located by a stream, built from wood, and offers a completely
+              different experience from what you&apos;re used to at similar
+              events.
+            </p>
+
+            <p className="text-xl leading-relaxed">
+              These facilities are properly maintained and cleaned regularly to
+              ensure hygiene and comfort for everyone.
+            </p>
+
+            <p className="text-xl leading-relaxed">
+              Let&apos;s practice water conservation when showering, ensuring
+              that everyone can enjoy the facilities by being mindful of our
+              usage.
+            </p>
+
+            <div className="w-full rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/endemit-festival/rener-plac.jpeg"
                 alt="Libelice festival camp"
                 width={800}
                 height={600}
