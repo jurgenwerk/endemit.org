@@ -54,34 +54,35 @@ const artists: Artist[] = [
       "Material Object is a master of sonic architecture, constructing a multidimensional atmosphere of abstract techno, ambient and psychedelic components. A producer and performer, embraced by worldwide audiences and record labels, has evolved his style through collabs with the sensei of electronic music Pete Namlook and brought his distinct sound to venues like Berghain or Labyrinth festival. Originating from Aussieland, he is now establishing his new hub in Slovenia, debuting at Endemit amidst the Carinthian forest.",
   },
   {
+    name: "Beko",
+    photo: "/endemit-festival/artists/beko.jpeg",
+    description:
+      "Beko blends hypnotic grooves with raw textures and a fine-tuned progressive touch. His sets, played exclusively on vinyl, are assembled with patience and sheer focus, guiding the listener through parallel mind states without ever losing the track. A true craftsman of on-point momentum.",
+  },
+
+  {
+    name: "Pvtr",
+    photo: "/endemit-festival/artists/pvtr.jpeg",
+    description:
+      "Pvtr has drawn up a blueprint for interlacing ambient techno with dub influences and meditative rhythms, encouraging a deep interaction between spacious yet subtle sonic structures. His gradual immersion in the vastness of the unknown invites stillness and focus, exploring the space between sound with much diligence and intent. Expect a thoughtful journey into the depths of techno.",
+  },
+  {
     name: "Tonske",
     photo: "/endemit-festival/artists/tonske.jpeg",
     description:
       "Tonske is a selector from Velenje, known for precise, groove-driven constructions built upon minimal foundations. His focus is on flow, tight transitions, and stripped-back control. He's also the mind behind Cogo, another Slovenian forward-thinking label dedicated to exploratory electronic music.",
   },
   {
-    name: "Obscur",
-    photo: "/endemit-festival/artists/obscur.jpeg",
-    description:
-      "Obscur channels the energy into the dancefloor with a sound that's raw, industrial and hypnotic. His work with Modularz, Paralelo and Newrhythmic labels speaks volumes about his music skills, his passion for the techno genre transcending his producer persona to deliver zestful performances. His sets are dense and physical, pulling the listener towards a rift of dark frequency range without losing forward momentum.",
-  },
-  {
-    name: "Beko",
-    photo: "/endemit-festival/artists/beko.jpeg",
-    description:
-      "Beko blends hypnotic grooves with raw textures and a fine-tuned progressive touch. His sets, played exclusively on vinyl, are assembled with patience and sheer focus, guiding the listener through parallel mind states without ever losing the track. A true craftsman of on-point momentum.",
-  },
-  {
     name: "MMali",
-    photo: "/placeholder-artist.jpg", // No photo available
+    photo: "/endemit-festival/artists/mmali.jpeg",
     description:
       "MMali brings our annual Endemit journey to a close with an ever emotional performance, shaped by the rarest ambient, trance, post-rock and experimental techno gems. His sets transcend genres to reflect his playful, explorative and delicately hardened character, who knows just when to stir up the dancefloor raw or cradle it gently, immersing the tribe in the feelings of affinity, deep gratitude and yearning for the next gathering.",
   },
   {
-    name: "Pvtr",
-    photo: "/placeholder-artist.jpg", // No photo available
+    name: "Obscur",
+    photo: "/endemit-festival/artists/obscur.jpeg",
     description:
-      "Pvtr has drawn up a blueprint for interlacing ambient techno with dub influences and meditative rhythms, encouraging a deep interaction between spacious yet subtle sonic structures. His gradual immersion in the vastness of the unknown invites stillness and focus, exploring the space between sound with much diligence and intent. Expect a thoughtful journey into the depths of techno.",
+      "Obscur channels the energy into the dancefloor with a sound that's raw, industrial and hypnotic. His work with Modularz, Paralelo and Newrhythmic labels speaks volumes about his music skills, his passion for the techno genre transcending his producer persona to deliver zestful performances. His sets are dense and physical, pulling the listener towards a rift of dark frequency range without losing forward momentum.",
   },
 ];
 
