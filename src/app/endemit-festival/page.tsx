@@ -3,7 +3,6 @@
 import EventSidebar from "@/app/components/EventSidebar";
 import FestivalSubscribe from "@/app/components/FestivalSubscribe";
 import EventFooter from "@/components/EventFooter";
-import Image from "next/image";
 
 export default function EndemitFestival() {
   return (
@@ -39,10 +38,10 @@ export default function EndemitFestival() {
               className="text-center absolute left-0 w-full flex flex-col items-center"
               style={{ top: "15%" }}
             >
-              <div className="text-center text-6xl font-bold uppercase text-white">
+              <div className="text-center text-5xl md:text-5xl lg:text-6xl font-bold uppercase text-white">
                 Endemit Festival
               </div>
-              <div className="text-center text-4xl font-bold uppercase text-white mt-4">
+              <div className="text-center text-3xl md:text-3xl lg:text-4xl font-bold uppercase text-white mt-4">
                 Libeliče, 15-17 Aug 2025
               </div>
             </div>

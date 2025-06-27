@@ -3,8 +3,8 @@
 export default function FestivalSubscribe() {
   return (
     <div className="text-center">
-      <h1 className="text-3xl font-bold text-gray-800 mb-2">SUBSCRIBE</h1>
-      <p className="text-gray-600 mb-8">
+      <h1 className="text-3xl font-bold text-gray-800 mb-2 mx-2">SUBSCRIBE</h1>
+      <p className="text-gray-600 mb-8 mx-2">
         By subscribing you will receive all the needed information about the
         festival.
       </p>
