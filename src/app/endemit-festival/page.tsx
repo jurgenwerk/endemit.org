@@ -24,19 +24,30 @@ export default function EndemitFestival() {
         style={{ background: "rgb(226 221 255)" }}
       >
         <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-          <Image
-            src="/endemit-festival/cover.jpg"
-            alt="Endemit Festival"
-            width={500}
-            height={300}
-            className="lg:max-w-[500px] mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16"
-            style={{ marginTop: "0px" }}
-          />
-
-          <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
-
+          <div
+            className="main-image-background"
+            style={{
+              background:
+                "url('/endemit-festival/hero-cover-landscape.jpg') no-repeat center center",
+              backgroundSize: "cover",
+              width: "100%",
+              height: "100vh",
+              position: "relative",
+            }}
+          >
+            <div
+              className="text-center absolute left-0 w-full flex flex-col items-center"
+              style={{ top: "15%" }}
+            >
+              <div className="text-center text-6xl font-bold uppercase text-white">
+                Endemit Festival
+              </div>
+              <div className="text-center text-4xl font-bold uppercase text-white mt-4">
+                Libeliče, 15-17 Aug 2025
+              </div>
+            </div>
+          </div>
           <FestivalSubscribe />
-
           <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
           <br />
           <br />
