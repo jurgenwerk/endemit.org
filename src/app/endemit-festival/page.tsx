@@ -60,10 +60,7 @@ export default function EndemitFestival() {
               position: "relative",
             }}
           >
-            <div
-              className="text-center absolute left-0 w-full flex flex-col items-center "
-              style={{ top: "12%" }}
-            >
+            <div className="text-center absolute left-0 w-full flex flex-col items-center top-[8%] md:top-[12%]">
               <div className="text-center text-4xl md:text-4xl lg:text-5xl font-bold uppercase text-white lg:w-3/4 md:w-4/5 mx-4">
                 A carefully curated electronic music festival, surrounded by a
                 river, forest, and mountains.
