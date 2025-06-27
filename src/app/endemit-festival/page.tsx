@@ -67,7 +67,7 @@ export default function EndemitFestival() {
                 A carefully curated electronic music festival, surrounded by a
                 river, forest, and mountains.
               </div>
-              <div className="text-center text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-white mt-4 lg:w-2/3 md:w-4/5 mx-4">
+              <div className="text-center text-2xl md:text-3xl lg:text-4xl font-bold  text-white mt-4 lg:w-2/3 md:w-4/5 mx-4">
                 <br></br>Back to the source. <br></br>
                 <br></br>That time of year is calling us home — to the forest
                 that knows us, to the ground that holds us, and to each other.
