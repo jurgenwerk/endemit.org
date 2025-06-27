@@ -1,5 +1,6 @@
 "use client";
 
+// Force new deployment with latest changes
 import EventSidebar from "@/app/components/EventSidebar";
 import FestivalSubscribe from "@/app/components/FestivalSubscribe";
 import EventFooter from "@/components/EventFooter";
@@ -77,8 +78,6 @@ export default function EndemitFestival() {
                 us – and those we trust to feel the same. The word travels from
                 friend to friend. From heart to heart. From those who hear the
                 silence between the bass. Hidden, but deeply connected.{" "}
-                <br></br>
-                <br></br>See you soon.
               </div>
             </div>
           </div>
