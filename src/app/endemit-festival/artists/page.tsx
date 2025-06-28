@@ -33,7 +33,7 @@ const artists: Artist[] = [
     name: "Rhaegal",
     photo: "/endemit-festival/artists/rhaegal.jpeg",
     description:
-      "Rhaegal has been stepping up his appearances, delivering dark masterpieces at each stop he has made on his ever evolving path as an artist. His closing sets are an underground experience of the vast emotional terrain, designed for exploring the inward sphere of the infinite. He also runs the label Hands for the Creator, dealing a hand of otherworldly sounds to the listener.",
+      "Rhaegal has been stepping up his appearances, delivering dark masterpieces at each stop he has made on his ever evolving path as an artist. His closing sets are an underground experience of the vast emotional terrain, designed for exploring the inward sphere of the infinite. He also runs the label Hands of the Creator, dealing a hand of otherworldly sounds to the listener.",
   },
   {
     name: "DJ Labrana",
