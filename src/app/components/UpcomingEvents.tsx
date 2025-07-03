@@ -10,9 +10,9 @@ export default function UpcomingEvents() {
           href="/endemit-festival"
           className="block focus:outline-none mt-2 "
         >
-          <div className="border-b border-[#333333] pt-4 pb-6 h-[220px]">
-            <div className="grid grid-cols-2 gap-6 h-full">
-              <div className="relative h-full">
+          <div className="border-b border-[#333333] pt-4 pb-6 min-h-[220px] md:h-[220px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">
+              <div className="relative h-48 md:h-full">
                 <Image
                   src="/endemit-festival/cover-without-border.jpg"
                   alt="Endemit Festival 2025"
@@ -21,9 +21,9 @@ export default function UpcomingEvents() {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2 text-white">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">
                   ENDEMIT FESTIVAL
-                  <span className="text-base font-normal text-gray-400 ml-2">
+                  <span className="text-sm md:text-base font-normal text-gray-400 ml-2">
                     [PRIVATE GATHERING]
                   </span>
                 </h3>
@@ -32,7 +32,7 @@ export default function UpcomingEvents() {
                   RENE WISE • BESTE HIRA • PVTR • BEKO • VINTER • RHAEGAL •
                   MATERIAL OBJECT • TONSKE • OBSCUR • MMALI
                 </p> */}
-                <div className="text-sm text-gray-400">
+                <div className="text-xs md:text-sm text-gray-400">
                   RENE WISE • BESTE HIRA • PVTR • BEKO • VINTER • MMALI •
                   RHAEGAL • DJ LABRANA • OMNIA VOX • MATERIAL OBJECT • TONSKE •
                   OBSCUR
@@ -45,7 +45,7 @@ export default function UpcomingEvents() {
         {/* Endemit Label Release Event */}
         <div className="border-b border-[#333333] pt-4 pb-4">
           <div>
-            <span className="text-xl font-bold text-white">
+            <span className="text-lg md:text-xl font-bold text-white">
               ENDEMIT LABEL RELEASE PARTY
             </span>
             <span className="text-gray-400 ml-3">
@@ -58,7 +58,7 @@ export default function UpcomingEvents() {
         {/* X Event */}
         <div className="border-b border-[#333333] pt-4 pb-4">
           <div>
-            <span className="text-xl font-bold text-white">TBA</span>
+            <span className="text-lg md:text-xl font-bold text-white">TBA</span>
             <span className="text-gray-400 ml-3">
               21 Nov 2025, Grad Kodeljevo
             </span>
