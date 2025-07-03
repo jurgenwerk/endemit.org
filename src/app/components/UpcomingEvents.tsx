@@ -23,6 +23,9 @@ export default function UpcomingEvents() {
               <div className="flex flex-col justify-center">
                 <h3 className="text-2xl font-bold mb-2 text-white">
                   ENDEMIT FESTIVAL
+                  <span className="text-base font-normal text-gray-400 ml-2">
+                    [PRIVATE GATHERING]
+                  </span>
                 </h3>
                 <p className="text-gray-400 mb-3">15-17 Aug 2025 • Libeliče</p>
                 {/* <p className="text-sm text-gray-400">
