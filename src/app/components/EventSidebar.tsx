@@ -11,9 +11,10 @@ interface EventSidebarProps {
   fbUrl: string;
   ticketsText?: string;
   ticketsPath?: string;
+  showFoodAndDrinks?: boolean;
   location?: {
-    name: string;
-    address?: string;
+    firstLine: string;
+    secondLine?: string;
   };
 }
 
@@ -23,9 +24,10 @@ export default function EventSidebar({
   fbUrl,
   ticketsText = "TICKETS",
   ticketsPath,
+  showFoodAndDrinks = false,
   location = {
-    name: "Grad Kodeljevo",
-    address: "Ul. Carla Benza 20",
+    firstLine: "Grad Kodeljevo",
+    secondLine: "Ul. Carla Benza 20",
   },
 }: EventSidebarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -130,6 +132,16 @@ export default function EventSidebar({
               Location
             </Link>
 
+            {showFoodAndDrinks && (
+              <Link
+                onClick={close}
+                href={`${eventPath}/food-and-drinks`}
+                className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
+              >
+                Food and Drinks
+              </Link>
+            )}
+
             {ticketsPath && (
               <Link
                 onClick={close}
@@ -189,8 +201,8 @@ export default function EventSidebar({
               style={{ paddingTop: "3px" }}
             >
               <a className="" href={`${eventPath}/location`}>
-                <div className="text-right">{location.name}</div>
-                {location.address && <div>{location.address}</div>}
+                <div className="text-right">{location.firstLine}</div>
+                {location.secondLine && <div>{location.secondLine}</div>}
               </a>
             </div>
           </div>

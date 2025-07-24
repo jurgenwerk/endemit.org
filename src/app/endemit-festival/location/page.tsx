@@ -13,6 +13,11 @@ export default function Location() {
         fbUrl={"https://www.facebook.com/endemit.crew"}
         ticketsPath={"/endemit-festival/subscribe"}
         ticketsText={"SUBSCRIBE"}
+        showFoodAndDrinks={true}
+        location={{
+          firstLine: "Libeliče, Koroška",
+          secondLine: "15-17 Aug 2025",
+        }}
       />
       <div
         className="lg:pl-72 min-h-screen"
@@ -62,29 +67,18 @@ export default function Location() {
             </div>
 
             <p className="text-xl leading-relaxed">
-              The event kicks off at 18:00. You&apos;ll have ample time to
-              settle in, pitch your tent, and prepare for the festivities.
-            </p>
-
-            <p className="text-xl leading-relaxed">
-              ℹ️ For more information about camping and other accommodations,
-              check the{" "}
-              <a
-                className=" hover:text-blue-600 transition-colors"
-                href="/accommodation"
-              >
-                Accommodation
-              </a>{" "}
-              page.
+              The event kicks off at 18:00 on Friday. You&apos;ll have ample
+              time to settle in, pitch your tent, and prepare for the
+              festivities.
             </p>
 
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/endemit-festival/festival-decor.jpg"
+                src="/endemit-festival/traki.jpeg"
                 alt="Libelice festival camp"
                 width={800}
                 height={600}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover max-h-[900px]"
               />
             </div>
           </div>
@@ -95,10 +89,10 @@ export default function Location() {
             </h2>
 
             <p className="text-xl leading-relaxed">
-              The camping area encircles the entire venue, allowing everyone to
-              find the perfect spot. Feel at home, but to maintain harmony with
-              your neighbors, please respect the rules of nature and keep the
-              area clean.
+              There will be a camping area in a designated field, allowing
+              everyone to find the perfect spot. Feel at home, but to maintain
+              harmony with your neighbors, please respect the rules of nature
+              and keep the area clean.
             </p>
 
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
@@ -123,8 +117,7 @@ export default function Location() {
 
             <p className="text-xl leading-relaxed">
               For camper vans, there&apos;s a designated parking area (with
-              electric plugs) available on a first-come, first-served basis –
-              it&apos;s the law of nature!
+              electric plugs) available on a first-come, first-served basis.
             </p>
 
             <p className="text-xl leading-relaxed">

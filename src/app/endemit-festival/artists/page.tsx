@@ -95,6 +95,11 @@ export default function Artists() {
         fbUrl={"https://www.facebook.com/endemit.crew"}
         ticketsPath={"/endemit-festival/subscribe"}
         ticketsText={"SUBSCRIBE"}
+        showFoodAndDrinks={true}
+        location={{
+          firstLine: "Libeliče, Koroška",
+          secondLine: "15-17 Aug 2025",
+        }}
       />
       <div
         className="lg:pl-72 min-h-screen"

@@ -12,6 +12,11 @@ export default function Tickets() {
         fbUrl={"https://www.facebook.com/endemit.crew"}
         ticketsPath={"/endemit-festival/subscribe"}
         ticketsText={"SUBSCRIBE"}
+        showFoodAndDrinks={true}
+        location={{
+          firstLine: "Libeliče, Koroška",
+          secondLine: "15-17 Aug 2025",
+        }}
       />
       <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
         <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
