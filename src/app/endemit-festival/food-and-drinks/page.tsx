@@ -31,9 +31,10 @@ export default function FoodAndDrinks() {
           <div className="space-y-6">
             <p className="text-xl leading-relaxed">
               This year, food will come straight from the garden and stables of
-              House Rener, our beloved Carinthian host and his family. We're
-              going back to basics, reviving the legendary Carinthian burger and
-              adding fresh specialties made of traditional ingredients.
+              House Rener, our beloved Carinthian host and his family.
+              We&apos;re going back to basics, reviving the legendary Carinthian
+              burger and adding fresh specialties made of traditional
+              ingredients.
             </p>
 
             <div className="w-full rounded-lg overflow-hidden shadow-lg">
@@ -49,9 +50,9 @@ export default function FoodAndDrinks() {
             <p className="text-xl leading-relaxed">
               Omnivores will be able to enjoy quesadillas stuffed with chicken,
               homegrown vegetables and spices or warm their bellies and hearts
-              with the special Rener meat stew. And as usual we'll be breaking
-              some eggs for breakfast: one for the ladies and two for the big
-              boys.
+              with the special Rener meat stew. And as usual we&apos;ll be
+              breaking some eggs for breakfast: one for the ladies and two for
+              the big boys.
             </p>
 
             <p className="text-xl leading-relaxed">
@@ -61,8 +62,8 @@ export default function FoodAndDrinks() {
             </p>
 
             <p className="text-xl leading-relaxed">
-              As for the drinks, we'll be in equally good hands. Kristjan and
-              his crew, practically family by now, will be holding the fort
+              As for the drinks, we&apos;ll be in equally good hands. Kristjan
+              and his crew, practically family by now, will be holding the fort
               night and day behind the bar. Juicy, hard, or skinny refreshments
               will be served cold, forever with a twist, and that signature
               smile the crew always brings to the table.
