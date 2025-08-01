@@ -4,11 +4,11 @@ import LandingPageSidebar from "@/app/components/LandingPageSidebar";
 export const metadata: Metadata = {
   title: "Music",
   description:
-    "Sets, mixes, and productions coming from Endemit team, or music recorded at Endemit events.",
+    "Sets, mixes, and productions from the Endemit team and live recordings from our events.",
   openGraph: {
     title: "Music | Endemit",
     description:
-      "Sets, mixes, and productions coming from Endemit team, or music recorded at Endemit events.",
+      "Sets, mixes, and productions from the Endemit team and live recordings from our events.",
     images: ["/endemit-logo.png"],
   },
   twitter: {
@@ -38,8 +38,8 @@ export default function Music() {
                 emit
               </span>{" "}
               <br></br>A creative outlet where we publish a series of sets,
-              mixes, and productions coming from Endemit team, or music recorded
-              at Endemit events.
+              mixes, and productions coming from Endemit team, and music
+              recorded at Endemit events.
             </p>
           </div>
 
