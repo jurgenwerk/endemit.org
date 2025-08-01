@@ -30,11 +30,16 @@ export default function Music() {
 
           {/* Emit Section */}
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-white">Emit</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Emit is creative outlet led by Endemit where we publish sets,
-              mixes, and productions coming from our team, or music recorded at
-              our events.
+            {/* <h2 className="text-2xl font-bold text-white">
+              <b>Emit</b>
+            </h2> */}
+            <p className="text-gray-300 leading-relaxed text-xl">
+              <span className="font-bold text-3xl  tracking-wider text-white">
+                emit
+              </span>{" "}
+              <br></br>A creative outlet where we publish a series of sets,
+              mixes, and productions coming from Endemit team, or music recorded
+              at Endemit events.
             </p>
           </div>
 
