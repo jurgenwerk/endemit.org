@@ -16,7 +16,7 @@ export default function EventFooter({
   locationLink = "/ius-primae-noctis/location",
 }: EventFooterProps) {
   return (
-    <div className="fixed bottom-0 m-0 w-full md:hidden">
+    <div className="fixed bottom-0 m-0 w-full lg:hidden">
       <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
         <div className="my-auto flex">
           <Link
