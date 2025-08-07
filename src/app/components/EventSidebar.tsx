@@ -12,6 +12,7 @@ interface EventSidebarProps {
   ticketsText?: string;
   ticketsPath?: string;
   showFoodAndDrinks?: boolean;
+  showMapAndTimetable?: boolean;
   location?: {
     firstLine: string;
     secondLine?: string;
@@ -25,6 +26,7 @@ export default function EventSidebar({
   ticketsText = "TICKETS",
   ticketsPath,
   showFoodAndDrinks = false,
+  showMapAndTimetable = false,
   location = {
     firstLine: "Grad Kodeljevo",
     secondLine: "Ul. Carla Benza 20",
@@ -131,6 +133,16 @@ export default function EventSidebar({
             >
               Location
             </Link>
+
+            {showMapAndTimetable && (
+              <Link
+                onClick={close}
+                href={`${eventPath}/map-and-timetable`}
+                className="block rounded-md px-3 py-2 text-right font-medium uppercase hover:text-gray-300 sm:pt-2 pt-4"
+              >
+                Map & Timetable
+              </Link>
+            )}
 
             {showFoodAndDrinks && (
               <Link
