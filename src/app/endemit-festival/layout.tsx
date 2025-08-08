@@ -22,7 +22,8 @@ export default function FestivalLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return  <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
+  return (
+    <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <EventSidebar
         eventName={"Endemit Festival"}
         eventPath={"/endemit-festival"}
@@ -36,11 +37,11 @@ export default function FestivalLayout({
           secondLine: "15-17 Aug 2025",
         }}
       />
-     <div
+      <div
         className="lg:pl-72 min-h-screen"
         style={{ background: "rgb(226 221 255)" }}
       >
-          {children}
+        {children}
       </div>
       <EventFooter
         ticketsLink="/endemit-festival/subscribe"
@@ -49,5 +50,6 @@ export default function FestivalLayout({
         locationAddress="15-17 Aug 2025"
         locationLink="/endemit-festival/location"
       />
-    </body>;
+    </body>
+  );
 }

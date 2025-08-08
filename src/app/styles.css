@@ -8,7 +8,6 @@
   src: url("/fonts/Metamorphous-Regular.ttf") format("truetype");
 }
 
-
 .font-metamorphous {
-  font-family: 'Metamorphous-Regular';
+  font-family: "Metamorphous-Regular";
 }
