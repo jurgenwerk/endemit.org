@@ -31,7 +31,7 @@ export default function Home() {
           </p>
           <div className="max-w-md mb-12">
             <form
-              onSubmit={async (e) => {
+              onSubmit={async e => {
                 e.preventDefault();
                 const form = e.target as HTMLFormElement;
                 const email = (

@@ -11,7 +11,7 @@ export default function FestivalSubscribe() {
       </p>
       <div className="max-w-xl mx-auto mb-12 px-4">
         <form
-          onSubmit={async (e) => {
+          onSubmit={async e => {
             e.preventDefault();
             const form = e.target as HTMLFormElement;
             const email = (form.elements.namedItem("email") as HTMLInputElement)

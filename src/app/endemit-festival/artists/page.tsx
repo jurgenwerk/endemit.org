@@ -1,19 +1,23 @@
 "use client";
 
-import EventSidebar from "@/app/components/EventSidebar";
-import EventFooter from "@/components/EventFooter";
 import Image from "next/image";
 
 interface Artist {
   name: string;
   photo: string;
   description: string;
+  stage?: "Dome" | "Day stage";
+  day?: "Friday" | "Saturday" | "Sunday";
+  time?: string;
 }
 
 const artists: Artist[] = [
   {
     name: "Rene Wise",
     photo: "/endemit-festival/artists/rene-wise.jpeg",
+    stage: "Dome",
+    day: "Saturday",
+    time: "00:00 - 02:00",
     description:
       "Rene Wise delivers powerful, percussive techno to stir up movement. His signature sound is grounded and driving — raw but modern rhythm set in motion to create atmospheric soundscapes, where body and sound converge. Never overbearing, always precise and in control. He curates the imprint Moving Pressure, a label that reflects his sound aesthetic: stripped-down, groove-heavy techno, coming from a background of percussion. Obscur's recent release on the label connects our scene with Rene's through a shared sonic ethos — tight, raw, and deeply felt.",
   },
@@ -88,66 +92,47 @@ const artists: Artist[] = [
 
 export default function Artists() {
   return (
-    <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
-      <EventSidebar
-        eventName={"Endemit Festival"}
-        eventPath={"/endemit-festival"}
-        fbUrl={"https://www.facebook.com/endemit.crew"}
-        ticketsPath={"/endemit-festival/subscribe"}
-        ticketsText={"SUBSCRIBE"}
-        showFoodAndDrinks={true}
-        location={{
-          firstLine: "Libeliče, Koroška",
-          secondLine: "15-17 Aug 2025",
-        }}
-      />
-      <div
-        className="lg:pl-72 min-h-screen"
-        style={{ background: "rgb(226 221 255)" }}
-      >
-        <div className="m-auto max-w-6xl space-y-8 p-5 text-black">
-          <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">
-            Artists
-          </h2>
+    <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
+      <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">Artists</h2>
 
-          <div className="space-y-12">
-            {artists.map((artist, index) => (
-              <div
-                key={index}
-                className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg"
-              >
-                <div className="flex flex-col lg:flex-row gap-6">
-                  {/* Artist Photo */}
-                  <div className="lg:w-1/3 flex-shrink-0">
-                    {artist.photo === "/placeholder-artist.jpg" ? (
-                      <div className="w-full h-64 lg:h-80 rounded-lg bg-gray-300 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="text-6xl mb-2">🎵</div>
-                          <div className="text-gray-600 font-medium">
-                            Photo Coming Soon
-                          </div>
-                        </div>
+      <div className="space-y-12">
+        {artists.map((artist, index) => (
+          <div
+            key={index}
+            className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg"
+          >
+            <div className="flex flex-col lg:flex-row gap-6">
+              {/* Artist Photo */}
+              <div className="lg:w-1/3 flex-shrink-0">
+                {artist.photo === "/placeholder-artist.jpg" ? (
+                  <div className="w-full h-64 lg:h-80 rounded-lg bg-gray-300 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-6xl mb-2">🎵</div>
+                      <div className="text-gray-600 font-medium">
+                        Photo Coming Soon
                       </div>
-                    ) : (
-                      <div className="relative w-full rounded-lg overflow-hidden bg-gray-200">
-                        <Image
-                          src={artist.photo}
-                          alt={artist.name}
-                          width={400}
-                          height={600}
-                          className="w-full h-auto object-cover"
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          onError={(e) => {
-                            console.error(
-                              `Failed to load image for ${artist.name}:`,
-                              artist.photo
-                            );
-                            // Fallback to placeholder
-                            const target = e.target as HTMLImageElement;
-                            target.style.display = "none";
-                            const parent = target.parentElement;
-                            if (parent) {
-                              parent.innerHTML = `
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative w-full rounded-lg overflow-hidden bg-gray-200">
+                    <Image
+                      src={artist.photo}
+                      alt={artist.name}
+                      width={400}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      onError={e => {
+                        console.error(
+                          `Failed to load image for ${artist.name}:`,
+                          artist.photo
+                        );
+                        // Fallback to placeholder
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `
                                 <div class="w-full h-64 lg:h-80 flex items-center justify-center bg-gray-300">
                                   <div class="text-center">
                                     <div class="text-6xl mb-2">🎵</div>
@@ -155,35 +140,26 @@ export default function Artists() {
                                   </div>
                                 </div>
                               `;
-                            }
-                          }}
-                        />
-                      </div>
-                    )}
+                        }
+                      }}
+                    />
                   </div>
-
-                  {/* Artist Info */}
-                  <div className="lg:w-2/3 flex flex-col justify-center">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 uppercase">
-                      {artist.name}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
-                      {artist.description}
-                    </p>
-                  </div>
-                </div>
+                )}
               </div>
-            ))}
+
+              {/* Artist Info */}
+              <div className="lg:w-2/3 flex flex-col justify-center">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900 uppercase">
+                  {artist.name}
+                </h3>
+                <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
+                  {artist.description}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
-      <EventFooter
-        ticketsLink="/endemit-festival/subscribe"
-        ticketsText="SUBSCRIBE"
-        locationName="Libeliče, Koroška"
-        locationAddress="15-17 Aug 2025"
-        locationLink="/endemit-festival/location"
-      />
-    </body>
+    </div>
   );
 }
