@@ -101,7 +101,7 @@ export default function About() {
               <p className="text-gray-300 mt-2">
                 <a
                   href="mailto:endemit@endemit.org"
-                  className="hover:text-white"
+                  className="hover:text-white underline"
                 >
                   endemit@endemit.org
                 </a>
