@@ -38,6 +38,23 @@ export default function About() {
             </p>
 
             <div className="mt-12 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                CONSTITUTION OF THE ENDEMIT CULTURAL ASSOCIATION
+              </h2>
+              <div>
+                🔗 &nbsp;
+                <a
+                  href="/Statut_Endemit_31.7.2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white underline"
+                >
+                  Statut ENDEMIT 31.7.2025 (slo)
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-gray-800">
               <h2 className="text-2xl font-bold text-white mb-6">MEMBERSHIP</h2>
               <p className="text-lg leading-relaxed mb-4">
                 To enjoy the perks of being a member of the Endemit cultural
@@ -48,7 +65,8 @@ export default function About() {
                 >
                   endemit@endemit.org
                 </a>
-                .
+                . You can also to hand a signed membership application to a
+                fellow member in person.
               </p>
               <div className="space-y-2">
                 <div>
@@ -73,23 +91,6 @@ export default function About() {
                     ENDEMIT membership application (en)
                   </a>
                 </div>
-              </div>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-800">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                CONSTITUTION OF THE ENDEMIT CULTURAL ASSOCIATION
-              </h2>
-              <div>
-                🔗 &nbsp;
-                <a
-                  href="/Statut_Endemit_31.7.2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white underline"
-                >
-                  Statut ENDEMIT 31.7.2025 (slo)
-                </a>
               </div>
             </div>
 
