@@ -15,9 +15,10 @@ export default function About() {
 
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
-              Endemit is a collective of individuals drawn to sound, code, and
-              image, quietly crafting in their own time. Each project is a
-              reflection of personal obsessions and shared values.
+              Endemit is a cultural association and a collective of individuals
+              drawn to sound, code, and image, quietly crafting in their own
+              time. Each project is a reflection of personal obsessions and
+              shared values.
             </p>
 
             <p className="text-lg leading-relaxed">
@@ -35,6 +36,62 @@ export default function About() {
               We&apos;ll keep creating as long as there&apos;s something inside
               worth expressing. No more. No less.
             </p>
+
+            <div className="mt-12 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-6">MEMBERSHIP</h2>
+              <p className="text-lg leading-relaxed mb-4">
+                To enjoy the perks of being a member of the Endemit cultural
+                association, fill the form and send it to{" "}
+                <a
+                  href="mailto:endemit@endemit.org"
+                  className="text-gray-300 hover:text-white underline"
+                >
+                  endemit@endemit.org
+                </a>
+                .
+              </p>
+              <div className="space-y-2">
+                <div>
+                  🔗 &nbsp;
+                  <a
+                    href="/ENDEMIT pristopna slo.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white underline"
+                  >
+                    ENDEMIT pristopna izjava (slo)
+                  </a>
+                </div>
+                <div>
+                  🔗 &nbsp;
+                  <a
+                    href="/ENDEMIT pristopna ang.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white underline"
+                  >
+                    ENDEMIT membership application (en)
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-gray-800">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                CONSTITUTION OF THE ENDEMIT CULTURAL ASSOCIATION
+              </h2>
+              <div>
+                🔗 &nbsp;
+                <a
+                  href="/Statut_Endemit_31.7.2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white underline"
+                >
+                  Statut ENDEMIT 31.7.2025 (slo)
+                </a>
+              </div>
+            </div>
 
             <div className="mt-12 pt-8 border-t border-gray-800">
               <h2 className="text-2xl font-bold text-white mb-4">CONTACT</h2>
