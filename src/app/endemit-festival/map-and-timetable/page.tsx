@@ -23,10 +23,10 @@ export default function MapAndTimetable() {
 
       <Image
         className="rounded-lg"
-        src="/endemit-festival/timetable/endemit-festival-timetable-2025.png"
+        src="/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
         alt="Endemit 2025 festival timetable"
-        width={1523}
-        height={676}
+        width={3000}
+        height={1330}
       />
     </div>
   );
