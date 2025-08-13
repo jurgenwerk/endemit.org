@@ -1,7 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
-import EventFooter from "@/components/EventFooter";
+import EventFooter from "@/app/components/EventFooter";
 
 export default function Tickets() {
   return (

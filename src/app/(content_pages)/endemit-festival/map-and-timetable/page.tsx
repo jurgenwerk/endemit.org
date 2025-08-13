@@ -1,4 +1,5 @@
 import Image from "next/image";
+import NowPlayingAndNext from "@/app/components/NowPlayingAndNext";
 import Link from "next/link";
 
 export default function MapAndTimetable() {
@@ -14,6 +15,8 @@ export default function MapAndTimetable() {
         timetable ensures you&apos;ll discover every artist and enjoy the
         magical corners of our wilderness at just the right moment.
       </p>
+      <NowPlayingAndNext />
+
       <Link href="/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
         <Image
           className="rounded-lg"
@@ -33,6 +36,7 @@ export default function MapAndTimetable() {
           height={1330}
         />
       </Link>
+
     </div>
   );
 }

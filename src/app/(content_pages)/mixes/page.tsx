@@ -16,7 +16,7 @@ export default function Mixes() {
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
         <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
-          <Link href="/" onClick={close} className="lg:mx-3 lg:ml-auto">
+          <Link href="/public" onClick={close} className="lg:mx-3 lg:ml-auto">
             <Image
               src="/endemit.png"
               alt="ENDEMIT"
@@ -80,7 +80,7 @@ export default function Mixes() {
           <nav className="space-y-6 px-5 pb-7 pt-5 text-xl">
             <Link
               onClick={close}
-              href="/"
+              href="/public"
               className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
             >
               Home
