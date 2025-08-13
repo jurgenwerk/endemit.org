@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import EventSidebar from "@/app/components/EventSidebar";
-import EventFooter from "@/components/EventFooter";
+import EventFooter from "@/app/components/EventFooter";
 
 export const metadata: Metadata = {
   title: "Endemit Festival",

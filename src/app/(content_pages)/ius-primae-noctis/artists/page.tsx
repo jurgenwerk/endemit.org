@@ -1,7 +1,7 @@
 "use client";
 
 import EventSidebar from "@/app/components/EventSidebar";
-import EventFooter from "@/components/EventFooter";
+import EventFooter from "@/app/components/EventFooter";
 import Image from "next/image";
 
 export default function Artists() {

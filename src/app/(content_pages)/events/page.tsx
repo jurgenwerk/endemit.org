@@ -2,7 +2,7 @@
 
 import UpcomingEvents from "@/app/components/UpcomingEvents";
 import LandingPageSidebar from "@/app/components/LandingPageSidebar";
-import PastEvents from "../components/PastEvents";
+import PastEvents from "../../components/PastEvents";
 
 export default function EventsPage() {
   return (

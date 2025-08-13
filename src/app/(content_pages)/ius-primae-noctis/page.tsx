@@ -1,7 +1,7 @@
 import EventSidebar from "@/app/components/EventSidebar";
 import Link from "next/link";
 import Image from "next/image";
-import EventFooter from "@/components/EventFooter";
+import EventFooter from "@/app/components/EventFooter";
 
 export default function IusPrimaeNoctis() {
   return (
@@ -28,7 +28,7 @@ export default function IusPrimaeNoctis() {
 
           <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
 
-          <Link href={`/ius-primae-noctis/artists`} className="pt-2">
+          <Link href={`/src/app/(content_pages)/ius-primae-noctis/artists`} className="pt-2">
             <h3 className="main-text-color mt-6 text-center text-xl md:text-2xl ">
               MOKILOK
             </h3>
