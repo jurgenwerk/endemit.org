@@ -11,6 +11,7 @@ export interface Artist {
 export interface ArtistWithTimestamp extends Artist {
     startTime: Date;
     endTime: Date;
+    id?: string;
 }
 
 export const artistConfig: Artist[] = [
@@ -101,7 +102,7 @@ export const artistConfig: Artist[] = [
             "Pvtr has drawn up a blueprint for interlacing ambient techno with dub influences and meditative rhythms, encouraging a deep interaction between spacious yet subtle sonic structures. His gradual immersion in the vastness of the unknown invites stillness and focus, exploring the space between sound with much diligence and intent. Expect a thoughtful journey into the depths of techno.",
         stage: "Dome",
         day: "Friday",
-        time: "16:00",
+        time: "18:00",
         duration: 150,
     },
     {

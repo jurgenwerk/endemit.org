@@ -1,12 +1,14 @@
 "use client";
 
 import {ArtistWithTimestamp,  artistConfig, eventConfig} from "@/app/(content_pages)/endemit-festival/config";
-import {useMemo} from "react";
+import {useMemo, useState} from "react";
 import ArtistCard from "@/app/components/ArtistCard";
-import NowPlayingAndNext from "@/app/components/NowPlayingAndNext";
+import ArtistCarousel from "@/app/components/ArtistCarousel";
 
+type SortOption = 'default' | 'timestamp';
 
 export default function Artists() {
+    const [sortBy, setSortBy] = useState<SortOption>('default');
 
     // Convert artist data to include UTC timestamps
     const artistsWithTimestamps = useMemo((): ArtistWithTimestamp[] => {
@@ -36,20 +38,45 @@ export default function Artists() {
             })
     }, []);
 
-
+    // Sort artists based on selected option
+    const sortedArtists = useMemo(() => {
+        if (sortBy === 'timestamp') {
+            return [...artistsWithTimestamps].sort((a, b) =>
+                a.startTime.getTime() - b.startTime.getTime()
+            );
+        }
+        // Default: maintain original config order
+        return artistsWithTimestamps;
+    }, [artistsWithTimestamps, sortBy]);
 
     return (
         <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
             <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">Artists</h2>
 
-            <NowPlayingAndNext />
+            <ArtistCarousel />
 
-            {/* All Artists (sorted by config order) */}
+            {/* All Artists with sorting controls */}
             <div className="space-y-4">
-                <h3 className="text-2xl font-bold uppercase">Lineup</h3>
+                <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-bold uppercase">Lineup</h3>
+
+                    {/* Sort Controls */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm font-medium">Sort by:</span>
+                        <select
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value as SortOption)}
+                            className="px-1 py-1 border border-gray-300 rounded text-sm bg-white"
+                        >
+                            <option value="default">Default</option>
+                            <option value="timestamp">Performance Time</option>
+                        </select>
+                    </div>
+                </div>
+
                 <div className="space-y-12">
-                    {artistsWithTimestamps.map((artist, index) => (
-                        <ArtistCard key={`all-${index}`} artist={artist} mounted={true} />
+                    {sortedArtists.map((artist, index) => (
+                        <ArtistCard key={`all-${index}`} artist={artist} />
                     ))}
                 </div>
             </div>

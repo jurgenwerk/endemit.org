@@ -2,9 +2,9 @@ export const eventConfig = {
     year: 2025,
     month: 8,
     dates: {
-        Friday: 13,
-        Saturday: 14,
-        Sunday: 15,
+        Friday: 15,
+        Saturday: 16,
+        Sunday: 17,
     },
     timezone: "Europe/Ljubljana", // Festival timezone
 };

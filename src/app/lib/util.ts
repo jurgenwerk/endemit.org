@@ -17,9 +17,8 @@ export const getTimeUntil = (currentTime: Date, date: Date) => {
   const hours = Math.floor(diff / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-  if (hours > 12) {
-    const days = Math.floor(hours / 24);
-    return `in ${days} day${days > 1 ? "s" : ""}`;
+  if (hours > 10) {
+    return null;
   } else if (hours > 0) {
     return `in ${hours}h ${minutes}m`;
   } else {
