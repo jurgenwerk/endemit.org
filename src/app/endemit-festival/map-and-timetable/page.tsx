@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function MapAndTimetable() {
   return (
@@ -13,21 +14,25 @@ export default function MapAndTimetable() {
         timetable ensures you&apos;ll discover every artist and enjoy the
         magical corners of our wilderness at just the right moment.
       </p>
-      <Image
-        className="rounded-lg"
-        src="/endemit-festival/map/endemit-festival-map-2025.webp"
-        alt="Endemit 2025 festival map"
-        width={3000}
-        height={4263}
-      />
+      <Link href="/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
+        <Image
+          className="rounded-lg"
+          src="/endemit-festival/map/endemit-festival-map-2025.webp"
+          alt="Endemit 2025 festival map"
+          width={3000}
+          height={4263}
+        />
+      </Link>
 
-      <Image
-        className="rounded-lg"
-        src="/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
-        alt="Endemit 2025 festival timetable"
-        width={3000}
-        height={1330}
-      />
+      <Link href="/endemit-festival/timetable/endemit-festival-timetable-2025.webp" target="_blank" className="block">
+        <Image
+          className="rounded-lg"
+          src="/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
+          alt="Endemit 2025 festival timetable"
+          width={3000}
+          height={1330}
+        />
+      </Link>
     </div>
   );
 }
