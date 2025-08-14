@@ -57,7 +57,7 @@ export default function ArtistCard({artist}: ArtistCardProps) {
           {/* Stage and Time Info */}
           <div className="mt-4 space-y-2">
             <div className="text-lg lg:text-xl font-bold text-gray-900 uppercase">
-             {formatDay(artist.startTime)} {formatTime(artist.startTime)} -{" "}
+              {formatDay(artist.startTime)} {formatTime(artist.startTime)} -{" "}
               {formatTime(artist.endTime)} @ {artist.stage}
             </div>
           </div>

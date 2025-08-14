@@ -3,7 +3,6 @@ import Image from "next/image";
 import {formatDay, formatTime, getTimeUntil} from "@/app/lib/util";
 import clsx from "clsx";
 
-
 interface ArtistSnippetProps {
   artist: ArtistWithTimestamp;
   isLive?: boolean;

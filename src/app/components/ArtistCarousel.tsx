@@ -70,7 +70,7 @@ const getTimelineItems = (timelineArtists: ArtistWithTimestamp[]) => {
   return items;
 };
 
-function ArtistCarousel({headline = 'Up next'} :ArtistCarouselProps) {
+function ArtistCarousel({headline = 'Up next'}: ArtistCarouselProps) {
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
   const [mounted, setMounted] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -94,7 +94,7 @@ function ArtistCarousel({headline = 'Up next'} :ArtistCarouselProps) {
 
   const isArtistLive = useCallback((artist: ArtistWithTimestamp) => {
     return currentTimeStamp >= artist.startTime.getTime() &&
-           currentTimeStamp < artist.endTime.getTime();
+      currentTimeStamp < artist.endTime.getTime();
   }, [currentTimeStamp]);
 
   // Debounced scroll function
@@ -168,7 +168,7 @@ function ArtistCarousel({headline = 'Up next'} :ArtistCarouselProps) {
     return null;
   }
 
-  if(timelineItems.length === 0) {
+  if (timelineItems.length === 0) {
     return null;
   }
 
@@ -213,7 +213,7 @@ function ArtistCarousel({headline = 'Up next'} :ArtistCarouselProps) {
               <div
                 key={item.id}
                 className="flex-shrink-0 min-w-[300px] max-w-[300px]"
-                style={{ scrollSnapAlign: 'start' }}
+                style={{scrollSnapAlign: 'start'}}
               >
                 <ArtistSnippet
                   currentTime={currentTime}
@@ -234,6 +234,7 @@ function ArtistCarousel({headline = 'Up next'} :ArtistCarouselProps) {
           scrollbar-width: none;
           -webkit-overflow-scrolling: touch;
         }
+
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }
