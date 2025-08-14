@@ -48,13 +48,13 @@ export default function AfterPurchase() {
               </div>
               <div className="flex justify-center space-x-4">
                 <Link
-                  href={`/src/app/(content_pages)/ius-primae-noctis/artists`}
+                  href={`/ius-primae-noctis/artists`}
                   className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
                 >
                   View Artists
                 </Link>
                 <Link
-                  href={`/src/app/(content_pages)/ius-primae-noctis/location`}
+                  href={`/ius-primae-noctis/location`}
                   className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
                 >
                   View Location
