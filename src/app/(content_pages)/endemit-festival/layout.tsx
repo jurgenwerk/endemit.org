@@ -28,8 +28,6 @@ export default function FestivalLayout({
         eventName={"Endemit Festival"}
         eventPath={"/endemit-festival"}
         fbUrl={"https://www.facebook.com/endemit.crew"}
-        ticketsPath={"/endemit-festival/subscribe"}
-        ticketsText={"SUBSCRIBE"}
         showFoodAndDrinks={true}
         showMapAndTimetable={true}
         location={{
@@ -44,8 +42,6 @@ export default function FestivalLayout({
         {children}
       </div>
       <EventFooter
-        ticketsLink="/endemit-festival/subscribe"
-        ticketsText="SUBSCRIBE"
         locationName="Libeliče, Koroška"
         locationAddress="15-17 Aug 2025"
         locationLink="/endemit-festival/location"
