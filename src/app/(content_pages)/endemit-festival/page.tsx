@@ -1,7 +1,5 @@
 "use client";
 
-import FestivalSubscribe from "@/app/components/FestivalSubscribe";
-
 export default function EndemitFestival() {
   return (
     <div className="lg:max-w-100 mx-auto  sm:max-w-full">
