@@ -27,7 +27,7 @@ export default function Home() {
             SUBSCRIBE
           </h1>
           <p className="text-gray-400 mb-8">
-            Receive updates about our next events
+            Receive updates about our upcoming events, music, and announcements
           </p>
           <div className="max-w-md mb-12">
             <form
