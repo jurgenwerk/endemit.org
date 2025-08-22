@@ -46,3 +46,11 @@ next-env.d.ts
 .env.development
 .env.production
 .env*.local
+/.idea/endemit-v3.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/prettier.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
