@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   description:
     "Electronic music festival in Libeliče, Slovenia. August 15-17, 2025.",
   openGraph: {
-    title: "Endemit Festival",
-    description:
-      "Electronic music festival in Libeliče, Slovenia. August 15-17, 2025.",
     images: ["/endemit-festival/cover.jpg"],
   },
   twitter: {
@@ -27,8 +24,8 @@ export default function FestivalLayout({
       <Sidebar
         navigationItems={[
           {
-            label: "← Home",
-            href: "/",
+            label: "← Events",
+            href: "/events",
           },
           {
             label: "Endemit Festival",

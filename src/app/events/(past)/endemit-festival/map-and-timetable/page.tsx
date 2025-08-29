@@ -17,7 +17,7 @@ export default function MapAndTimetable() {
       </p>
 
       <h3 className="text-2xl font-bold uppercase">Map</h3>
-      <Link href="/src/app/events/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
+      <Link href="/src/app/events/(past)/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
         <Image
           className="rounded-lg"
           src="/endemit-festival/map/endemit-festival-map-2025.webp"

@@ -7,10 +7,7 @@ export const metadata: Metadata = {
   description:
     "Issun-Bōshi vinyl release event. Grad Kader, Ljubljana September 20 2025.",
   openGraph: {
-    title: "Issun-Bōshi vinyl release",
-    description:
-      "Issun-Bōshi vinyl release event. Grad Kader, Ljubljana September 20 2025.",
-    images: ["/endemit-festival/cover.jpg"],
+    images: ["/issun-boshi-vinyl-release/cover-without-border.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -29,9 +26,9 @@ export default function IssunBoshiVinylReleaseLayout({
       <Sidebar
         activeColor="text-issun-boshi-yellow"
         navigationItems={[
-          { label: "← Home", href: "/" },
+          { label: "← Events", href: "/events" },
           {
-            label: "Event",
+            label: "Vinyl release",
             href: "/events/issun-boshi-vinyl-release",
           },
           {
@@ -65,9 +62,11 @@ export default function IssunBoshiVinylReleaseLayout({
       <div className="lg:pl-72 min-h-screen">{children}</div>
 
       <EventFooter
-        locationName="Grad Kodeljevo"
+        locationName="Kader, Grad Kodeljevo"
         locationAddress="Ul. Carla Benza 20"
         locationLink="/events/issun-boshi-vinyl-release/location"
+        ticketsLink={"/events/issun-boshi-vinyl-release/tickets"}
+        ticketsText={"TICKETS"}
       />
     </body>
   );

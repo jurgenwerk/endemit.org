@@ -3,16 +3,9 @@ import Sidebar from "@/app/(components)/Sidebar";
 import EventFooter from "@/app/(components)/EventFooter";
 
 export const metadata: Metadata = {
-  title: {
-    default: "Endemit",
-    template: "%s | Endemit",
-  },
-  description:
-    "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025. Tickets available now.",
+  title: "Ius Primae Noctis",
+  description: "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025.",
   openGraph: {
-    title: "Endemit",
-    description:
-      "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025. Tickets available now.",
     images: ["/ius-primae-noctis/cover.jpg"],
   },
   twitter: {
@@ -22,6 +15,7 @@ export const metadata: Metadata = {
     icon: "/endemit-logo.jpg",
   },
 };
+
 
 export default function IusPrimaeNoctisLayout({
   children,
@@ -33,8 +27,8 @@ export default function IusPrimaeNoctisLayout({
       <Sidebar
         navigationItems={[
           {
-            label: "← Home",
-            href: "/",
+            label: "← Events",
+            href: "/events",
           },
           {
             label: "Ius Primae Noctis",
@@ -55,19 +49,10 @@ export default function IusPrimaeNoctisLayout({
         ]}
         socialLinks={[
           {
+            id: "facebook",
             href: "https://www.facebook.com/events/985739330046224",
             iconSrc: "/facebook.png",
             alt: "Facebook",
-          },
-          {
-            href: "https://instagram.com/ende.mit",
-            iconSrc: "/instagram.png",
-            alt: "Instagram",
-          },
-          {
-            href: "mailto:endemit@endemit.org",
-            iconSrc: "/email.png",
-            alt: "Email",
           },
         ]}
         footerAction={{

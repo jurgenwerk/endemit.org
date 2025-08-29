@@ -53,3 +53,7 @@ button:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+.link {
+  @apply underline decoration-dotted underline-offset-4 hover:opacity-80 focus:opacity-80 active:opacity-95 hover:decoration-solid;
+}

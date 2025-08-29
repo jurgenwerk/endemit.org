@@ -1,6 +1,18 @@
 import events from "@/app/(config)/events.config";
 import EventList from "@/app/(components)/EventList";
 import EndemitSubscribe from "@/app/(components)/EndemitSubscribe";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Events",
+  description: "Endemit events are rare moments when these inner worlds surface, shaped with care, emotion, and intent. No two are the same, but all come from the same place.",
+  openGraph: {
+     images: ["/endemit-logo.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+};
 
 export default function EventsPage() {
   return (

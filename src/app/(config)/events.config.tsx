@@ -20,6 +20,7 @@ const events: EventProps[] = [
   },
   {
     title: "TBA",
+    annotation: "[MORE INFO SOON]",
     dateString: "21 Nov 2025",
     location: "Grad Kodeljevo",
     artists: ["PULSO", "RHAEGAL"],

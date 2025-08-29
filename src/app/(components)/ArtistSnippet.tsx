@@ -1,4 +1,4 @@
-import { ArtistWithTimestamp } from "@/app/events/endemit-festival/(config)";
+import { ArtistWithTimestamp } from "@/app/events/(past)/endemit-festival/(config)";
 import Image from "next/image";
 import { formatDay, formatTime, getTimeUntil } from "@/app/(lib)/util";
 import clsx from "clsx";

@@ -9,6 +9,7 @@ export default function RootLayout({
     <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
       <Sidebar
         navigationItems={[
+          { label: "Main", href: "/" },
           { label: "Events", href: "/events" },
           { label: "Music", href: "/music" },
           { label: "Merch", href: "/merch" },

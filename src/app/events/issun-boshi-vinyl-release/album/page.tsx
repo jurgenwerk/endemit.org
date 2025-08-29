@@ -1,7 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Album",
+
+};
 
 export default function AlbumPage() {
   return (

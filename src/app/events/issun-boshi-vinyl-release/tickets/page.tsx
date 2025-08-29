@@ -1,12 +1,8 @@
-"use client";
-
 import EndemitSubscribe from "@/app/(components)/EndemitSubscribe";
-import { ParallaxProvider } from "react-scroll-parallax";
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
 
 export default function TicketsPage() {
   return (
-    <ParallaxProvider>
     <div className="m-auto max-w-5xl space-y-6 p-5 text-white font-typo">
      <Headline title="Tickets" />
 
@@ -28,7 +24,5 @@ export default function TicketsPage() {
         <EndemitSubscribe />
       </div>
     </div>
-
-    </ParallaxProvider>
   );
 }

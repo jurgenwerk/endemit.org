@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata: Metadata = {
   title: {
     default: "Endemit",
-    template: "%s | Endemit",
+    template: "%s • Endemit",
   },
   description: "Series of events curated by Endemit crew.",
   openGraph: {

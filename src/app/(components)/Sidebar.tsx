@@ -19,6 +19,7 @@ interface SocialLink {
   alt: string;
   width?: number;
   height?: number;
+  id: "facebook" | "email" | "instagram";
 }
 
 interface FooterAction {
@@ -43,7 +44,7 @@ interface FlexibleSidebarProps {
   // Navigation items
   navigationItems: NavigationItem[];
 
-  // Social links (optional)
+  // Social links (optional) - will merge with defaults
   socialLinks?: SocialLink[];
 
   // Footer configuration (optional)
@@ -62,23 +63,7 @@ export default function Sidebar({
   logoHeight = 24,
   logoHref = "/",
   navigationItems,
-  socialLinks = [
-    {
-      href: "https://www.facebook.com/endemit.crew",
-      iconSrc: "/facebook.png",
-      alt: "Facebook",
-    },
-    {
-      href: "https://instagram.com/ende.mit",
-      iconSrc: "/instagram.png",
-      alt: "Instagram",
-    },
-    {
-      href: "mailto:endemit@endemit.org",
-      iconSrc: "/email.png",
-      alt: "Email",
-    },
-  ],
+  socialLinks = [],
   footerAction,
   footerInfo,
   showFooter = true,
@@ -86,6 +71,33 @@ export default function Sidebar({
 }: FlexibleSidebarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  // Default social links
+  const defaultSocialLinks: SocialLink[] = [
+    {
+      id: "facebook",
+      href: "https://www.facebook.com/endemit.crew",
+      iconSrc: "/facebook.png",
+      alt: "Facebook",
+    },
+    {
+      id: "instagram",
+      href: "https://instagram.com/ende.mit",
+      iconSrc: "/instagram.png",
+      alt: "Instagram",
+    },
+    {
+      id: "email",
+      href: "mailto:endemit@endemit.org",
+      iconSrc: "/email.png",
+      alt: "Email",
+    },
+  ];
+
+  const mergedSocialLinks = defaultSocialLinks.map(defaultLink => {
+    const customLink = socialLinks.find(link => link.id === defaultLink.id);
+    return customLink ? { ...defaultLink, ...customLink } : defaultLink;
+  });
 
   const isItemActive = (item: NavigationItem) => {
     if (item.isActive) {
@@ -110,7 +122,7 @@ export default function Sidebar({
   return (
     <div className="fixed top-0 !z-40 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto lg:mt-12">
-        <Link href={logoHref} onClick={close} className="lg:mx-3 lg:ml-auto">
+        <Link href={logoHref} onClick={close} className="lg:mx-3 lg:ml-auto hover:opacity-70">
           <Image
             src={logoSrc}
             alt={logoAlt}
@@ -166,7 +178,7 @@ export default function Sidebar({
       </button>
 
       <div
-        className={clsx("overflow-y-auto lg:static lg:block", {
+        className={clsx("overflow-y-auto lg:static lg:block opacity-90", {
           "fixed inset-x-0 bottom-0 top-14 mt-px bg-black": isMenuOpen,
           hidden: !isMenuOpen,
         })}
@@ -181,8 +193,8 @@ export default function Sidebar({
                 href={item.href}
                 className={clsx(
                   "block rounded-md px-3 py-2 text-right font-medium uppercase sm:pt-2 pt-4",
-                  isActive && activeColor,
-                  !isActive && "text-white hover:text-gray-300"
+                  isActive && `${activeColor} cursor-default`,
+                  !isActive && "text-white hover:text-gray-300 active:text-gray-600",
                 )}
               >
                 {item.label}
@@ -191,11 +203,11 @@ export default function Sidebar({
           })}
         </nav>
 
-        {socialLinks.length > 0 && (
+        {mergedSocialLinks.length > 0 && (
           <div className="social-icons flex justify-end pr-6">
-            {socialLinks.map((social, index) => (
+            {mergedSocialLinks.map((social) => (
               <a
-                key={index}
+                key={social.id}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,5 +1,3 @@
-"use client";
-
 import { BannerLayer, Parallax, ParallaxBanner } from "react-scroll-parallax";
 
 export default function ParallaxHero() {

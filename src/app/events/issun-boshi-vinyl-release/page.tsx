@@ -2,9 +2,11 @@
 
 import ParallaxHero from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxHero";
 import Image from "next/image";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { ParallaxProvider } from "react-scroll-parallax";
 import Button from "@/app/(components)/Button";
 import ParallaxFooter from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxFooter";
+import ParallaxAlbum from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxAlbum";
+import Link from "next/link";
 
 export default function IssunBoshiVinylReleasePage() {
   return (
@@ -34,35 +36,7 @@ export default function IssunBoshiVinylReleasePage() {
 
             <div className="mt-4 flex items-center justify-center space-x-2 text-sm">
               <div className="relative">
-                <Parallax
-                  shouldAlwaysCompleteAnimation={true}
-                  scale={[0.2, 1, "easeInOutCubic"]}
-                  rotateX={[90, 0, "easeInOutCubic"]}
-                  startScroll={400}
-                  endScroll={800}
-                >
-                  <Image
-                    src="/issun-boshi-vinyl-release/album/issun-boshi-cover.png"
-                    alt="Issun Boshi Vinyl release"
-                    width={400}
-                    height={400}
-                    className="z-10 relative"
-                  />
-
-                  <Parallax
-                    shouldAlwaysCompleteAnimation={true}
-                    translateX={[-40, 0, "easeInOutCubic"]}
-                    className="absolute top-0"
-                  >
-                    <Image
-                      src="/issun-boshi-vinyl-release/album/issun-boshi-record.png"
-                      alt="Issun Boshi Vinyl release"
-                      width={400}
-                      height={400}
-                      className="animate-spin ml-52"
-                    />
-                  </Parallax>
-                </Parallax>
+                <ParallaxAlbum />
               </div>
             </div>
 
@@ -79,10 +53,10 @@ export default function IssunBoshiVinylReleasePage() {
                 <br />
                 Accompanied on this journey by his brother-by-heart and master
                 Ed Davenport, also known as Inland, MMali is about to open a new
-                chapter in life on{" "}
-                <span className={"text-issun-boshi-yellow font-normal"}>
-                  20 September in Kader
-                </span>
+                chapter in life {" "}
+                <Link className={"text-issun-boshi-yellow font-normal link"} href={"/events/issun-boshi-vinyl-release/location"}>
+                  on 20 September in Kader
+                </Link>
                 , adding production skills to his mixing achievements.
                 <br />
                 <br />
@@ -95,7 +69,7 @@ export default function IssunBoshiVinylReleasePage() {
             </div>
 
             <div className="flex flex-col gap-4 items-center justify-center">
-              <Button href="/events/issun-boshi-vinyl-release/tickets"  >
+              <Button href="/events/issun-boshi-vinyl-release/tickets">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -116,14 +90,20 @@ export default function IssunBoshiVinylReleasePage() {
               </Button>
 
               <div>
-                {["@19 Warm up w/ Rahul","@22 MMali", "@03 Inland"].map((artist) => (
-                  <div key={artist} className="text-issun-boshi-orange text-md">{artist}</div>))}
+                {["@19 Warm up w/ Rahul", "@22 MMali", "@03 Inland"].map(
+                  artist => (
+                    <div
+                      key={artist}
+                      className="text-issun-boshi-orange text-md"
+                    >
+                      {artist}
+                    </div>
+                  )
+                )}
               </div>
-
-
             </div>
           </div>
-         <ParallaxFooter/>
+          <ParallaxFooter />
         </div>
       </div>
     </ParallaxProvider>
