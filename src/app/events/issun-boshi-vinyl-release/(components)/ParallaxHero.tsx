@@ -107,9 +107,7 @@ export default function ParallaxHero() {
         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-7xl text-white font-thin ">
           Issun-Bōshi vinyl release
         </h1>
-        <div className="text-2xl text-white ">
-          INLAND • MMALI
-        </div>
+        <div className="text-2xl text-white ">INLAND • MMALI</div>
       </div>
     ),
   };
@@ -119,23 +117,25 @@ export default function ParallaxHero() {
       <Parallax shouldAlwaysCompleteAnimation={true} opacity={[0, 0.9]}>
         <div className="absolute w-full h-[120vh] inset-0 bg-gradient-to-t from-gray-900 to-blue-900 top-[-20vh]" />
       </Parallax>
-      <ParallaxBanner
-        layers={[
-          sun,
-          subheadline,
-          mountainFar,
-          mountainClose,
-          headline,
-          hillsFar,
-          buildings,
-          hillsClose,
-          floorPane,
-          stage,
-          tree,
-          clouds,
-        ]}
-        className="aspect-[9/16] lg:aspect-[16/9]   "
-      />
+      <div className={"overflow-hidden"}>
+        <ParallaxBanner
+          layers={[
+            sun,
+            subheadline,
+            mountainFar,
+            mountainClose,
+            headline,
+            hillsFar,
+            buildings,
+            hillsClose,
+            floorPane,
+            stage,
+            tree,
+            clouds,
+          ]}
+          className="aspect-[9/16] lg:aspect-[16/9] -mt-1"
+        />
+      </div>
     </div>
   );
 }

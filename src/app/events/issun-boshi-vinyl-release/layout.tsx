@@ -20,9 +20,16 @@ export default function IssunBoshiVinylReleaseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body
-      className="m-auto overflow-y-scroll pb-16 max-lg:my-14 bg-issun-boshi-purple"
-    >
+    <body className="m-auto overflow-y-scroll pb-16 max-lg:my-14 bg-issun-boshi-purple">
+      <div
+        className="fixed -z-10 top-0 bottom-0 left-0 right-0 bg-issun-boshi-purple opacity-30"
+        style={{
+          backgroundImage: "url('/worms.png')",
+          backgroundRepeat: "repeat",
+          backgroundBlendMode: "color-burn",
+          backgroundSize: "150px",
+        }}
+      />
       <Sidebar
         activeColor="text-issun-boshi-yellow"
         navigationItems={[

@@ -27,7 +27,7 @@ export default function MapAndTimetable() {
         />
       </Link>
 
-      <ArtistCarousel/>
+      {/*<ArtistCarousel/>*/}
 
       <h3 className="text-2xl font-bold uppercase">Timetable</h3>
       <Link href="/endemit-festival/timetable/endemit-festival-timetable-2025.webp" target="_blank" className="block">

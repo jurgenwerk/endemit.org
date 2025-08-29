@@ -30,7 +30,7 @@ export default function Subscribe({
     : 'text-gray-600 mb-8 mx-2 text-lg';
   const formContainerStyles = centered
     ? 'max-w-xl mx-auto mb-12 px-4'
-    : 'max-w-xl mb-16';
+    : 'max-w-xl ';
   const inputStyles = isDark
     ? 'w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500'
     : 'w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500';

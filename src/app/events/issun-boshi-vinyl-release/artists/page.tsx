@@ -1,28 +1,29 @@
 "use client";
 
-import {ArtistWithTimestamp, artistConfig, eventConfig} from "../(config)";
-import {useMemo, useState} from "react";
+import { ArtistWithTimestamp, artistConfig, eventConfig } from "../(config)";
+import { useMemo, useState } from "react";
 import ArtistCard from "@/app/(components)/ArtistCard";
 import ArtistCarousel from "@/app/(components)/ArtistCarousel";
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
 
-type SortOption = 'default' | 'timestamp';
+type SortOption = "default" | "timestamp";
 
 export default function ArtistsPage() {
-  const [sortBy, setSortBy] = useState<SortOption>('default');
+  const [sortBy, setSortBy] = useState<SortOption>("default");
 
   // Convert artist data to include UTC timestamps
   const artistsWithTimestamps = useMemo((): ArtistWithTimestamp[] => {
     return artistConfig
-      .filter((artist) => artist.day && artist.time)
-      .map((artist) => {
+      .filter(artist => artist.day && artist.time)
+      .map(artist => {
         const [hours, minutes] = artist.time!.split(":").map(Number);
-        const dayConfig = eventConfig.dates[artist.day as keyof typeof eventConfig.dates];
+        const dayConfig =
+          eventConfig.dates[artist.day as keyof typeof eventConfig.dates];
 
         // Create date in festival timezone
         const startDate = new Date(
           eventConfig.year,
-          (eventConfig.month - 1), // Month is 0-indexed
+          eventConfig.month - 1, // Month is 0-indexed
           dayConfig,
           hours,
           minutes
@@ -36,14 +37,14 @@ export default function ArtistsPage() {
           startTime: startDate,
           endTime: endDate,
         };
-      })
+      });
   }, []);
 
   // Sort artists based on selected option
   const sortedArtists = useMemo(() => {
-    if (sortBy === 'timestamp') {
-      return [...artistsWithTimestamps].sort((a, b) =>
-        a.startTime.getTime() - b.startTime.getTime()
+    if (sortBy === "timestamp") {
+      return [...artistsWithTimestamps].sort(
+        (a, b) => a.startTime.getTime() - b.startTime.getTime()
       );
     }
     // Default: maintain original config order
@@ -54,7 +55,9 @@ export default function ArtistsPage() {
     <div className="m-auto max-w-5xl space-y-6 p-5 font-typo">
       <Headline title="Artists" />
 
-      <ArtistCarousel/>
+      <div>
+        <ArtistCarousel />
+      </div>
 
       {/* All Artists with sorting controls */}
       <div className="space-y-4">
@@ -66,7 +69,7 @@ export default function ArtistsPage() {
             <span className="text-sm font-medium">Sort by:</span>
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortOption)}
+              onChange={e => setSortBy(e.target.value as SortOption)}
               className="px-1 py-1 border border-gray-300 rounded text-sm bg-white text-issun-boshi-purple"
             >
               <option value="default">Default</option>
@@ -77,7 +80,7 @@ export default function ArtistsPage() {
 
         <div className="space-y-12">
           {sortedArtists.map((artist, index) => (
-            <ArtistCard key={`all-${index}`} artist={artist}/>
+            <ArtistCard key={`all-${index}`} artist={artist} />
           ))}
         </div>
       </div>

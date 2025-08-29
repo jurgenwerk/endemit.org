@@ -53,7 +53,7 @@ export default function Artists() {
     <div className="m-auto max-w-5xl space-y-6 p-5 text-black">
       <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">Artists</h2>
 
-      <ArtistCarousel/>
+      {/*<ArtistCarousel/>*/}
 
       {/* All Artists with sorting controls */}
       <div className="space-y-4">

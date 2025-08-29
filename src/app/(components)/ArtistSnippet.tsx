@@ -43,7 +43,7 @@ export default function ArtistSnippet({
           </div>
           <div>
             {!isLive && getTimeUntil(currentTime, artist.startTime)}
-            <span>&nbsp;@ {artist.stage}</span>
+            {artist.stage && <span>&nbsp;@ {artist.stage}</span>}
           </div>
         </div>
       </div>

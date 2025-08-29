@@ -3,7 +3,7 @@ import {
   ArtistWithTimestamp,
   artistConfig,
   eventConfig,
-} from "@/app/events/(past)/endemit-festival/(config)";
+} from "@/app/events/issun-boshi-vinyl-release/(config)";
 import { useEffect, useState, useMemo, useRef, memo, useCallback } from "react";
 import ArtistSnippet from "@/app/(components)/ArtistSnippet";
 
