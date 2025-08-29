@@ -1,5 +1,10 @@
 import EndemitSubscribe from "@/app/(components)/EndemitSubscribe";
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Tickets",
+};
 
 export default function TicketsPage() {
   return (
@@ -11,7 +16,7 @@ export default function TicketsPage() {
         updated!
       </div>
 
-      <div className="bg-issun-boshi-purple px-10 py-1 rounded-lg flex justify-center mt-16 border-gray-900 border-2">
+      <div className="bg-black/30 px-10 py-1 rounded-lg flex justify-center mt-16 border-gray-900 border-2">
         <EndemitSubscribe />
       </div>
     </div>

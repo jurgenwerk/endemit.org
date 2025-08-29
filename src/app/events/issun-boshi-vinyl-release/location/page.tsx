@@ -1,5 +1,10 @@
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
 import Link from "next/link";
+import type {Metadata} from "next";
+
+export const metadata: Metadata = {
+  title: "Location",
+};
 
 export default function LocationPage() {
   return (

@@ -3,7 +3,10 @@ import EventFooter from "@/app/(components)/EventFooter";
 import Sidebar from "@/app/(components)/Sidebar";
 
 export const metadata: Metadata = {
-  title: "Issun-Bōshi vinyl release",
+  title: {
+    default: "Issun-Bōshi vinyl release",
+    template: '%s • Issun-Bōshi vinyl release • Endemit',
+  },
   description:
     "Issun-Bōshi vinyl release event. Grad Kader, Ljubljana September 20 2025.",
   openGraph: {
