@@ -9,6 +9,13 @@ module.exports = {
     extend: {
       colors: {
         "gray-1100": "#0a0a0a",
+
+        /* Colors for Issun-Boshi album release */
+        "issun-boshi-yellow": "#fdad42",
+        "issun-boshi-red": "#ff0000",
+        "issun-boshi-orange": "#fe7f00",
+        "issun-boshi-purple": "#352953",
+        "issun-boshi-blue": "#396395",
       },
     },
   },

@@ -1,0 +1,67 @@
+@keyframes float-back-forth {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10vw);
+  }
+}
+
+@keyframes sunBlown {
+  0% {
+    transform: scale(1) translateY(0px);
+    transform-origin: 87% 22%;
+    filter: blur(0px);
+  }
+  30%,50% {
+    transform: scale(1) translateY(20px);
+    transform-origin: 87% 22%;
+    filter: blur(2px);
+  }
+  70%, 100%  {
+    transform: scale(1) translateY(0px);
+    transform-origin: 87% 22%;
+    filter: blur(0px);
+  }
+}
+
+@keyframes beatShake {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  10% {
+    transform: translateX(-2px) translateY(-1px);
+  }
+  20% {
+    transform: translateX(2px) translateY(1px);
+  }
+  30% {
+    transform: translateX(-1px) translateY(2px);
+  }
+  40% {
+    transform: translateX(1px) translateY(-2px);
+  }
+  50% {
+    transform: translateX(-2px) translateY(1px);
+  }
+  60%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-rave-125bmp {
+  animation: beatShake 0.476s infinite ease-in-out;
+}
+
+.animate-float-cloud {
+  animation: float-back-forth 18s ease-in-out infinite;
+}
+
+.animate-float-cloud-alt {
+  animation: float-back-forth 25s ease-in-out infinite reverse;
+}
+
+.animate-sun {
+  animation: sunBlown 25s ease-in-out infinite;
+  transform-origin: 87% 22%;
+}
