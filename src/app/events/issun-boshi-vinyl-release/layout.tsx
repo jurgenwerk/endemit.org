@@ -5,7 +5,7 @@ import Sidebar from "@/app/(components)/Sidebar";
 export const metadata: Metadata = {
   title: {
     default: "Issun-Bōshi vinyl release",
-    template: '%s • Issun-Bōshi vinyl release • Endemit',
+    template: "%s • Issun-Bōshi vinyl release • Endemit",
   },
   description:
     "Issun-Bōshi vinyl release event. Grad Kader, Ljubljana September 20 2025.",

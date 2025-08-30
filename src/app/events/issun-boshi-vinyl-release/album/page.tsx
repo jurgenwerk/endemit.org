@@ -9,29 +9,29 @@ export const metadata: Metadata = {
 
 export default function AlbumPage() {
   return (
-    <div className="m-auto max-w-5xl space-y-6 p-5 lg:px-12 font-typo">
+    <div className="m-auto max-w-5xl space-y-6 p-5 lg:px-12 font-typo ">
       <Headline title="Album" />
       <p className="text-xl font-light">
         {" "}
         The album will be available for purchase exclusively at the event and in
         limited quantities.
       </p>
-      <div className="mt-4 flex items-center justify-center space-x-2 text-sm pt-32 overflow-hidden ">
-        <div className="relative z-10 mt-32 transition-transform group hover:scale-[0.95] ease-in-out">
+      <div className="mt-4 flex items-center justify-center space-x-2 text-sm pt-12 lg:pt-32 overflow-hidden ">
+        <div className="relative z-10 group pt-[200px]">
           <Image
             src="/issun-boshi-vinyl-release/album/issun-boshi-cover.png"
             alt="Issun Boshi Vinyl release"
             width={400}
             height={400}
-            className="z-10 relative"
+            className="z-10 relative group-hover:scale-[0.95] transition-transform ease-in-out"
           />
-          <div className="absolute top-0 group-hover:translate-y-[110%] ease-in-out transition-transform">
+          <div className="absolute top-0 group-hover:translate-y-[200px] group-hover:scale-[0.95]  ease-in-out transition-transform">
             <Image
               src="/issun-boshi-vinyl-release/album/issun-boshi-record.png"
               alt="Issun Boshi Vinyl release"
               width={400}
               height={400}
-              className="animate-slow-spin -mt-52"
+              className="animate-slow-spin"
             />
           </div>
 
@@ -43,13 +43,11 @@ export default function AlbumPage() {
 
         <div
           className={
-            "absolute left-0 right-0 z-0 -translate-y-1/3 h-full bg-center bg-cover"
+            "absolute left-0 right-0 z-0 -translate-y-1/3 h-full bg-center bg-cover w-full !m-0 bg-no-repeat"
           }
           style={{
             backgroundImage:
               "url('/issun-boshi-vinyl-release/parallax-layers/4.png')",
-            backgroundRepeat: "no-repeat",
-            backgroundBlendMode: "color-burn",
           }}
         />
       </div>
