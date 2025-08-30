@@ -12,7 +12,7 @@ export default function RootLayout({
           { label: "Main", href: "/" },
           { label: "Events", href: "/events" },
           { label: "Music", href: "/music" },
-          { label: "Merch", href: "/merch" },
+          // { label: "Merch", href: "/merch" },
           { label: "About", href: "/about" },
         ]}
       />

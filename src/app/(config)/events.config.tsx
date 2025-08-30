@@ -9,6 +9,10 @@ const events: EventProps[] = [
     artists: ["INLAND", "MMALI"],
     imageSrc: "/issun-boshi-vinyl-release/cover-without-border.jpg",
     href: "/events/issun-boshi-vinyl-release",
+    visible: {
+      link: false,
+      event: true
+    },
     children:
       <Image
         src="/issun-boshi-vinyl-release/album/issun-boshi-record.png"
@@ -24,6 +28,10 @@ const events: EventProps[] = [
     dateString: "21 Nov 2025",
     location: "Grad Kodeljevo",
     artists: ["PULSO", "RHAEGAL"],
+    visible: {
+      link: false,
+      event: true
+    },
   },
   {
     title: "ENDEMIT FESTIVAL",
@@ -46,7 +54,11 @@ const events: EventProps[] = [
     ],
     imageSrc: "/endemit-festival/cover-without-border.jpg",
     href: "/events/endemit-festival",
-    isPastEvent: true
+    isPastEvent: true,
+    visible: {
+      link: true,
+      event: true
+    },
   },
   {
     title: "IUS PRIMAE NOCTIS",
@@ -55,7 +67,11 @@ const events: EventProps[] = [
     artists: ["MOKILOK", "UNKNOWN TEXTURE", "RHAEGAL", "MMALI"],
     imageSrc: "/ius-primae-noctis/cover.jpg",
     href: "/events/ius-primae-noctis",
-    isPastEvent: true
+    isPastEvent: true,
+    visible: {
+      link: true,
+      event: true
+    },
   },
 ];
 

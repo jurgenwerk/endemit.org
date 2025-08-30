@@ -20,7 +20,7 @@ export default function IusPrimaeNoctisPage() {
         <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
 
         <Link
-          href={`/src/app/events/(past)/ius-primae-noctis/artists`}
+          href={`/events/ius-primae-noctis/artists`}
           className="pt-2"
         >
           <h3 className="main-text-color mt-6 text-center text-xl md:text-2xl ">

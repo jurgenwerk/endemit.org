@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AfterPurchase() {
   return (
-    <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
+    <div className="min-h-screen">
       <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
         <div className="m-auto  max-w-5xl space-y-6 p-5 text-black">
           <div className="m-auto  max-w-5xl  p-5  text-black text-xl">
@@ -33,13 +33,13 @@ export default function AfterPurchase() {
           </div>
           <div className="flex justify-center space-x-4">
             <Link
-              href={`/events/ius-primae-noctis/artists`}
+              href={`/events/issun-boshi-vinyl-release/artists`}
               className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
             >
               View Artists
             </Link>
             <Link
-              href={`/events/ius-primae-noctis/location`}
+              href={`/events/issun-boshi-vinyl-release/location`}
               className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
             >
               View Location
