@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ArtistCarousel from "@/app/(components)/ArtistCarousel";
 import Link from "next/link";
 
 export default function MapAndTimetable() {

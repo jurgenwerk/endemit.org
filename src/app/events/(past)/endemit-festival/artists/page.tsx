@@ -3,7 +3,6 @@
 import {ArtistWithTimestamp, artistConfig, eventConfig} from "../(config)";
 import {useMemo, useState} from "react";
 import ArtistCard from "@/app/(components)/ArtistCard";
-import ArtistCarousel from "@/app/(components)/ArtistCarousel";
 
 type SortOption = 'default' | 'timestamp';
 

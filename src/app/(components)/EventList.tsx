@@ -1,7 +1,7 @@
 "use client";
 
 import EventCard, { EventProps } from "@/app/(components)/EventCard";
-import React from "react";
+import React, { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 interface EventListProps {
@@ -9,7 +9,8 @@ interface EventListProps {
   events: EventProps[];
 }
 
-export default function EventList({ title, events }: EventListProps) {
+// Separate the component that uses useSearchParams
+function EventListContent({ title, events }: EventListProps) {
   const searchParams = useSearchParams();
   const showAllParam = searchParams.get("show");
 
@@ -45,12 +46,21 @@ export default function EventList({ title, events }: EventListProps) {
               link: showHiddenContent || event.visible.link,
               image: showHiddenContent || event.visible.image,
               event: event.visible.event
-          }}
+            }}
           >
             {event.children}
           </EventCard>
         </React.Fragment>
       ))}
     </div>
+  );
+}
+
+// Main component with Suspense boundary
+export default function EventList({ title, events }: EventListProps) {
+  return (
+    <Suspense fallback={<div className="text-white">Loading events...</div>}>
+      <EventListContent title={title} events={events} />
+    </Suspense>
   );
 }
