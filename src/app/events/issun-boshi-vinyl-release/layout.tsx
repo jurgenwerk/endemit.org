@@ -23,9 +23,9 @@ export default function IssunBoshiVinylReleaseLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className="m-auto overflow-y-scroll max-lg:my-14 bg-issun-boshi-purple">
+    <body className="m-auto overflow-y-scroll max-lg:my-14 bg-issun-boshi-purple min-h-screen">
       <div
-        className="fixed -z-10 top-0 bottom-0 left-0 right-0 bg-issun-boshi-purple opacity-30"
+        className="fixed -z-10 top-0 bottom-0 left-0 right-0 bg-issun-boshi-purple opacity-30 min-h-screen"
         style={{
           backgroundImage: "url('/worms.png')",
           backgroundRepeat: "repeat",
@@ -69,7 +69,7 @@ export default function IssunBoshiVinylReleaseLayout({
           href: "/events/issun-boshi-vinyl-release/location",
         }}
       />
-      <div className="lg:pl-72 min-h-screen">{children}</div>
+      <div className="lg:pl-72 min-h-screen  flex-col flex h-full xl:items-center">{children}</div>
 
       <EventFooter
         locationName="Kader, Grad Kodeljevo"

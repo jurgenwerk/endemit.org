@@ -32,5 +32,4 @@ export const artistConfig: Artist[] = [
     time: "22:00",
     duration: 300,
   },
-
 ];

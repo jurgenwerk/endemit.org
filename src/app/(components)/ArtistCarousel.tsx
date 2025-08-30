@@ -234,7 +234,10 @@ function ArtistCarousel({
             return (
               <div
                 key={item.id}
-                className={clsx("flex-shrink-0 flex items-center justify-center  rounded-lg w-10", dayDividerClassName)}
+                className={clsx(
+                  "flex-shrink-0 flex items-center justify-center  rounded-lg w-10",
+                  dayDividerClassName
+                )}
               >
                 <div className="text-sm font-bold uppercase whitespace-nowrap rotate-90">
                   {item.day}

@@ -12,11 +12,9 @@ export const metadata: Metadata = {
 export default function ArtistsPage() {
   return (
     <>
-      <div className="m-auto max-w-5xl space-y-6 p-5 lg:px-12 font-typo pb-16 min-h-screen">
+      <div className=" max-w-5xl space-y-6 p-5 lg:px-12 font-typo pb-32 min-h-screen flex-1">
         <Headline title="Artists" />
-
         <CustomArtistCarousel />
-
         <ArtistList />
       </div>
       <CoverFooter />

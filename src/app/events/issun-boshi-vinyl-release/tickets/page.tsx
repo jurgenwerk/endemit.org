@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function TicketsPage() {
   return (
      <>
-    <div className="m-auto max-w-5xl space-y-6 p-5 lg:px-12 text-white font-typo min-h-screen">
+    <div className="max-w-5xl space-y-6 p-5 lg:px-12 text-white font-typo flex-1">
       <Headline title="Tickets" />
 
       <div className="text-2xl font-light mt-8">
