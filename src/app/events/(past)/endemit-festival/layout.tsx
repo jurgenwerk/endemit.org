@@ -20,7 +20,7 @@ export default function FestivalLayout({
   children: React.ReactNode;
 }) {
   return (
-    <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
+    <body className="m-auto overflow-y-scroll bg-gray-1100">
       <Sidebar
         navigationItems={[
           {
@@ -54,7 +54,7 @@ export default function FestivalLayout({
         }}
       />
       <div
-        className="lg:pl-72 min-h-screen"
+        className="lg:pl-72 min-h-screen pb-16"
         style={{ background: "rgb(226 221 255)" }}
       >
         {children}

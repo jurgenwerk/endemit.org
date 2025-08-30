@@ -1,17 +1,18 @@
-import Link from "next/link";
 import Image from "next/image";
+import Button from "@/app/(components)/Button";
+import Link from "next/link";
 
 export default function AfterPurchase() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-typo">
       <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-        <div className="m-auto  max-w-5xl space-y-6 p-5 text-black">
-          <div className="m-auto  max-w-5xl  p-5  text-black text-xl">
-            <h2 className="text-center text-3xl font-bold">
+        <div className="m-auto  max-w-5xl space-y-6 p-5 ">
+          <div className="m-auto  max-w-5xl  p-5  text-white text-xl font-thin">
+            <h2 className="text-center text-3xl text-issun-boshi-orange font-normal ">
               Haha, yes! Purchase confirmed.
             </h2>
             <Image
-              src="/rener-thumbs-up.jpg"
+              src="/thumbs-up.png"
               alt="Tickets"
               width={400}
               height={400}
@@ -20,7 +21,7 @@ export default function AfterPurchase() {
             <p>
               You should have received a ticket to the email address you
               specified. If you can&apos;t see it, check your spam folder, or
-              contact us at endemit@endemit.org.
+              contact us at <Link className={"link text-issun-boshi-yellow"} href={"mailto:endemit@endemit.org"}>endemit@endemit.org</Link>
             </p>
 
             <p className="pt-4">
@@ -32,18 +33,16 @@ export default function AfterPurchase() {
             <p className="pt-4">See you at the event! </p>
           </div>
           <div className="flex justify-center space-x-4">
-            <Link
+            <Button
               href={`/events/issun-boshi-vinyl-release/artists`}
-              className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
-            >
+                   >
               View Artists
-            </Link>
-            <Link
+            </Button>
+            <Button
               href={`/events/issun-boshi-vinyl-release/location`}
-              className="rounded-md bg-black px-6 py-2 text-center text-sm font-medium text-white hover:bg-gray-800"
             >
               View Location
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

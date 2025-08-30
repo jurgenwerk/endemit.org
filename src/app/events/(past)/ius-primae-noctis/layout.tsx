@@ -4,7 +4,8 @@ import EventFooter from "@/app/(components)/EventFooter";
 
 export const metadata: Metadata = {
   title: "Ius Primae Noctis",
-  description: "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025.",
+  description:
+    "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025.",
   openGraph: {
     images: ["/ius-primae-noctis/cover.jpg"],
   },
@@ -16,14 +17,13 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function IusPrimaeNoctisLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <body className="m-auto overflow-y-scroll bg-gray-1100 pb-16">
+    <body className="m-auto overflow-y-scroll bg-gray-1100 ">
       <Sidebar
         navigationItems={[
           {
@@ -65,8 +65,7 @@ export default function IusPrimaeNoctisLayout({
           href: "/events/ius-primae-noctis/location",
         }}
       />
-      {children}
-
+      <div className={"pb-16"}>{children}</div>
       <EventFooter ticketsLink={"/events/ius-primae-noctis/tickets"} />
     </body>
   );
