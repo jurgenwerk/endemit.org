@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "DIN";
+  src: url("/fonts/DIN_Condensed_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Metamorphous-Regular";
+  src: url("/fonts/Metamorphous-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Typo";
+  font-weight: 500;
+  src: url("/fonts/Typo_Round_Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Typo";
+  font-weight: 300;
+  src: url("/fonts/Typo_Round_Light.otf") format("opentype");
+}
+
+.font-metamorphous {
+  font-family: "Metamorphous-Regular";
+}
+
+.font-typo {
+  font-family: "Typo";
+}
