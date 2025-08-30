@@ -8,28 +8,28 @@ export default function CoverFooter() {
         <h4 className="font-light">Grad kodeljevo, 20 Sep 2025</h4>
       </div>
       <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/2b.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/2b.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
           className="w-full transform absolute bottom-0 -scale-x-100 z-10 "
         />
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/10.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/10.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
           className="w-full transform absolute bottom-0 z-20"
         />
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/4.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/4.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
           className="w-full transform absolute -bottom-6 z-10"
         />
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/7.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/7.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}

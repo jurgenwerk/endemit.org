@@ -17,9 +17,9 @@ export default function AlbumPage() {
         limited quantities.
       </p>
       <div className="mt-4 flex items-center justify-center space-x-2 text-sm pt-12 lg:pt-32 overflow-hidden ">
-        <div className="relative z-10 group pt-[200px]">
+        <div className="relative z-10 group pt-[200px] max-lg:pointer-events-none">
           <Image
-            src="/issun-boshi-vinyl-release/album/issun-boshi-cover.png"
+            src="/issun-boshi-vinyl-release/album/issun-boshi-cover.webp"
             alt="Issun Boshi Vinyl release"
             width={400}
             height={400}
@@ -27,7 +27,7 @@ export default function AlbumPage() {
           />
           <div className="absolute top-0 group-hover:translate-y-[200px] group-hover:scale-[0.95]  ease-in-out transition-transform">
             <Image
-              src="/issun-boshi-vinyl-release/album/issun-boshi-record.png"
+              src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
               alt="Issun Boshi Vinyl release"
               width={400}
               height={400}
@@ -36,8 +36,7 @@ export default function AlbumPage() {
           </div>
 
           <div className={"font-light pt-8 text-lg text-center"}>
-            ARTIST: MMali • TITLE: Issun-bōshi • PRICE:{" "}
-            <span className="text-issun-boshi-yellow">35 €</span>
+            MMali • Issun-bōshi • <span className="text-issun-boshi-yellow">35 €</span>
           </div>
         </div>
 
@@ -47,7 +46,7 @@ export default function AlbumPage() {
           }
           style={{
             backgroundImage:
-              "url('/issun-boshi-vinyl-release/parallax-layers/4.png')",
+              "url('/issun-boshi-vinyl-release/parallax-layers/4.webp')",
           }}
         />
       </div>

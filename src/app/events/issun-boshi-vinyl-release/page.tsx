@@ -17,7 +17,7 @@ export default function IssunBoshiVinylReleasePage() {
         <div className="relative w-full z-10 min-h-screen">
           <div className="w-full h-2 bg-[#f5cf98]" />
 
-          <div className="flex flex-col gap-y-28 p-28">
+          <div className="flex flex-col gap-y-28 p-28 px-6 lg:px-28">
             <div>
               <div className="text-4xl text-center text-issun-boshi-yellow">
                 20 Sep 2025

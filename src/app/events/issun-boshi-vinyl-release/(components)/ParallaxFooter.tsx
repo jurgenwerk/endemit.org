@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function ParallaxFooter() {
   return (
-    <div className="-mt-96 pointer-events-none">
+    <div className="-mt-20 lg:-mt-96 pointer-events-none">
       <Parallax
         shouldAlwaysCompleteAnimation={true}
         translateY={[-100, 20]}
         className="w-full"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/2b.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/2b.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
@@ -26,7 +26,7 @@ export default function ParallaxFooter() {
         className="w-full  absolute bottom-0 z-20"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/10.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/10.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
@@ -40,7 +40,7 @@ export default function ParallaxFooter() {
         className="w-full absolute bottom-0 z-10"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/4.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/4.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}
@@ -55,7 +55,7 @@ export default function ParallaxFooter() {
         className="w-full absolute bottom-0 z-0"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/7.png"
+          src="/issun-boshi-vinyl-release/parallax-layers/7.webp"
           alt="Issun Boshi Vinyl release"
           width={1000}
           height={400}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function LocationPage() {
   return (
     <>
-      <div className="max-w-5xl space-y-6 p-5 lg:px-12 font-typo flex-1">
+      <div className="max-w-5xl space-y-6 p-5 lg:px-12 font-typo flex-1 max-lg:pb-16">
         <Headline title="Location" />
 
         <p className="text-xl font-light">
