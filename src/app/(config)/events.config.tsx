@@ -11,7 +11,8 @@ const events: EventProps[] = [
     href: "/events/issun-boshi-vinyl-release",
     visible: {
       link: false,
-      event: true
+      event: true,
+      image: false
     },
     children:
       <Image
@@ -19,7 +20,7 @@ const events: EventProps[] = [
         alt="Issun Boshi Vinyl release"
         width={220}
         height={220}
-        className="animate-spin mt-20 -ml-20"
+        className="animate-slow-spin mt-20 -ml-20"
       />
   },
   {
@@ -30,9 +31,12 @@ const events: EventProps[] = [
     artists: ["PULSO", "RHAEGAL"],
     visible: {
       link: false,
-      event: true
+      event: true,
+      image: false
     },
   },
+
+  // Past events
   {
     title: "ENDEMIT FESTIVAL",
     annotation: "[PRIVATE GATHERING]",
@@ -57,7 +61,8 @@ const events: EventProps[] = [
     isPastEvent: true,
     visible: {
       link: true,
-      event: true
+      event: true,
+      image: true
     },
   },
   {
@@ -70,7 +75,8 @@ const events: EventProps[] = [
     isPastEvent: true,
     visible: {
       link: true,
-      event: true
+      event: true,
+      image: true
     },
   },
 ];

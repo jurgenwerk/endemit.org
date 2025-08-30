@@ -81,7 +81,7 @@ export default function ArtistList() {
             cardClassName={"bg-black/20"}
             nameClassName={"text-issun-boshi-yellow"}
             descriptionClassName={"text-white/80 font-light"}
-            timeClassName={"text-issun-boshi-orange"}
+            timeClassName={"text-issun-boshi-orange font-light"}
           />
         ))}
       </div>

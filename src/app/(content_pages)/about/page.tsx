@@ -55,7 +55,7 @@ export default function About() {
                 href="/Statut_Endemit_31.7.2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white underline"
+                className="text-gray-300 link"
               >
                 Statut ENDEMIT 31.7.2025 (slo)
               </a>
@@ -69,7 +69,7 @@ export default function About() {
               association, fill the form and send it to{" "}
               <a
                 href="mailto:endemit@endemit.org"
-                className="text-gray-300 hover:text-white underline"
+                className="text-gray-300 link"
               >
                 endemit@endemit.org
               </a>
@@ -83,7 +83,7 @@ export default function About() {
                   href="/ENDEMIT pristopna slo.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white underline"
+                  className="text-gray-300 link"
                 >
                   ENDEMIT pristopna izjava (slo)
                 </a>
@@ -94,7 +94,7 @@ export default function About() {
                   href="/ENDEMIT pristopna ang.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white underline"
+                  className="text-gray-300 link"
                 >
                   ENDEMIT membership application (en)
                 </a>
@@ -110,7 +110,7 @@ export default function About() {
             <p className="text-gray-300 mt-2">
               <a
                 href="mailto:endemit@endemit.org"
-                className="hover:text-white underline"
+                className="text-gray-300 link"
               >
                 endemit@endemit.org
               </a>

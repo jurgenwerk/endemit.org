@@ -6,8 +6,8 @@ export default function AfterPurchase() {
   return (
     <div className="min-h-screen font-typo">
       <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-        <div className="m-auto  max-w-5xl space-y-6 p-5 ">
-          <div className="m-auto  max-w-5xl  p-5  text-white text-xl font-thin">
+        <div className="m-auto  max-w-5xl space-y-6 p-5 lg:px-12 ">
+          <div className="m-auto  max-w-5xl  p-5 lg:px-12  text-white text-xl font-thin">
             <h2 className="text-center text-3xl text-issun-boshi-orange font-normal ">
               Haha, yes! Purchase confirmed.
             </h2>
@@ -18,10 +18,17 @@ export default function AfterPurchase() {
               height={400}
               className="m-auto w-1/2"
             />
+
             <p>
               You should have received a ticket to the email address you
               specified. If you can&apos;t see it, check your spam folder, or
-              contact us at <Link className={"link text-issun-boshi-yellow"} href={"mailto:endemit@endemit.org"}>endemit@endemit.org</Link>
+              contact us at{" "}
+              <Link
+                className={"link text-issun-boshi-yellow"}
+                href={"mailto:endemit@endemit.org"}
+              >
+                endemit@endemit.org
+              </Link>
             </p>
 
             <p className="pt-4">
@@ -33,14 +40,10 @@ export default function AfterPurchase() {
             <p className="pt-4">See you at the event! </p>
           </div>
           <div className="flex justify-center space-x-4">
-            <Button
-              href={`/events/issun-boshi-vinyl-release/artists`}
-                   >
+            <Button href={`/events/issun-boshi-vinyl-release/artists`}>
               View Artists
             </Button>
-            <Button
-              href={`/events/issun-boshi-vinyl-release/location`}
-            >
+            <Button href={`/events/issun-boshi-vinyl-release/location`}>
               View Location
             </Button>
           </div>

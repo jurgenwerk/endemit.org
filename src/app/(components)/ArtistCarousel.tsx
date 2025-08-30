@@ -1,14 +1,29 @@
 "use client";
+
 import {
   ArtistWithTimestamp,
   artistConfig,
   eventConfig,
 } from "@/app/events/issun-boshi-vinyl-release/(config)";
-import { useEffect, useState, useMemo, useRef, memo, useCallback } from "react";
+import {
+  useEffect,
+  useState,
+  useMemo,
+  useRef,
+  memo,
+  useCallback,
+  HTMLProps,
+} from "react";
 import ArtistSnippet from "@/app/(components)/ArtistSnippet";
+import clsx from "clsx";
 
 interface ArtistCarouselProps {
   headline?: string;
+  cardClassName?: HTMLProps<HTMLElement>["className"];
+  liveCardClassName?: HTMLProps<HTMLElement>["className"];
+  nameClassName?: HTMLProps<HTMLElement>["className"];
+  descriptionClassName?: HTMLProps<HTMLElement>["className"];
+  dayDividerClassName?: HTMLProps<HTMLElement>["className"];
 }
 
 const getArtistsWithTimestamps = (): ArtistWithTimestamp[] => {
@@ -76,7 +91,14 @@ const getTimelineItems = (timelineArtists: ArtistWithTimestamp[]) => {
   return items;
 };
 
-function ArtistCarousel({ headline = "Up next" }: ArtistCarouselProps) {
+function ArtistCarousel({
+  headline = "Up next",
+  cardClassName,
+  liveCardClassName,
+  nameClassName,
+  descriptionClassName,
+  dayDividerClassName = "bg-gray-900 text-black  bg-opacity-25 text-opacity-80 ",
+}: ArtistCarouselProps) {
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
   const [mounted, setMounted] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -212,9 +234,9 @@ function ArtistCarousel({ headline = "Up next" }: ArtistCarouselProps) {
             return (
               <div
                 key={item.id}
-                className="flex-shrink-0 flex items-center justify-center bg-gray-900 bg-opacity-25 rounded-lg w-10"
+                className={clsx("flex-shrink-0 flex items-center justify-center  rounded-lg w-10", dayDividerClassName)}
               >
-                <div className="text-black text-opacity-80  text-sm font-bold uppercase whitespace-nowrap rotate-90">
+                <div className="text-sm font-bold uppercase whitespace-nowrap rotate-90">
                   {item.day}
                 </div>
               </div>
@@ -233,6 +255,10 @@ function ArtistCarousel({ headline = "Up next" }: ArtistCarouselProps) {
                   currentTime={currentTime}
                   artist={item.artist}
                   isLive={isLive}
+                  cardClassName={cardClassName}
+                  descriptionClassName={descriptionClassName}
+                  liveCardClassName={liveCardClassName}
+                  nameClassName={nameClassName}
                 />
               </div>
             );

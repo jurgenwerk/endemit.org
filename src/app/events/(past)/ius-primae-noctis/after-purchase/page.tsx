@@ -5,8 +5,8 @@ export default function AfterPurchase() {
   return (
     <div className="lg:pl-72 min-h-screen" style={{ background: "#FFFBEE" }}>
       <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full">
-        <div className="m-auto  max-w-5xl space-y-6 p-5 text-black">
-          <div className="m-auto  max-w-5xl  p-5  text-black text-xl">
+        <div className="m-auto  max-w-5xl space-y-6 p-5 lg:px-12 text-black">
+          <div className="m-auto  max-w-5xl  p-5 lg:px-12  text-black text-xl">
             <h2 className="text-center text-3xl font-bold">
               Haha, yes! Purchase confirmed.
             </h2>

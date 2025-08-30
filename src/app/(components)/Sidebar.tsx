@@ -57,7 +57,7 @@ interface FlexibleSidebarProps {
 }
 
 export default function Sidebar({
-  logoSrc = "/endemit.png",
+  logoSrc = "/endemit.svg",
   logoAlt = "ENDEMIT",
   logoWidth = 96,
   logoHeight = 24,
@@ -103,9 +103,7 @@ export default function Sidebar({
     if (item.isActive) {
       return item.isActive(pathname);
     }
-    return (
-      pathname === item.href
-    );
+    return pathname === item.href;
   };
 
   const close = () => {
@@ -122,7 +120,11 @@ export default function Sidebar({
   return (
     <div className="fixed top-0 !z-40 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto lg:mt-12">
-        <Link href={logoHref} onClick={close} className="lg:mx-3 lg:ml-auto hover:opacity-70">
+        <Link
+          href={logoHref}
+          onClick={close}
+          className="lg:mx-3 lg:ml-auto hover:opacity-70"
+        >
           <Image
             src={logoSrc}
             alt={logoAlt}
@@ -194,7 +196,8 @@ export default function Sidebar({
                 className={clsx(
                   "block rounded-md px-3 py-2 text-right font-medium uppercase sm:pt-2 pt-4",
                   isActive && `${activeColor} cursor-default`,
-                  !isActive && "text-white hover:text-gray-300 active:text-gray-600",
+                  !isActive &&
+                    "text-white hover:text-gray-300 active:text-gray-600"
                 )}
               >
                 {item.label}
@@ -205,7 +208,7 @@ export default function Sidebar({
 
         {mergedSocialLinks.length > 0 && (
           <div className="social-icons flex justify-end pr-6">
-            {mergedSocialLinks.map((social) => (
+            {mergedSocialLinks.map(social => (
               <a
                 key={social.id}
                 href={social.href}

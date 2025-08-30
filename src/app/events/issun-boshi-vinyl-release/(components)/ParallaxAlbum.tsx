@@ -27,7 +27,7 @@ export default function ParallaxAlbum() {
           alt="Issun Boshi Vinyl release"
           width={400}
           height={400}
-          className="animate-spin ml-52"
+          className="animate-slow-spin ml-52"
         />
       </Parallax>
     </Parallax>

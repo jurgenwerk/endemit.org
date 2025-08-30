@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Location() {
   return (
-    <div className="m-auto max-w-5xl space-y-8 p-5 text-black">
+    <div className="m-auto max-w-5xl space-y-8 p-5 lg:px-12 text-black">
       <h2 className="text-4xl font-bold uppercase pt-16 lg:pt-10">Location</h2>
       <div className="space-y-6">
         <p className="text-xl leading-relaxed">

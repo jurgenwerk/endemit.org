@@ -15,6 +15,7 @@ export interface EventProps {
   visible: {
     link: boolean;
     event: boolean;
+    image: boolean;
   };
 }
 
@@ -28,16 +29,13 @@ export default function EventCard({
   href,
   children,
   isPastEvent = false,
-  visible: { link: linkVisible },
+  visible: { link: linkVisible, image: imageVisible },
 }: EventProps) {
   const shouldShowLink = linkVisible && href;
+  const shouldShowImage = imageVisible && imageSrc;
 
   return (
-    <div
-      className={clsx(
-        !shouldShowLink && "cursor-not-allowed"
-      )}
-    >
+    <div className={clsx(!shouldShowLink && "cursor-not-allowed")}>
       <Link
         href={shouldShowLink ? href : ""}
         className={clsx(
@@ -48,7 +46,7 @@ export default function EventCard({
       >
         <div className={clsx("pt-4 pb-6 min-h-[220px] md:h-[220px]")}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">
-            {imageSrc && (
+            {shouldShowImage && (
               <div className="relative h-48 md:h-full overflow-hidden rounded-md">
                 <Image
                   src={imageSrc}
@@ -59,7 +57,7 @@ export default function EventCard({
                 {children}
               </div>
             )}
-            {!imageSrc && (
+            {!shouldShowImage && (
               <div>
                 <div
                   className="w-full h-48 md:h-full flex items-center justify-center bg-stone-700 rounded-md "

@@ -17,6 +17,9 @@ module.exports = {
         "issun-boshi-purple": "#352953",
         "issun-boshi-blue": "#396395",
       },
+      animation: {
+        "slow-spin": "spin 2s linear infinite",
+      },
     },
   },
   plugins: [],

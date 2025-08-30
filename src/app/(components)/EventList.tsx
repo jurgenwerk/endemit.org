@@ -11,11 +11,11 @@ interface EventListProps {
 
 export default function EventList({ title, events }: EventListProps) {
   const searchParams = useSearchParams();
-  const visibleParam = searchParams.get("visible");
+  const showAllParam = searchParams.get("show");
 
-  // Filter events based on visibility unless visible=All
-  const showHiddenLinks = visibleParam?.toUpperCase() === "ALL";
-  const filteredEvents = showHiddenLinks
+  // Filter events based on visibility unless show=All
+  const showHiddenContent = showAllParam?.toUpperCase() === "ALL";
+  const filteredEvents = showHiddenContent
     ? events
     : events.filter(event => event.visible.event !== false);
 
@@ -41,7 +41,11 @@ export default function EventList({ title, events }: EventListProps) {
             imageSrc={event.imageSrc}
             href={event.href}
             isPastEvent={event.isPastEvent}
-            visible={{link: showHiddenLinks || event.visible.link, event: event.visible.event}}
+            visible={{
+              link: showHiddenContent || event.visible.link,
+              image: showHiddenContent || event.visible.image,
+              event: event.visible.event
+          }}
           >
             {event.children}
           </EventCard>
