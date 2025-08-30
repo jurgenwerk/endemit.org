@@ -16,7 +16,7 @@ const events: EventProps[] = [
     },
     children:
       <Image
-        src="/issun-boshi-vinyl-release/album/issun-boshi-record.png"
+        src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
         alt="Issun Boshi Vinyl release"
         width={220}
         height={220}
