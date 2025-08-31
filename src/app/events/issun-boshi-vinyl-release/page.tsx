@@ -64,7 +64,10 @@ export default function IssunBoshiVinylReleasePage() {
                 <br />
                 <br />
                 For the first time, his warm-up set will feature his own
-                production, available exclusively for purchase at the event. And
+                production, available exclusively for <Link
+                  className={"text-issun-boshi-yellow font-normal link"}
+                  href={"/events/issun-boshi-vinyl-release/get-the-ep"}
+              >purchase at the event</Link>. And
                 who else would be better to close this special Endemit edition
                 than Inland himself, the brother who mastered the sound of the
                 first Endemit EP release.
