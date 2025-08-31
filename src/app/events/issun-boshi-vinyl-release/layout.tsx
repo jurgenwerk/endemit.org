@@ -36,7 +36,7 @@ export default function IssunBoshiVinylReleaseLayout({
       <Sidebar
         activeColor="text-issun-boshi-yellow"
         navigationItems={[
-          { label: "← Events", href: "/events" },
+          { label: "Events", href: "/events", isBackButton: true },
           {
             label: "Vinyl release",
             href: "/events/issun-boshi-vinyl-release",
@@ -76,7 +76,7 @@ export default function IssunBoshiVinylReleaseLayout({
         locationAddress="Ul. Carla Benza 20"
         locationLink="/events/issun-boshi-vinyl-release/location"
         ticketsLink={"/events/issun-boshi-vinyl-release/tickets"}
-        ticketsText={"TICKETS"}
+        ticketsText={"Tickets"}
       />
     </body>
   );

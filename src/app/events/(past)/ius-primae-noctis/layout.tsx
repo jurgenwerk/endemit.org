@@ -27,8 +27,9 @@ export default function IusPrimaeNoctisLayout({
       <Sidebar
         navigationItems={[
           {
-            label: "← Events",
+            label: "Events",
             href: "/events",
+            isBackButton: true,
           },
           {
             label: "Ius Primae Noctis",

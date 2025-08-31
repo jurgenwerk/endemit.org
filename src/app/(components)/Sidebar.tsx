@@ -10,6 +10,7 @@ interface NavigationItem {
   label: string;
   href: string;
   onClick?: () => void;
+  isBackButton?: boolean; // If true, indicates this is a "back" button
   isActive?: (pathname: string) => boolean; // Custom active logic
 }
 
@@ -195,11 +196,13 @@ export default function Sidebar({
                 href={item.href}
                 className={clsx(
                   "block rounded-md px-3 py-2 text-right font-medium uppercase sm:pt-2 pt-4",
+                  item.isBackButton && "text-sm opacity-85",
                   isActive && `${activeColor} cursor-default`,
                   !isActive &&
                     "text-white hover:text-gray-300 active:text-gray-600"
                 )}
               >
+                {item.isBackButton && ("← ")}
                 {item.label}
               </Link>
             );
