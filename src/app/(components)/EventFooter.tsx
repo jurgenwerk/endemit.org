@@ -20,7 +20,7 @@ export default function EventFooter({
   }
 
   return (
-    <div className="fixed bottom-0 m-0 w-full lg:hidden z-50">
+    <div className="fixed bottom-0 m-0 w-full lg:hidden z-30">
       <div className="flex flex-row justify-between bg-black p-3.5 lg:px-5 lg:py-3">
         {ticketsLink && ticketsText && (
           <div className="my-auto flex">
