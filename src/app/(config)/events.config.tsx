@@ -17,7 +17,7 @@ const events: EventProps[] = [
     children:
       <Image
         src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-        alt="Issun Boshi Vinyl release"
+        alt="Issun bōshi Vinyl release"
         width={220}
         height={220}
         className="animate-slow-spin mt-20 -ml-20"

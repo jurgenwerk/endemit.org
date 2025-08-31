@@ -20,7 +20,7 @@ export default function AlbumPage() {
         <div className="relative z-10 group pt-[200px] max-lg:pointer-events-none">
           <Image
             src="/issun-boshi-vinyl-release/album/issun-boshi-cover.webp"
-            alt="Issun Boshi Vinyl release"
+            alt="Issun bōshi Vinyl release"
             width={400}
             height={400}
             className="z-10 relative group-hover:scale-[0.95] transition-transform ease-in-out"
@@ -28,7 +28,7 @@ export default function AlbumPage() {
           <div className="absolute top-0 group-hover:translate-y-[200px] group-hover:scale-[0.95]  ease-in-out transition-transform">
             <Image
               src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-              alt="Issun Boshi Vinyl release"
+              alt="Issun bōshi Vinyl release"
               width={400}
               height={400}
               className="animate-slow-spin"
@@ -36,7 +36,7 @@ export default function AlbumPage() {
           </div>
 
           <div className={"font-light pt-8 text-lg text-center"}>
-            MMali • Issun-bōshi • <span className="text-issun-boshi-yellow">35 €</span>
+            MMali • Issun-bōshi • <span className="text-issun-boshi-yellow">15 €</span>
           </div>
         </div>
 
