@@ -28,7 +28,6 @@ export default function EventCard({
   imageSrc,
   href,
   children,
-  isPastEvent = false,
   visible: { link: linkVisible, image: imageVisible },
 }: EventProps) {
   const shouldShowLink = linkVisible && href;
