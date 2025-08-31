@@ -12,7 +12,7 @@ export default function ParallaxAlbum() {
     >
       <Image
         src="/issun-boshi-vinyl-release/album/issun-boshi-cover.webp"
-        alt="Issun Boshi Vinyl release"
+        alt="Issun-bōshi  Vinyl release"
         width={400}
         height={400}
         className="z-10 relative"
@@ -26,7 +26,7 @@ export default function ParallaxAlbum() {
       >
         <Image
           src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-          alt="Issun Boshi Vinyl release"
+          alt="Issun-bōshi  Vinyl release"
           width={400}
           height={400}
           className="animate-slow-spin ml-52"
@@ -41,7 +41,7 @@ export default function ParallaxAlbum() {
       >
         <Image
           src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-          alt="Issun Boshi Vinyl release"
+          alt="Issun-bōshi  Vinyl release"
           width={400}
           height={400}
           className="animate-slow-spin mt-52"

@@ -17,6 +17,7 @@ export default function ArtistList() {
   // Convert artist data to include UTC timestamps
   const artistsWithTimestamps = useMemo((): ArtistWithTimestamp[] => {
     return artistConfig
+      .filter(artist => artist.hiddenInBio !== true)
       .filter(artist => artist.day && artist.time)
       .map(artist => {
         const [hours, minutes] = artist.time!.split(":").map(Number);

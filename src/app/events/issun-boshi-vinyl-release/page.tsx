@@ -64,7 +64,10 @@ export default function IssunBoshiVinylReleasePage() {
                 <br />
                 <br />
                 For the first time, his warm-up set will feature his own
-                production, available exclusively for purchase at the event. And
+                production, available exclusively for <Link
+                  className={"text-issun-boshi-yellow font-normal link"}
+                  href={"/events/issun-boshi-vinyl-release/get-the-ep"}
+              >purchase at the event</Link>. And
                 who else would be better to close this special Endemit edition
                 than Inland himself, the brother who mastered the sound of the
                 first Endemit EP release.
@@ -97,7 +100,7 @@ export default function IssunBoshiVinylReleasePage() {
                 </Button>
 
                 <div>
-                  {["@19 • Warm up w/ Rahul", "@22 • MMali", "@03 • Inland"].map(
+                  {["19h • Warm up w/ Rahul", "22h • MMali", "02h • Inland"].map(
                     artist => (
                       <div
                         key={artist}

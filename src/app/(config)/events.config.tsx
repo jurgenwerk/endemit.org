@@ -3,21 +3,21 @@ import Image from "next/image";
 
 const events: EventProps[] = [
   {
-    title: "Issun-Bōshi vinyl release",
+    title: "Issun-bōshi vinyl release",
     dateString: "20 Sep 2025",
     location: "Grad Kodeljevo",
     artists: ["INLAND", "MMALI"],
     imageSrc: "/issun-boshi-vinyl-release/cover-without-border.jpg",
     href: "/events/issun-boshi-vinyl-release",
     visible: {
-      link: false,
+      link: true,
       event: true,
-      image: false
+      image: true
     },
     children:
       <Image
         src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-        alt="Issun Boshi Vinyl release"
+        alt="Issun-bōshi  Vinyl release"
         width={220}
         height={220}
         className="animate-slow-spin mt-20 -ml-20"

@@ -4,13 +4,13 @@ import Sidebar from "@/app/(components)/Sidebar";
 
 export const metadata: Metadata = {
   title: {
-    default: "Issun-Bōshi vinyl release",
-    template: "%s • Issun-Bōshi vinyl release • Endemit",
+    default: "Issun-bōshi vinyl release",
+    template: "%s • Issun-bōshi vinyl release • Endemit",
   },
   description:
-    "Issun-Bōshi vinyl release event. Grad Kader, Ljubljana September 20 2025.",
+    "After a decade of both creative blockade and artistic growth, MMali is set to present his first vinyl release. Inland • MMali. Grad Kader, Ljubljana September 20 2025.",
   openGraph: {
-    images: ["/issun-boshi-vinyl-release/cover-without-border.jpg"],
+    images: ["/issun-boshi-vinyl-release/issun-boshi-vinyl-release-og.gif"],
   },
   twitter: {
     card: "summary_large_image",
@@ -36,14 +36,14 @@ export default function IssunBoshiVinylReleaseLayout({
       <Sidebar
         activeColor="text-issun-boshi-yellow"
         navigationItems={[
-          { label: "← Events", href: "/events" },
+          { label: "Events", href: "/events", isBackButton: true },
           {
             label: "Vinyl release",
             href: "/events/issun-boshi-vinyl-release",
           },
           {
-            label: "Album",
-            href: "/events/issun-boshi-vinyl-release/album",
+            label: "Get the EP",
+            href: "/events/issun-boshi-vinyl-release/get-the-ep",
           },
           {
             label: "Artists",
@@ -76,7 +76,7 @@ export default function IssunBoshiVinylReleaseLayout({
         locationAddress="Ul. Carla Benza 20"
         locationLink="/events/issun-boshi-vinyl-release/location"
         ticketsLink={"/events/issun-boshi-vinyl-release/tickets"}
-        ticketsText={"TICKETS"}
+        ticketsText={"Tickets"}
       />
     </body>
   );

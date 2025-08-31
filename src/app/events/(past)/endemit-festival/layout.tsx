@@ -24,8 +24,9 @@ export default function FestivalLayout({
       <Sidebar
         navigationItems={[
           {
-            label: "← Events",
+            label: "Events",
             href: "/events",
+            isBackButton: true,
           },
           {
             label: "Endemit Festival",
