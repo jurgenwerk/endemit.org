@@ -85,7 +85,7 @@ export default function ParallaxHero() {
         >
           <div className="absolute inset-0 flex-col flex items-center justify-center text-shadow-lg">
             <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl text-white font-thin max-lg:text-issun-boshi-blue">
-              Issun-Bōshi vinyl release
+              Issun-bōshi vinyl release
             </h1>
             <div className="text-2xl text-white">INLAND • MMALI</div>
           </div>

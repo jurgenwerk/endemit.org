@@ -4,8 +4,8 @@ import Sidebar from "@/app/(components)/Sidebar";
 
 export const metadata: Metadata = {
   title: {
-    default: "Issun-Bōshi vinyl release",
-    template: "%s • Issun-Bōshi vinyl release • Endemit",
+    default: "Issun-bōshi vinyl release",
+    template: "%s • Issun-bōshi vinyl release • Endemit",
   },
   description:
     "After a decade of both creative blockade and artistic growth, MMali is set to present his first vinyl release. Inland • MMali. Grad Kader, Ljubljana September 20 2025.",
@@ -42,8 +42,8 @@ export default function IssunBoshiVinylReleaseLayout({
             href: "/events/issun-boshi-vinyl-release",
           },
           {
-            label: "Album",
-            href: "/events/issun-boshi-vinyl-release/album",
+            label: "Get the EP",
+            href: "/events/issun-boshi-vinyl-release/get-the-ep",
           },
           {
             label: "Artists",

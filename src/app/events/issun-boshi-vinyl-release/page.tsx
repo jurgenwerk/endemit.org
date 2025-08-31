@@ -97,7 +97,7 @@ export default function IssunBoshiVinylReleasePage() {
                 </Button>
 
                 <div>
-                  {["@19 • Warm up w/ Rahul", "@22 • MMali", "@03 • Inland"].map(
+                  {["19h • Warm up w/ Rahul", "22h • MMali", "02h • Inland"].map(
                     artist => (
                       <div
                         key={artist}
