@@ -40,8 +40,7 @@ export default function EventCard({
         href={shouldShowLink ? href : ""}
         className={clsx(
           "block focus:outline-0 active:outline-0 mt-2 hover:scale-[1.02] transition-all duration-300 active:scale-[0.995]",
-          !shouldShowLink && "pointer-events-none",
-          isPastEvent && "grayscale-[70%] hover:grayscale-0"
+          !shouldShowLink && "pointer-events-none"
         )}
       >
         <div className={clsx("pt-4 pb-6 min-h-[220px] md:h-[220px]")}>
