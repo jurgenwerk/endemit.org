@@ -10,9 +10,9 @@ const events: EventProps[] = [
     imageSrc: "/issun-boshi-vinyl-release/cover-without-border.jpg",
     href: "/events/issun-boshi-vinyl-release",
     visible: {
-      link: false,
+      link: true,
       event: true,
-      image: false
+      image: true
     },
     children:
       <Image
