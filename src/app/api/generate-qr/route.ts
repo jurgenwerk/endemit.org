@@ -17,6 +17,7 @@ async function generateQRWithLogo(data: string): Promise<string> {
   const logoPath = path.join(
     process.cwd(),
     "public",
+    "images",
     "endemit-title-black-font.jpg"
   );
   const logoBuffer = await sharp(logoPath)

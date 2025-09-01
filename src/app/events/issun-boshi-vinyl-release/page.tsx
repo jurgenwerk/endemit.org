@@ -24,7 +24,7 @@ export default function IssunBoshiVinylReleasePage() {
               </div>
               <div className="mt-4 flex items-center justify-center space-x-2 text-lg">
                 <Image
-                  src="/kader.png"
+                  src="/images/kader.png"
                   alt="Kader"
                   width={16}
                   height={16}

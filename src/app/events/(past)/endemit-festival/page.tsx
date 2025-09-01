@@ -5,7 +5,7 @@ export default function EndemitFestival() {
         className="main-image-background"
         style={{
           background:
-            "url('/endemit-festival/hero-cover-landscape.jpg') no-repeat center center",
+            "url('/images/endemit-festival/hero-cover-landscape.jpg') no-repeat center center",
           backgroundSize: "cover",
           width: "100%",
           height: "100vh",

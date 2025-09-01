@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Electronic music event by Endemit in Kader, Grad Kodeljevo, June 20 2025.",
   openGraph: {
-    images: ["/ius-primae-noctis/cover.jpg"],
+    images: ["/images/ius-primae-noctis/cover.jpg"],
   },
   twitter: {
     card: "summary_large_image",
   },
   icons: {
-    icon: "/endemit-logo.jpg",
+    icon: "/images/endemit-logo.jpg",
   },
 };
 

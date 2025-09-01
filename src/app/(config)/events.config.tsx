@@ -7,7 +7,7 @@ const events: EventProps[] = [
     dateString: "20 Sep 2025",
     location: "Grad Kodeljevo",
     artists: ["INLAND", "MMALI"],
-    imageSrc: "/issun-boshi-vinyl-release/cover-without-border.jpg",
+    imageSrc: "/images/issun-boshi-vinyl-release/cover-without-border.jpg",
     href: "/events/issun-boshi-vinyl-release",
     visible: {
       link: true,
@@ -16,7 +16,7 @@ const events: EventProps[] = [
     },
     children:
       <Image
-        src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
+        src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
         alt="Issun-bōshi  Vinyl release"
         width={220}
         height={220}
@@ -56,7 +56,7 @@ const events: EventProps[] = [
       "TONSKE",
       "OBSCUR",
     ],
-    imageSrc: "/endemit-festival/cover-without-border.jpg",
+    imageSrc: "/images/endemit-festival/cover-without-border.jpg",
     href: "/events/endemit-festival",
     isPastEvent: true,
     visible: {
@@ -70,7 +70,7 @@ const events: EventProps[] = [
     dateString: "Jun 20 2025",
     location: "Grad Kodeljevo",
     artists: ["MOKILOK", "UNKNOWN TEXTURE", "RHAEGAL", "MMALI"],
-    imageSrc: "/ius-primae-noctis/cover.jpg",
+    imageSrc: "/images/ius-primae-noctis/cover.jpg",
     href: "/events/ius-primae-noctis",
     isPastEvent: true,
     visible: {

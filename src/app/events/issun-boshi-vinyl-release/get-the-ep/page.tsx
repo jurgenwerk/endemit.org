@@ -19,7 +19,7 @@ export default function AlbumPage() {
       <div className="mt-4 flex items-center justify-center space-x-2 text-sm pt-12 lg:pt-32 overflow-hidden ">
         <div className="relative z-10 group pt-[200px] max-lg:pointer-events-none">
           <Image
-            src="/issun-boshi-vinyl-release/album/issun-boshi-cover.webp"
+            src="/images/issun-boshi-vinyl-release/album/issun-boshi-cover.webp"
             alt="Issun-bōshi  Vinyl release"
             width={400}
             height={400}
@@ -27,7 +27,7 @@ export default function AlbumPage() {
           />
           <div className="absolute top-0 group-hover:translate-y-[200px] group-hover:scale-[0.95]  ease-in-out transition-transform">
             <Image
-              src="/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
+              src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
               alt="Issun-bōshi  Vinyl release"
               width={400}
               height={400}
@@ -47,7 +47,7 @@ export default function AlbumPage() {
           }
           style={{
             backgroundImage:
-              "url('/issun-boshi-vinyl-release/parallax-layers/4.webp')",
+              "url('/images/issun-boshi-vinyl-release/parallax-layers/4.webp')",
           }}
         />
       </div>

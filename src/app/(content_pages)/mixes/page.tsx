@@ -17,7 +17,7 @@ export default function Mixes() {
       <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
         <Link href="/public" onClick={close} className="lg:mx-3 lg:ml-auto">
           <Image
-            src="/endemit.png"
+            src="/images/endemit.png"
             alt="ENDEMIT"
             width={96}
             height={24}
@@ -79,7 +79,7 @@ export default function Mixes() {
         <nav className="space-y-6 px-5 pb-7 pt-5 text-xl">
           <Link
             onClick={close}
-            href="/public"
+            href="/"
             className="block rounded-md px-3 py-2  text-right font-medium uppercase hover:text-gray-300"
           >
             Home

@@ -19,7 +19,7 @@ export default function MapAndTimetable() {
       <Link href="/images/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
         <Image
           className="rounded-lg"
-          src="/endemit-festival/map/endemit-festival-map-2025.webp"
+          src="/images/endemit-festival/map/endemit-festival-map-2025.webp"
           alt="Endemit 2025 festival map"
           width={3000}
           height={4263}
@@ -32,7 +32,7 @@ export default function MapAndTimetable() {
       <Link href="/images/endemit-festival/timetable/endemit-festival-timetable-2025.webp" target="_blank" className="block">
         <Image
           className="rounded-lg"
-          src="/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
+          src="/images/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
           alt="Endemit 2025 festival timetable"
           width={3000}
           height={1330}

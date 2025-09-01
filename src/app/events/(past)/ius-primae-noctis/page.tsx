@@ -9,7 +9,7 @@ export default function IusPrimaeNoctisPage() {
     >
       <div className="lg:max-w-100 mx-auto space-y-8 sm:max-w-full font-metamorphous">
         <Image
-          src="/ius-primae-noctis/main.jpg"
+          src="/images/ius-primae-noctis/main.jpg"
           alt="Ius Primae Noctis"
           width={500}
           height={300}
@@ -41,7 +41,7 @@ export default function IusPrimaeNoctisPage() {
 
         <div className="mt-4 flex items-center justify-center space-x-2 text-sm">
           <Image
-            src="/kader.png"
+            src="/images/kader.png"
             alt="Kader"
             width={16}
             height={16}

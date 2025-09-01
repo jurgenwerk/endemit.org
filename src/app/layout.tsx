@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Endemit",
     description: "Series of events curated by Endemit crew.",
-    images: ["/endemit-logo.png"],
+    images: ["/images/endemit-logo.png"],
   },
   twitter: {
     card: "summary_large_image",

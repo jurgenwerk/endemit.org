@@ -34,7 +34,7 @@ export default function Location() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/location-libelice.jpg"
+            src="/images/endemit-festival/location-libelice.jpg"
             alt="Libelice festival camp"
             width={800}
             height={600}
@@ -49,7 +49,7 @@ export default function Location() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/traki.jpeg"
+            src="/images/endemit-festival/traki.jpeg"
             alt="Libelice festival camp"
             width={800}
             height={600}
@@ -70,7 +70,7 @@ export default function Location() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/izvir - šotori.jpeg"
+            src="/images/endemit-festival/izvir - šotori.jpeg"
             alt="Libelice festival camp"
             width={800}
             height={600}
@@ -80,7 +80,7 @@ export default function Location() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/camp-1.jpg"
+            src="/images/endemit-festival/camp-1.jpg"
             alt="Libelice festival camp"
             width={800}
             height={600}
@@ -120,7 +120,7 @@ export default function Location() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/rener-plac.jpeg"
+            src="/images/endemit-festival/rener-plac.jpeg"
             alt="Libelice festival camp"
             width={800}
             height={600}
