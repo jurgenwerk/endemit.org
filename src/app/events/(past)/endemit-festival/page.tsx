@@ -5,7 +5,7 @@ export default function EndemitFestival() {
         className="main-image-background"
         style={{
           background:
-            "url('/endemit-festival/hero-cover-landscape.jpg') no-repeat center center",
+            "url('/images/endemit-festival/hero-cover-landscape.jpg') no-repeat center center",
           backgroundSize: "cover",
           width: "100%",
           height: "100vh",
@@ -28,7 +28,7 @@ export default function EndemitFestival() {
         className="festival-description-background mt-0 mb-8"
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, rgb(0 0 0 / 55%) 1200px, rgba(87, 87, 87, 0.26)), url('/endemit-festival/festival-description-bg.jpeg')",
+            "linear-gradient(to bottom, rgb(0 0 0 / 55%) 1200px, rgba(87, 87, 87, 0.26)), url('/images/endemit-festival/festival-description-bg.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
@@ -55,12 +55,6 @@ export default function EndemitFestival() {
           </div>
         </div>
       </div>
-      {/* <FestivalSubscribe /> */}
-      <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

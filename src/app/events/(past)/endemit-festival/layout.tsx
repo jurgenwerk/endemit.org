@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Electronic music festival in Libeliče, Slovenia. August 15-17, 2025.",
   openGraph: {
-    images: ["/endemit-festival/cover.jpg"],
+    images: ["/images/endemit-festival/cover.jpg"],
   },
   twitter: {
     card: "summary_large_image",

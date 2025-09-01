@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Sets, mixes, and productions from the Endemit team and live recordings from our events.",
   openGraph: {
-    images: ["/endemit-logo.png"],
+    images: ["/images/og/endemit-og.png"],
   },
   twitter: {
     card: "summary_large_image",

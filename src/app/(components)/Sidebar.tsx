@@ -58,8 +58,8 @@ interface FlexibleSidebarProps {
 }
 
 export default function Sidebar({
-  logoSrc = "/endemit.svg",
-  logoAlt = "ENDEMIT",
+  logoSrc = "/images/endemit.svg",
+  logoAlt = "Endemit",
   logoWidth = 96,
   logoHeight = 24,
   logoHref = "/",
@@ -78,19 +78,19 @@ export default function Sidebar({
     {
       id: "facebook",
       href: "https://www.facebook.com/endemit.crew",
-      iconSrc: "/facebook.png",
+      iconSrc: "/images/facebook.png",
       alt: "Facebook",
     },
     {
       id: "instagram",
       href: "https://instagram.com/ende.mit",
-      iconSrc: "/instagram.png",
+      iconSrc: "/images/instagram.png",
       alt: "Instagram",
     },
     {
       id: "email",
       href: "mailto:endemit@endemit.org",
-      iconSrc: "/email.png",
+      iconSrc: "/images/email.png",
       alt: "Email",
     },
   ];

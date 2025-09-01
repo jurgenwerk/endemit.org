@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Exclusive Endemit merchandise, coming soon.",
   openGraph: {
     description: "Exclusive Endemit merchandise, coming soon.",
-    images: ["/endemit-logo.png"],
+    images: ["/images/og/endemit-og.png"],
   },
   twitter: {
     card: "summary_large_image",

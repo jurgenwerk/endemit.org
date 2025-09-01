@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "After a decade of both creative blockade and artistic growth, MMali is set to present his first vinyl release. Inland • MMali. Grad Kader, Ljubljana September 20 2025.",
   openGraph: {
-    images: ["/issun-boshi-vinyl-release/issun-boshi-vinyl-release-og.gif"],
+    images: ["/images/issun-boshi-vinyl-release/issun-boshi-vinyl-release-og.gif"],
   },
   twitter: {
     card: "summary_large_image",
@@ -27,7 +27,7 @@ export default function IssunBoshiVinylReleaseLayout({
       <div
         className="fixed -z-10 top-0 bottom-0 left-0 right-0 bg-issun-boshi-purple opacity-30 min-h-screen"
         style={{
-          backgroundImage: "url('/worms.png')",
+          backgroundImage: "url('/images/worms.png')",
           backgroundRepeat: "repeat",
           backgroundBlendMode: "color-burn",
           backgroundSize: "150px",

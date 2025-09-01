@@ -17,7 +17,7 @@ export default function FoodAndDrinks() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/hrana1.jpeg"
+            src="/images/endemit-festival/hrana1.jpeg"
             alt="Festival food preparation"
             width={800}
             height={600}
@@ -48,7 +48,7 @@ export default function FoodAndDrinks() {
 
         <div className="w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/endemit-festival/hrana2.jpeg"
+            src="/images/endemit-festival/hrana2.jpeg"
             alt="Festival food and drinks"
             width={800}
             height={600}

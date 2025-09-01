@@ -12,7 +12,7 @@ export default function AfterPurchase() {
               Haha, yes! Purchase confirmed.
             </h2>
             <Image
-              src="/thumbs-up.png"
+              src="/images/thumbs-up.png"
               alt="Tickets"
               width={400}
               height={400}

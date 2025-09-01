@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Endemit events are rare moments when these inner worlds surface, shaped with care, emotion, and intent. No two are the same, but all come from the same place.",
   openGraph: {
-    images: ["/endemit-logo.png"],
+    images: ["/images/og/endemit-og.png"],
   },
   twitter: {
     card: "summary_large_image",

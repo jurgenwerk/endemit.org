@@ -10,7 +10,7 @@ export default function ParallaxFooter() {
         className="w-full"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/2b.webp"
+          src="/images/issun-boshi-vinyl-release/parallax-layers/2b.webp"
           alt="Issun-bōshi  Vinyl release"
           width={1000}
           height={400}
@@ -26,7 +26,7 @@ export default function ParallaxFooter() {
         className="w-full  absolute bottom-0 z-20"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/10.webp"
+          src="/images/issun-boshi-vinyl-release/parallax-layers/10.webp"
           alt="Issun-bōshi  Vinyl release"
           width={1000}
           height={400}
@@ -40,7 +40,7 @@ export default function ParallaxFooter() {
         className="w-full absolute bottom-0 z-10"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/4.webp"
+          src="/images/issun-boshi-vinyl-release/parallax-layers/4.webp"
           alt="Issun-bōshi  Vinyl release"
           width={1000}
           height={400}
@@ -55,7 +55,7 @@ export default function ParallaxFooter() {
         className="w-full absolute bottom-0 z-0"
       >
         <Image
-          src="/issun-boshi-vinyl-release/parallax-layers/7.webp"
+          src="/images/issun-boshi-vinyl-release/parallax-layers/7.webp"
           alt="Issun-bōshi  Vinyl release"
           width={1000}
           height={400}

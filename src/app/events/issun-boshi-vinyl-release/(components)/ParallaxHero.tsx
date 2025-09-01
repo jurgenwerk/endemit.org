@@ -23,7 +23,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/1.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/1.webp"
             alt="Sun"
             className="w-full h-full object-cover animate-sun absolute"
           />
@@ -55,7 +55,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/2a.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/2a.webp"
             alt="Mountains Far"
             className="w-full h-full object-cover"
           />
@@ -70,7 +70,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/2b.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/2b.webp"
             alt="Mountains Close"
             className="w-full h-full object-cover"
           />
@@ -100,7 +100,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/3.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/3.webp"
             alt="Hills Far"
             className="w-full h-full object-cover"
           />
@@ -115,7 +115,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/7.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/7.webp"
             alt="Buildings"
             className="w-full h-full object-cover"
           />
@@ -130,7 +130,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/4.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/4.webp"
             alt="Hills Close"
             className="w-full h-full object-cover"
           />
@@ -145,7 +145,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/5.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/5.webp"
             alt="Floor"
             className="w-full h-full object-cover"
           />
@@ -163,7 +163,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/6.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/6.webp"
             alt="Stage"
             className="w-full h-full object-cover max-lg:hidden"
           />
@@ -181,7 +181,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/6.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/6.webp"
             alt="Stage"
             className="w-full h-full object-cover lg:hidden"
           />
@@ -197,7 +197,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/8.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/8.webp"
             alt="Tree"
             className="w-full h-full object-cover"
           />
@@ -213,7 +213,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/9a.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/9a.webp"
             alt="Cloud 1"
             className={
               "absolute animate-float-cloud w-full h-full object-cover"
@@ -223,7 +223,7 @@ export default function ParallaxHero() {
           <Image
             width={1000}
             height={400}
-            src="/issun-boshi-vinyl-release/parallax-layers/9b.webp"
+            src="/images/issun-boshi-vinyl-release/parallax-layers/9b.webp"
             alt="Cloud 2"
             className={
               "absolute animate-float-cloud-alt w-full h-full object-cover"

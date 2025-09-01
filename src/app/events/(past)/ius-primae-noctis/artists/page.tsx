@@ -15,7 +15,7 @@ export default function Artists() {
             <div className="mb-0 text-3xl font-bold">MOKILOK</div>
             <div className="flex flex-col gap-8 md:flex-row">
               <Image
-                src="/ius-primae-noctis/mokilok.jpeg"
+                src="/images/ius-primae-noctis/mokilok.jpeg"
                 alt="Mokilok"
                 width={400}
                 height={400}
@@ -37,7 +37,7 @@ export default function Artists() {
             </div>
             <div className="flex flex-col gap-8 md:flex-row">
               <Image
-                src="/ius-primae-noctis/unknown texture.jpeg"
+                src="/images/ius-primae-noctis/unknown texture.jpeg"
                 alt="Unknown Texture"
                 width={400}
                 height={400}
@@ -58,7 +58,7 @@ export default function Artists() {
             <div className="mb-4 text-3xl font-bold uppercase">RHAEGAL</div>
             <div className="flex flex-col gap-8 md:flex-row">
               <Image
-                src="/ius-primae-noctis/rhaegal.jpeg"
+                src="/images/ius-primae-noctis/rhaegal.jpeg"
                 alt="Rhaegal"
                 width={400}
                 height={400}
@@ -78,7 +78,7 @@ export default function Artists() {
             <div className="mb-4 text-3xl font-bold uppercase">MMALI</div>
             <div className="flex flex-col gap-8 md:flex-row">
               <Image
-                src="/ius-primae-noctis/mmali.jpeg"
+                src="/images/ius-primae-noctis/mmali.jpeg"
                 alt="MMALI"
                 width={400}
                 height={400}

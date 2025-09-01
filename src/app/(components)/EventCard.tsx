@@ -60,7 +60,7 @@ export default function EventCard({
                 <div
                   className="w-full h-48 md:h-full flex items-center justify-center bg-stone-700 rounded-md "
                   style={{
-                    backgroundImage: "url('/worms.png')",
+                    backgroundImage: "url('/images/worms.png')",
                     backgroundRepeat: "repeat",
                     backgroundBlendMode: "color-burn",
                     backgroundSize: "40%",
@@ -68,7 +68,7 @@ export default function EventCard({
                 >
                   <div className="text-center">
                     <Image
-                      src={"/endemit-logo.png"}
+                      src={"/images/endemit-logo.png"}
                       alt={"Event image coming soon"}
                       width={48}
                       height={48}

@@ -1,0 +1,64 @@
+{
+  "name": "Endemit",
+  "short_name": "EƎ",
+  "icons": [
+    {
+      "src": "/images/icons/endemit_icon-48x48.webp",
+      "sizes": "48x48",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-72x72.webp",
+      "sizes": "72x72",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-96x96.webp",
+      "sizes": "96x96",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-128x128.webp",
+      "sizes": "128x128",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-144x144.webp",
+      "sizes": "144x144",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-152x152.webp",
+      "sizes": "152x152",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-192x192.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-256x256.webp",
+      "sizes": "256x256",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-384x384.webp",
+      "sizes": "384x384",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/icons/endemit_icon-512x512.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "start_url": "https://endemit.org",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "lang": "en-US",
+  "scope": "/",
+  "description": "Endemit is a cultural association and a collective of individuals drawn to sound, code, and image, quietly crafting in their own time. Each project is a reflection of personal obsessions and shared values."
+}
