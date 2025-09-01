@@ -52,7 +52,7 @@ export default function IusPrimaeNoctisLayout({
           {
             id: "facebook",
             href: "https://www.facebook.com/events/985739330046224",
-            iconSrc: "/facebook.png",
+            iconSrc: "/images/facebook.png",
             alt: "Facebook",
           },
         ]}

@@ -28,7 +28,7 @@ export default function EndemitFestival() {
         className="festival-description-background mt-0 mb-8"
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, rgb(0 0 0 / 55%) 1200px, rgba(87, 87, 87, 0.26)), url('/endemit-festival/festival-description-bg.jpeg')",
+            "linear-gradient(to bottom, rgb(0 0 0 / 55%) 1200px, rgba(87, 87, 87, 0.26)), url('/images/endemit-festival/festival-description-bg.jpeg')",
           backgroundSize: "cover",
           backgroundPosition: "center center",
           backgroundRepeat: "no-repeat",
