@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     "rave",
     "ljubljana",
     "libeliče",
+    "ljubljana techno",
     "art",
     "music",
     "creative",
