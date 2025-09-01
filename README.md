@@ -1,4 +1,4 @@
-# Endemit web - V3
+# Endemit web • V3
 
 A modern web application for Endemit events and music curation, built with Next.js 15, React 19, TypeScript, and Tailwind CSS.
 
@@ -6,8 +6,8 @@ A modern web application for Endemit events and music curation, built with Next.
 
 ## ⭐ Masthead
 
-- 👾 Matic Jurglič **@jurgenwerk**
-- 👾 Nejc Palir **@n3pal**
+- 👾 Matic Jurglič • @jurgenwerk
+- 👾 Nejc Palir • @n3pal
 - 📝 Matej Mirnik
 - 📝 Katarina Žniderič
 - 🎨 Nejc Dornik
