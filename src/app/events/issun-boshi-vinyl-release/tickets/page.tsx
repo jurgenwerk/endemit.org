@@ -1,4 +1,3 @@
-import EndemitSubscribe from "@/app/(components)/EndemitSubscribe";
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
 import type { Metadata } from "next";
 import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
@@ -15,12 +14,12 @@ export default function TicketsPage() {
 
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-        {/* @ts-ignore */}
+        {/* @ts-expect-error */}
         <stripe-buy-button
           buy-button-id="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
           publishable-key="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
         >
-          {/* @ts-ignore */}
+          {/* @ts-expect-error */}
         </stripe-buy-button>
       </div>
       <CoverFooter />
