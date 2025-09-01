@@ -6,19 +6,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // General redirects with dynamic paths
-      {
-        source: '/endemit-festival/:path*',
-        destination: '/events/endemit-festival/:path*',
-        permanent: true,
-      },
-      {
-        source: '/ius-primae-noctis/:path*',
-        destination: '/events/ius-primae-noctis/:path*',
-        permanent: true,
-      },
-
-      // Specific one - to - one
+      // Most specific redirects first
       {
         source: '/endemit-festival/map',
         destination: '/events/endemit-festival/map-and-timetable',
@@ -27,6 +15,18 @@ const nextConfig: NextConfig = {
       {
         source: '/festival',
         destination: '/events/endemit-festival',
+        permanent: true,
+      },
+
+      // General redirects with dynamic paths last
+      {
+        source: '/endemit-festival/:path*',
+        destination: '/events/endemit-festival/:path*',
+        permanent: true,
+      },
+      {
+        source: '/ius-primae-noctis/:path*',
+        destination: '/events/ius-primae-noctis/:path*',
         permanent: true,
       },
     ]
