@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Endemit is a cultural association and a collective of individuals drawn to sound, code, and image, quietly crafting in their own time.",
   openGraph: {
-    images: ["/images/endemit-logo.png"],
+    images: ["/images/og/endemit-og.png"],
   },
   twitter: {
     card: "summary_large_image",
