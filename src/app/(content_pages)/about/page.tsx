@@ -47,7 +47,7 @@ export default function About() {
           <div>
             🔗 &nbsp;
             <a
-              href="/Statut_Endemit_31.7.2025.pdf"
+              href="/docs/Statut_Endemit_31.7.2025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 link"
@@ -72,7 +72,7 @@ export default function About() {
             <div>
               🔗 &nbsp;
               <a
-                href="/ENDEMIT pristopna slo.pdf"
+                href="/docs/ENDEMIT%20pristopna%20slo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 link"
@@ -83,7 +83,7 @@ export default function About() {
             <div>
               🔗 &nbsp;
               <a
-                href="/ENDEMIT pristopna ang.pdf"
+                href="/docs/ENDEMIT%20pristopna%20ang.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 link"
