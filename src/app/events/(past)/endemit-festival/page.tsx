@@ -55,12 +55,6 @@ export default function EndemitFestival() {
           </div>
         </div>
       </div>
-      {/* <FestivalSubscribe /> */}
-      <hr className="mx-auto mt-4 w-1/2 border-gray-400" />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }
