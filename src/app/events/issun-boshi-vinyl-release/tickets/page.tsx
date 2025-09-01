@@ -14,12 +14,12 @@ export default function TicketsPage() {
 
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
-        {/* @ts-expect-error */}
+        {/* @ts-expect-error custom component */}
         <stripe-buy-button
           buy-button-id="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
           publishable-key="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
         >
-          {/* @ts-expect-error */}
+          {/* @ts-expect-error custom component */}
         </stripe-buy-button>
       </div>
       <CoverFooter />
