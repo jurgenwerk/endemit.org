@@ -102,10 +102,6 @@ endemit-web/
 ├── src/
 │   └── app/               # Next.js App Router
 │       ├── (components)/  # Reusable UI components
-│       │   ├── EventCard.tsx
-│       │   ├── ArtistCard.tsx
-│       │   ├── Sidebar.tsx
-│       │   └── ...
 │       ├── (content_pages)/ # Main content pages
 │       │   ├── about/
 │       │   ├── events/
@@ -113,8 +109,9 @@ endemit-web/
 │       │   ├── merch/
 │       │   └── mixes/
 │       ├── (styles)/      # Global styles
+|       ├── (lib)/       # Utility functions  
 │       ├── api/           # API routes
-│       ├── lib/           # Utility functions
+│       ├── events/           # event content pages
 │       └── layout.tsx     # Root layout
 ├── next.config.ts         # Next.js configuration
 ├── tailwind.config.js     # Tailwind CSS configuration
@@ -124,7 +121,7 @@ endemit-web/
 
 ## 🎨 Styling
 
-The project uses **Tailwind CSS** 
+The project uses **Tailwind CSS**. Each event can have its own color scheme and styling defined. 
 
 ## 🔧 Key Technologies
 
