@@ -18,10 +18,10 @@ async function generateQRWithLogo(data: string): Promise<string> {
     process.cwd(),
     "public",
     "images",
-    "endemit-title-black-font.jpg"
+    "endemit-logo.png"
   );
   const logoBuffer = await sharp(logoPath)
-    .resize(60, 20, {
+    .resize(55, 55, {
       fit: "inside",
       background: { r: 255, g: 255, b: 255, alpha: 1 },
     })
@@ -29,8 +29,8 @@ async function generateQRWithLogo(data: string): Promise<string> {
     .toBuffer();
 
   const paddingWidth = 80;
-  const paddingHeight = 35;
-  const cornerRadius = 6;
+  const paddingHeight = 80;
+  const cornerRadius = 0;
 
   const whitePadding = await sharp(
     Buffer.from(`
@@ -42,7 +42,7 @@ async function generateQRWithLogo(data: string): Promise<string> {
         height="${paddingHeight}"
         rx="${cornerRadius}"
         fill="white"
-        fill-opacity="0.95"
+        fill-opacity="1"
       />
     </svg>`)
   )
