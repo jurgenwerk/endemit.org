@@ -15,9 +15,9 @@ export default function TicketsPage() {
         <Headline title="Tickets" />
 
         <p className="text-xl font-light">
-          The tickets are available for purchase in limited quantities and
-          limited capacity. Tickets can be purchased through the secure Stripe
-          payment gateway. Tickets are non-refundable.
+          Tickets are available in limited capacity and sold on a first-come,
+          first-served basis through our secure Stripe payment gateway. All
+          sales are final - tickets are non-refundable.
         </p>
         <div className="w-full flex justify-center pt-16">
           <BuyButton
