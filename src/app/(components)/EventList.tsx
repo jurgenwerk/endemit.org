@@ -33,6 +33,7 @@ function EventListContent({ title, events }: EventListProps) {
             />
           )}
           <EventCard
+            id={event.id}
             key={event.title}
             title={event.title}
             dateString={event.dateString}

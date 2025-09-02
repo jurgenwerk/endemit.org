@@ -1,3 +1,6 @@
+import { EventProps } from "@/app/(components)/EventCard";
+import events from "@/app/(config)/events.config";
+
 export const formatTime = (date: Date) => {
   return date.toLocaleTimeString("en-US", {
     hour: "2-digit",
@@ -24,4 +27,10 @@ export const getTimeUntil = (currentTime: Date, date: Date) => {
   } else {
     return `in ${minutes}m`;
   }
+};
+
+export const getEventConfigById = (id: string): EventProps | undefined => {
+  return events.find(
+    (event: EventProps) => event.id.toLowerCase() === id.toLowerCase()
+  );
 };

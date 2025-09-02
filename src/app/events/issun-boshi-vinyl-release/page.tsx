@@ -90,6 +90,7 @@ export default function IssunBoshiVinylReleasePage() {
                   fill="none"
                   role="img"
                   color="#000000"
+                  className="group-hover:invert"
                 >
                   <path
                     fillRule="evenodd"
