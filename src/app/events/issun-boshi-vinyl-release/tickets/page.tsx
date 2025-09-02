@@ -1,6 +1,8 @@
 import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
 import type { Metadata } from "next";
 import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
+import BuyButton from "@/app/(components)/BuyButton";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Tickets",
@@ -12,15 +14,26 @@ export default function TicketsPage() {
       <div className="max-w-5xl space-y-6 p-5 lg:px-12 text-white font-typo flex-1 max-lg:pb-16">
         <Headline title="Tickets" />
 
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-        {/* @ts-expect-error custom component */}
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
-          publishable-key="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
-        >
-          {/* @ts-expect-error custom component */}
-        </stripe-buy-button>
+        <p className="text-xl font-light">
+          The tickets are available for purchase in limited quantities and
+          limited capacity. Tickets can be purchased through the secure Stripe
+          payment gateway. Tickets are non-refundable.
+        </p>
+        <div className="w-full flex justify-center pt-16">
+          <BuyButton
+            buyButtonId="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
+            publishableKey="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
+          />
+          <div
+            className={
+              "absolute left-0 right-0 -z-10 -translate-y-[78%] h-full bg-center bg-cover w-full !m-0 bg-no-repeat"
+            }
+            style={{
+              backgroundImage:
+                "url('/images/issun-boshi-vinyl-release/parallax-layers/5.webp')",
+            }}
+          />
+        </div>
       </div>
       <CoverFooter />
     </>
