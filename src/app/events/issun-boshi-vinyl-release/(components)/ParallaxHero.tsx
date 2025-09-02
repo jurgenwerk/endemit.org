@@ -10,7 +10,7 @@ export default function ParallaxHero() {
 
       <div
         className={
-          "overflow-hidden relative aspect-[9/16] lg:aspect-[16/9] -mt-1 "
+          "lg:overflow-hidden relative aspect-[9/16] lg:aspect-[16/9] -mt-1 "
         }
       >
         {/* Sun */}
@@ -84,7 +84,7 @@ export default function ParallaxHero() {
           className="absolute inset-0 max-lg:-mt-[130%]"
         >
           <div className="absolute inset-0 flex-col flex items-center justify-center text-shadow-lg">
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl text-white font-thin max-lg:text-issun-boshi-blue">
+            <h1 className="text-center text-4xl sm:text-5xl lg:text-5xl xl:text-7xl text-white font-thin max-lg:text-issun-boshi-blue">
               Issun-bōshi vinyl release
             </h1>
             <div className="text-2xl text-white">INLAND • MMALI</div>
