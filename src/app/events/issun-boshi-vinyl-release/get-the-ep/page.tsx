@@ -15,6 +15,10 @@ export default function AlbumPage() {
         {" "}
         The EP will be available for purchase exclusively at the event and in
         limited quantities.
+        <br />
+        <br />
+        Collect your vinyl at the bar using your receipt during morning
+        departure and enjoy dancing carefree all night.
       </p>
       <div className="mt-4 flex items-center justify-center space-x-2 text-sm pt-12 lg:pt-32 overflow-hidden ">
         <div className="relative z-10 group pt-[200px] max-lg:pointer-events-none">
