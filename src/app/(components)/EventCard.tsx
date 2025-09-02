@@ -3,6 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 
 export interface EventProps {
+  id: string;
   title: string;
   annotation?: string;
   dateString: string;

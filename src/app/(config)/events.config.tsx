@@ -3,6 +3,7 @@ import Image from "next/image";
 
 const events: EventProps[] = [
   {
+    id: "issun-boshi-vinyl-release",
     title: "Issun-bōshi vinyl release",
     dateString: "20 Sep 2025",
     location: "Grad Kodeljevo",
@@ -26,6 +27,7 @@ const events: EventProps[] = [
     ),
   },
   {
+    id: "tba-nov-2025",
     title: "TBA",
     annotation: "[MORE INFO SOON]",
     dateString: "21 Nov 2025",
@@ -40,6 +42,7 @@ const events: EventProps[] = [
 
   // Past events
   {
+    id: "endemit-festival",
     title: "ENDEMIT FESTIVAL",
     annotation: "[PRIVATE GATHERING]",
     dateString: "15-17 Aug 2025",
@@ -68,6 +71,7 @@ const events: EventProps[] = [
     },
   },
   {
+    id: "ius-primae-noctis",
     title: "IUS PRIMAE NOCTIS",
     dateString: "Jun 20 2025",
     location: "Grad Kodeljevo",

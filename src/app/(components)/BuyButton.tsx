@@ -1,24 +1,34 @@
 import Script from "next/script";
 
 interface BuyButtonParams {
+  available: boolean;
   buyButtonId: string;
   publishableKey: string;
 }
 
 export default function BuyButton({
+  available,
   buyButtonId,
   publishableKey,
 }: BuyButtonParams) {
+  if (!available) {
+    return (
+      <div className="text-center p-4 bg-white text-black rounded-md mt-28 text-lg border-2 border-black">
+        Tickets are currently not available
+      </div>
+    );
+  }
+
   return (
     <>
       <Script
         src="https://js.stripe.com/v3/buy-button.js"
         strategy="afterInteractive"
       />
-      <div className={"absolute -z-[5] mt-40 bg-white p-5 rounded-full"}>
+      <div className={"absolute -z-[5] mt-40 bg-white/60 rounded-full"}>
         <svg
           aria-hidden="true"
-          className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+          className="inline w-8 h-8 text-gray-200 animate-spin dark:text-white fill-black"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
