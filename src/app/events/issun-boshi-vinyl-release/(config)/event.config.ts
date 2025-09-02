@@ -3,7 +3,7 @@ export const eventConfig = {
   month: 9,
   dates: {
     Saturday: 20,
-    Sunday: 21
+    Sunday: 21,
   },
   timezone: "Europe/Ljubljana", // Festival timezone
 };

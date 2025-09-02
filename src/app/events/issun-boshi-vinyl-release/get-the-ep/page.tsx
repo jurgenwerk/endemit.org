@@ -73,8 +73,10 @@ export default function AlbumPage() {
           ))}
           <hr className="border-t border-issun-boshi-yellow/80 my-12 border-dashed" />
           <div className="text-center font-light flex flex-col gap-4 text-lg bg-gradient-to-b items-center from-issun-boshi-orange via-issun-boshi-yellow to-white bg-clip-text text-transparent">
-            <p className="text-white text-lg font-normal py-2 mb-4">Endemit I</p>
-            <p >
+            <p className="text-white text-lg font-normal py-2 mb-4">
+              Endemit I
+            </p>
+            <p>
               A decade of wars - with myself,
               <br />
               with the noise,
@@ -104,7 +106,8 @@ export default function AlbumPage() {
               <br />
               The ones who gave me hell when I needed fire.
               <br />
-              The ones who stood beside me in the storm and said, &#39;Keep going.&#39;
+              The ones who stood beside me in the storm and said, &#39;Keep
+              going.&#39;
             </p>
             <p>Thank you. Now - we begin.</p>
           </div>

@@ -17,17 +17,19 @@ A modern web application for Endemit events and music curation, built with Next.
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 pnpm install
 ```
 
 2. Run the development server:
+
 ```bash
 pnpm dev
 ```
@@ -36,29 +38,32 @@ Open [http://127.0.0.1:3000](http://localhost:3000) to view the application.
 
 ## 🛠️ Available Scripts
 
-| Script                  | Description |
-|-------------------------|-------------|
+| Script                  | Description                                  |
+| ----------------------- | -------------------------------------------- |
 | `pnpm run dev`          | Starts the development server with Turbopack |
-| `pnpm run build`        | Builds the application for production |
-| `pnpm run start`        | Starts the production server |
-| `pnpm run lint`         | Runs ESLint to check code quality |
-| `pnpm run format`       | Formats code using Prettier |
-| `pnpm run format:check` | Checks if code is properly formatted |
+| `pnpm run build`        | Builds the application for production        |
+| `pnpm run start`        | Starts the production server                 |
+| `pnpm run lint`         | Runs ESLint to check code quality            |
+| `pnpm run format`       | Formats code using Prettier                  |
+| `pnpm run format:check` | Checks if code is properly formatted         |
 
 ## 🏗️ Build & Deployment
 
 ### Development Build
+
 ```bash
 pnpm run dev
 ```
 
 ### Production Build
+
 ```bash
 pnpm run build
 pnpm run start
 ```
 
 ### Static Export (if needed)
+
 The project is configured for static export. Build artifacts will be in the `.next` directory.
 
 ## 🔀 Redirects Configuration
@@ -103,7 +108,7 @@ endemit-web/
 │       │   ├── merch/
 │       │   └── mixes/
 │       ├── (styles)/      # Global styles
-|       ├── (lib)/       # Utility functions  
+|       ├── (lib)/       # Utility functions
 │       ├── api/           # API routes
 │       ├── events/           # event content pages
 │       └── layout.tsx     # Root layout
@@ -115,7 +120,7 @@ endemit-web/
 
 ## 🎨 Styling
 
-The project uses **Tailwind CSS**. Each event can have its own color scheme and styling defined. 
+The project uses **Tailwind CSS**. Each event can have its own color scheme and styling defined.
 
 ## 🔧 Key Technologies
 
@@ -142,6 +147,7 @@ The project uses **Tailwind CSS**. Each event can have its own color scheme and 
 ## 🚀 Deployment
 
 The project is configured for deployment on Vercel with:
+
 - Automatic builds on push
 - Image optimization
 - Analytics integration

@@ -1,7 +1,7 @@
 import { ArtistWithTimestamp } from "@/app/events/(past)/endemit-festival/(config)";
 import Image from "next/image";
 import { formatDay, formatTime } from "@/app/(lib)/util";
-import {HTMLProps} from "react";
+import { HTMLProps } from "react";
 import clsx from "clsx";
 
 interface ArtistCardProps {
@@ -17,10 +17,15 @@ export default function ArtistCard({
   cardClassName = "bg-white/80",
   nameClassName = "font-bold mb-4 text-gray-900",
   descriptionClassName = "text-gray-700 ",
-  timeClassName = "font-bold text-gray-900"
+  timeClassName = "font-bold text-gray-900",
 }: ArtistCardProps) {
   return (
-    <div className={clsx("backdrop-blur-sm rounded-lg p-6 shadow-lg", cardClassName)}>
+    <div
+      className={clsx(
+        "backdrop-blur-sm rounded-lg p-6 shadow-lg",
+        cardClassName
+      )}
+    >
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Artist Photo */}
         <div className="lg:w-1/3 flex-shrink-0">
@@ -53,18 +58,30 @@ export default function ArtistCard({
         {/* Artist Info */}
         <div className="lg:w-2/3 flex flex-col justify-center">
           <div className="flex items-start justify-between">
-            <h3 className={clsx("text-2xl lg:text-3xl mb-4 uppercase", nameClassName)}>
+            <h3
+              className={clsx(
+                "text-2xl lg:text-3xl mb-4 uppercase",
+                nameClassName
+              )}
+            >
               {artist.name}
             </h3>
           </div>
 
-          <p className={clsx("leading-relaxed text-sm lg:text-base", descriptionClassName)}>
+          <p
+            className={clsx(
+              "leading-relaxed text-sm lg:text-base",
+              descriptionClassName
+            )}
+          >
             {artist.description}
           </p>
 
           {/* Stage and Time Info */}
           <div className="mt-4 space-y-2">
-            <div className={clsx("text-lg lg:text-xl uppercase", timeClassName)}>
+            <div
+              className={clsx("text-lg lg:text-xl uppercase", timeClassName)}
+            >
               {formatDay(artist.startTime)} {formatTime(artist.startTime)} -{" "}
               {formatTime(artist.endTime)}
               {artist.stage && ` @ ${artist.stage}`}

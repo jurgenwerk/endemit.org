@@ -19,10 +19,7 @@ export default function IusPrimaeNoctisPage() {
 
         <hr className="mx-auto mt-10 w-1/2 border-gray-400"></hr>
 
-        <Link
-          href={`/events/ius-primae-noctis/artists`}
-          className="pt-2"
-        >
+        <Link href={`/events/ius-primae-noctis/artists`} className="pt-2">
           <h3 className="main-text-color mt-6 text-center text-xl md:text-2xl ">
             MOKILOK
           </h3>

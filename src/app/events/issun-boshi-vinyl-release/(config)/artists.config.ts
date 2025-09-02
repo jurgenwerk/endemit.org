@@ -23,7 +23,6 @@ export const artistConfig: Artist[] = [
     day: "Sunday",
     time: "02:00",
     duration: 240,
-
   },
   {
     name: "MMali",

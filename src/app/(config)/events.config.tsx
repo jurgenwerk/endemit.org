@@ -1,4 +1,4 @@
-import {EventProps} from "@/app/(components)/EventCard";
+import { EventProps } from "@/app/(components)/EventCard";
 import Image from "next/image";
 
 const events: EventProps[] = [
@@ -12,9 +12,10 @@ const events: EventProps[] = [
     visible: {
       link: true,
       event: true,
-      image: true
+      image: true,
     },
-    children:
+    isTicketsAvailable: true,
+    children: (
       <Image
         src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
         alt="Issun-bōshi  Vinyl release"
@@ -22,6 +23,7 @@ const events: EventProps[] = [
         height={220}
         className="animate-slow-spin mt-20 -ml-20"
       />
+    ),
   },
   {
     title: "TBA",
@@ -32,7 +34,7 @@ const events: EventProps[] = [
     visible: {
       link: false,
       event: true,
-      image: false
+      image: false,
     },
   },
 
@@ -62,7 +64,7 @@ const events: EventProps[] = [
     visible: {
       link: true,
       event: true,
-      image: true
+      image: true,
     },
   },
   {
@@ -76,7 +78,7 @@ const events: EventProps[] = [
     visible: {
       link: true,
       event: true,
-      image: true
+      image: true,
     },
   },
 ];

@@ -16,7 +16,11 @@ export default function MapAndTimetable() {
       </p>
 
       <h3 className="text-2xl font-bold uppercase">Map</h3>
-      <Link href="/images/endemit-festival/map/endemit-festival-map-2025.webp" target="_blank" className="block">
+      <Link
+        href="/images/endemit-festival/map/endemit-festival-map-2025.webp"
+        target="_blank"
+        className="block"
+      >
         <Image
           className="rounded-lg"
           src="/images/endemit-festival/map/endemit-festival-map-2025.webp"
@@ -29,7 +33,11 @@ export default function MapAndTimetable() {
       {/*<ArtistCarousel/>*/}
 
       <h3 className="text-2xl font-bold uppercase">Timetable</h3>
-      <Link href="/images/endemit-festival/timetable/endemit-festival-timetable-2025.webp" target="_blank" className="block">
+      <Link
+        href="/images/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
+        target="_blank"
+        className="block"
+      >
         <Image
           className="rounded-lg"
           src="/images/endemit-festival/timetable/endemit-festival-timetable-2025.webp"
@@ -38,7 +46,6 @@ export default function MapAndTimetable() {
           height={1330}
         />
       </Link>
-
     </div>
   );
 }

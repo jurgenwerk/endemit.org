@@ -4,7 +4,7 @@ interface SubscribeProps {
   title: string;
   description: string;
   apiEndpoint: string;
-  theme?: 'light' | 'dark';
+  theme?: "light" | "dark";
   centered?: boolean;
   resetButton?: boolean;
   containerClass?: string;
@@ -14,34 +14,33 @@ export default function Subscribe({
   title,
   description,
   apiEndpoint,
-  theme = 'light',
+  theme = "light",
   centered = false,
   resetButton = false,
-  containerClass = ''
+  containerClass = "",
 }: SubscribeProps) {
-  const isDark = theme === 'dark';
+  const isDark = theme === "dark";
 
-  const containerStyles = centered ? 'text-center' : '';
+  const containerStyles = centered ? "text-center" : "";
   const titleStyles = isDark
-    ? 'text-2xl font-bold text-white mb-4'
-    : 'text-3xl font-bold text-gray-800 mb-2 mx-2';
+    ? "text-2xl font-bold text-white mb-4"
+    : "text-3xl font-bold text-gray-800 mb-2 mx-2";
   const descriptionStyles = isDark
-    ? 'text-gray-400 mb-8 text-lg'
-    : 'text-gray-600 mb-8 mx-2 text-lg';
+    ? "text-gray-400 mb-8 text-lg"
+    : "text-gray-600 mb-8 mx-2 text-lg";
   const formContainerStyles = centered
-    ? 'max-w-xl mx-auto mb-12 px-4'
-    : 'max-w-xl ';
+    ? "max-w-xl mx-auto mb-12 px-4"
+    : "max-w-xl ";
   const inputStyles = isDark
-    ? 'w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500'
-    : 'w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500';
-  const buttonStyles = 'w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors';
+    ? "w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    : "w-full px-4 py-2 bg-white border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
+  const buttonStyles =
+    "w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors";
 
   return (
     <div className={`${containerStyles} ${containerClass}`}>
       <h1 className={titleStyles}>{title}</h1>
-      <p className={descriptionStyles}>
-        {description}
-      </p>
+      <p className={descriptionStyles}>{description}</p>
       <div className={formContainerStyles}>
         <form
           onSubmit={async e => {
@@ -99,10 +98,7 @@ export default function Subscribe({
               className={inputStyles}
             />
           </div>
-          <button
-            type="submit"
-            className={buttonStyles}
-          >
+          <button type="submit" className={buttonStyles}>
             Sign me up
           </button>
         </form>

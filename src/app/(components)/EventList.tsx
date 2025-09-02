@@ -42,10 +42,11 @@ function EventListContent({ title, events }: EventListProps) {
             imageSrc={event.imageSrc}
             href={event.href}
             isPastEvent={event.isPastEvent}
+            isTicketsAvailable={event.isTicketsAvailable}
             visible={{
               link: showHiddenContent || event.visible.link,
               image: showHiddenContent || event.visible.image,
-              event: event.visible.event
+              event: event.visible.event,
             }}
           >
             {event.children}

@@ -1,0 +1,24 @@
+# Build outputs
+.next
+out
+dist
+coverage
+
+# Node
+node_modules
+
+# Locks
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Misc
+.DS_Store
+.idea
+.vscode
+
+# Generated assets
+public/**/*.webp
+public/**/*.png
+public/**/*.jpg
+public/**/*.jpeg

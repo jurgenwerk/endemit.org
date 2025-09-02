@@ -202,7 +202,7 @@ export default function Sidebar({
                     "text-white hover:text-gray-300 active:text-gray-600"
                 )}
               >
-                {item.isBackButton && ("← ")}
+                {item.isBackButton && "← "}
                 {item.label}
               </Link>
             );
