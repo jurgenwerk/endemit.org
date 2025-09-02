@@ -2,7 +2,6 @@ import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headli
 import type { Metadata } from "next";
 import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
 import BuyButton from "@/app/(components)/BuyButton";
-import Image from "next/image";
 import React from "react";
 
 export const metadata: Metadata = {
