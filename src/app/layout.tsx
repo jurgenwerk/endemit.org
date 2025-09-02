@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   creator: "Endemit",
   publisher: "Endemit",
   manifest: "/manifest.json",
+  metadataBase: new URL("https://endemit.org"),
 
   openGraph: {
     title: "Endemit",

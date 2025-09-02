@@ -1,4 +1,10 @@
-export default function Headline({eventName = "Issun-bōshi vinyl release", title}: {eventName?: string, title: string}) {
+export default function Headline({
+  eventName = "Issun-bōshi vinyl release",
+  title,
+}: {
+  eventName?: string;
+  title: string;
+}) {
   return (
     <>
       <div className="text-lg font-light uppercase text-issun-boshi-orange pt-16 lg:pt-10 pb-0 mb-0">

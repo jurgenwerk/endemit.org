@@ -8,28 +8,28 @@ const nextConfig: NextConfig = {
     return [
       // Most specific redirects first
       {
-        source: '/endemit-festival/map',
-        destination: '/events/endemit-festival/map-and-timetable',
+        source: "/endemit-festival/map",
+        destination: "/events/endemit-festival/map-and-timetable",
         permanent: true,
       },
       {
-        source: '/festival',
-        destination: '/events/endemit-festival',
+        source: "/festival",
+        destination: "/events/endemit-festival",
         permanent: true,
       },
 
       // General redirects with dynamic paths last
       {
-        source: '/endemit-festival/:path*',
-        destination: '/events/endemit-festival/:path*',
+        source: "/endemit-festival/:path*",
+        destination: "/events/endemit-festival/:path*",
         permanent: true,
       },
       {
-        source: '/ius-primae-noctis/:path*',
-        destination: '/events/ius-primae-noctis/:path*',
+        source: "/ius-primae-noctis/:path*",
+        destination: "/events/ius-primae-noctis/:path*",
         permanent: true,
       },
-    ]
+    ];
   },
 };
 

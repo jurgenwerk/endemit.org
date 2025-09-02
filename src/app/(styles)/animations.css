@@ -1,5 +1,6 @@
 @keyframes float-back-forth {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -13,12 +14,14 @@
     transform-origin: 87% 22%;
     filter: blur(0px);
   }
-  30%,50% {
+  30%,
+  50% {
     transform: scale(1) translateY(20px);
     transform-origin: 87% 22%;
     filter: blur(2px);
   }
-  70%, 100%  {
+  70%,
+  100% {
     transform: scale(1) translateY(0px);
     transform-origin: 87% 22%;
     filter: blur(0px);
@@ -44,7 +47,8 @@
   50% {
     transform: translateX(-2px) translateY(1px);
   }
-  60%, 100% {
+  60%,
+  100% {
     transform: translateX(0) translateY(0);
   }
 }
