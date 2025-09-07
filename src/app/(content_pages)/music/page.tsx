@@ -33,9 +33,8 @@ export default function Music() {
         height="166"
         scrolling="no"
         frameBorder="no"
-        className="rounded-md"
+        className="rounded-md mt-4"
         allow="autoplay"
-        className="mt-4"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2164932096&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
       ></iframe>
       <div
@@ -77,9 +76,8 @@ export default function Music() {
         height="166"
         scrolling="no"
         frameBorder="no"
-        className="rounded-md"
+        className="rounded-md mt-8"
         allow="autoplay"
-        className="mt-8"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2140222152&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
       ></iframe>
       <div
