@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Music() {
   return (
-    <div className="lg:max-w-3xl mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16">
+    <div className="lg:max-w-3xl mx-auto  sm:max-w-full pt-24 px-4 lg:pt-16">
       <h1 className="text-3xl font-bold text-white mb-8">MUSIC</h1>
 
       <div className="space-y-4">
@@ -35,6 +35,7 @@ export default function Music() {
         frameBorder="no"
         className="rounded-md"
         allow="autoplay"
+        className="mt-4"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2164932096&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
       ></iframe>
       <div
@@ -49,6 +50,7 @@ export default function Music() {
           fontFamily:
             "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
           fontWeight: 100,
+          marginTop: "6px",
         }}
       >
         <a
@@ -66,7 +68,7 @@ export default function Music() {
           target="_blank"
           style={{ color: "#cccccc", textDecoration: "none" }}
         >
-          Emit 002
+          Obscur · Emit 002 · Sep 6 2025
         </a>
       </div>
 
@@ -77,6 +79,7 @@ export default function Music() {
         frameBorder="no"
         className="rounded-md"
         allow="autoplay"
+        className="mt-8"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2140222152&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
       ></iframe>
       <div
@@ -91,6 +94,7 @@ export default function Music() {
           fontFamily:
             "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
           fontWeight: 100,
+          marginTop: "6px",
         }}
       >
         <a
@@ -108,7 +112,7 @@ export default function Music() {
           target="_blank"
           style={{ color: "#cccccc", textDecoration: "none" }}
         >
-          Rhaegal - Emit 001
+          Rhaegal · Emit 001 · Aug 23 2025
         </a>
       </div>
     </div>
