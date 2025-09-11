@@ -42,8 +42,10 @@ function EventListContent({ title, events }: EventListProps) {
             annotation={event.annotation}
             imageSrc={event.imageSrc}
             href={event.href}
-            isPastEvent={event.isPastEvent}
-            isTicketsAvailable={event.isTicketsAvailable}
+            options={{
+              isPastEvent: event.options?.isPastEvent,
+              isTicketsAvailable: event.options?.isTicketsAvailable,
+            }}
             visible={{
               link: showHiddenContent || event.visible.link,
               image: showHiddenContent || event.visible.image,

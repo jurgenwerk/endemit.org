@@ -8,7 +8,7 @@ export default function Home() {
     <div className="lg:max-w-3xl mx-auto sm:max-w-full pt-24 px-6 lg:pt-16">
       <EventList
         title="UPCOMING EVENTS"
-        events={events.filter(event => !event.isPastEvent)}
+        events={events.filter(event => !event.options?.isPastEvent)}
       />
       <div className="mt-4">
         <Link

@@ -15,7 +15,9 @@ const events: EventProps[] = [
       event: true,
       image: true,
     },
-    isTicketsAvailable: true,
+    options: {
+      isTicketsAvailable: true,
+    },
     children: (
       <Image
         src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
@@ -25,6 +27,20 @@ const events: EventProps[] = [
         className="animate-slow-spin mt-20 -ml-20"
       />
     ),
+  },
+  {
+    id: "road-zagreb-nov-2025",
+    title: "Road! 𐔧 Endemit",
+    annotation: "[GUEST PERFORMANCE]",
+    dateString: "11 Oct 2025",
+    location: "Depo Klub, Zagreb",
+    artists: ["BEKO", "MMALI", "RHAEGAL"],
+    href: "https://www.facebook.com/road3345/",
+    visible: {
+      link: true,
+      event: true,
+      image: false,
+    },
   },
   {
     id: "tba-nov-2025",
@@ -63,7 +79,9 @@ const events: EventProps[] = [
     ],
     imageSrc: "/images/endemit-festival/cover-without-border.jpg",
     href: "/events/endemit-festival",
-    isPastEvent: true,
+    options: {
+      isPastEvent: true,
+    },
     visible: {
       link: true,
       event: true,
@@ -78,7 +96,9 @@ const events: EventProps[] = [
     artists: ["MOKILOK", "UNKNOWN TEXTURE", "RHAEGAL", "MMALI"],
     imageSrc: "/images/ius-primae-noctis/cover.jpg",
     href: "/events/ius-primae-noctis",
-    isPastEvent: true,
+    options: {
+      isPastEvent: true,
+    },
     visible: {
       link: true,
       event: true,
