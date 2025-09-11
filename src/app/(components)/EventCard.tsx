@@ -12,8 +12,11 @@ export interface EventProps {
   imageSrc?: string;
   href?: string;
   children?: React.ReactNode;
-  isPastEvent?: boolean;
-  isTicketsAvailable?: boolean;
+  options?: {
+    isPastEvent?: boolean;
+    isTicketsAvailable?: boolean;
+    openInNewTab?: boolean;
+  };
   visible: {
     link: boolean;
     event: boolean;
@@ -30,18 +33,17 @@ export default function EventCard({
   imageSrc,
   href,
   children,
-  isTicketsAvailable,
+  options,
   visible: { link: linkVisible, image: imageVisible },
 }: EventProps) {
   const shouldShowLink = linkVisible && href;
   const shouldShowImage = imageVisible && imageSrc;
 
-  console.log({ isTicketsAvailable, title });
-
   return (
     <div className={clsx(!shouldShowLink && "cursor-not-allowed")}>
       <Link
         href={shouldShowLink ? href : ""}
+        target={href?.startsWith("http") ? "_blank" : "_self"}
         className={clsx(
           "block focus:outline-0 active:outline-0 mt-2 hover:scale-[1.02] transition-all duration-300 active:scale-[0.995]",
           !shouldShowLink && "pointer-events-none"
@@ -105,7 +107,7 @@ export default function EventCard({
                   )}
                 </div>
               )}
-              {isTicketsAvailable && (
+              {options?.isTicketsAvailable && (
                 <div className="mt-4">
                   <span className="px-2 pt-1 bg-white text-black animate-pulse text-md rounded-md flex w-fit gap-x-2">
                     <svg

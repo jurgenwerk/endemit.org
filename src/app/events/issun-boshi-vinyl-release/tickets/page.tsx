@@ -23,13 +23,14 @@ export default function TicketsPage() {
           sales are final - tickets are non-refundable.
         </p>
         <div className="w-full flex justify-center pt-16">
-          {eventConfig && eventConfig.isTicketsAvailable !== undefined && (
-            <BuyButton
-              available={eventConfig.isTicketsAvailable}
-              buyButtonId="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
-              publishableKey="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
-            />
-          )}
+          {eventConfig &&
+            eventConfig.options?.isTicketsAvailable !== undefined && (
+              <BuyButton
+                available={eventConfig.options?.isTicketsAvailable}
+                buyButtonId="buy_btn_1S2d84Ir2nqko6q4Uq8sSKOe"
+                publishableKey="pk_live_51P6Vo2Ir2nqko6q44ic0fwaGZJjuheAWZfNOeekvDWZiRifEcTOHhJ023IoMWrrxCWXwPUUUmhlkqudmOrKw0qxG005H4cBkj3"
+              />
+            )}
           <div
             className={
               "absolute left-0 right-0 -z-10 -translate-y-[78%] h-full bg-center bg-cover w-full !m-0 bg-no-repeat"
