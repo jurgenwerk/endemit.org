@@ -36,12 +36,10 @@ const events: EventProps[] = [
     location: "Depo Klub, Zagreb",
     artists: ["BEKO", "MMALI", "RHAEGAL"],
     href: "https://www.facebook.com/road3345/",
-    imageSrc:
-      "https://scontent.fmbx2-1.fna.fbcdn.net/v/t39.30808-6/539637298_762728143351327_3959348473966735835_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=103&ccb=1-7&_nc_sid=75d36f&_nc_ohc=k-lJWLX8YgUQ7kNvwHJicwN&_nc_oc=Adm-wLsQIQd5t4sMPFTQjmRU-4YlZt7Qe-ZRf1u99cjm-lc-5KXlJ3lvLBIkBCI5ziI&_nc_zt=23&_nc_ht=scontent.fmbx2-1.fna&_nc_gid=LB7jST-qCk-UTTEsYydd0Q&oh=00_Afaa9xkH0uZnI2hSgB9G-2UfxWxkBmqsY1GyF1iiABDw8Q&oe=68C8B2D8",
     visible: {
       link: true,
       event: true,
-      image: true,
+      image: false,
     },
   },
   {
