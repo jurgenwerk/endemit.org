@@ -21,6 +21,7 @@
     "react-dom": "^19.0.0",
     "react-scroll-parallax": "^3.4.5",
     "sharp": "^0.34.2",
+    "stripe": "^18.5.0",
     "use-shopping-cart": "^3.2.0"
   },
   "devDependencies": {
