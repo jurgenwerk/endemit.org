@@ -1,6 +1,6 @@
-import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import Headline from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/Headline";
 import type { Metadata } from "next";
-import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
+import CoverFooter from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/CoverFooter";
 import BuyButton from "@/app/(components)/BuyButton";
 import React from "react";
 import { getEventConfigById } from "@/app/(lib)/util";
@@ -17,11 +17,7 @@ export default function TicketsPage() {
       <div className="max-w-5xl space-y-6 p-5 lg:px-12 text-white font-typo flex-1 max-lg:pb-16">
         <Headline title="Tickets" />
 
-        <p className="text-xl font-light">
-          Tickets are available in limited capacity and sold on a first-come,
-          first-served basis through our secure Stripe payment gateway. All
-          sales are final - tickets are non-refundable.
-        </p>
+        <p className="text-xl font-light">Tickets are sold out.</p>
         <div className="w-full flex justify-center pt-16">
           {eventConfig &&
             eventConfig.options?.isTicketsAvailable !== undefined && (

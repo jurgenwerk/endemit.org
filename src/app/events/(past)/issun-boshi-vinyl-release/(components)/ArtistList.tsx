@@ -5,7 +5,7 @@ import {
   artistConfig,
   ArtistWithTimestamp,
   eventConfig,
-} from "@/app/events/issun-boshi-vinyl-release/(config)";
+} from "@/app/events/(past)/issun-boshi-vinyl-release/(config)";
 
 import ArtistCard from "@/app/(components)/ArtistCard";
 

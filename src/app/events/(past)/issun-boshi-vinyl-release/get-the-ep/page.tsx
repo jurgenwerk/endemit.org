@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import Headline from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/Headline";
 import type { Metadata } from "next";
 import React from "react";
 

@@ -1,11 +1,11 @@
 "use client";
 
-import ParallaxHero from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxHero";
+import ParallaxHero from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/ParallaxHero";
 import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Button from "@/app/(components)/Button";
-import ParallaxFooter from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxFooter";
-import ParallaxAlbum from "@/app/events/issun-boshi-vinyl-release/(components)/ParallaxAlbum";
+import ParallaxFooter from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/ParallaxFooter";
+import ParallaxAlbum from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/ParallaxAlbum";
 import Link from "next/link";
 
 export default function IssunBoshiVinylReleasePage() {
