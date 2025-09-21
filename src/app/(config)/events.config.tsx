@@ -3,32 +3,6 @@ import Image from "next/image";
 
 const events: EventProps[] = [
   {
-    id: "issun-boshi-vinyl-release",
-    title: "Issun-bōshi vinyl release",
-    dateString: "20 Sep 2025",
-    location: "Grad Kodeljevo",
-    artists: ["INLAND", "MMALI"],
-    imageSrc: "/images/issun-boshi-vinyl-release/cover-without-border.jpg",
-    href: "/events/issun-boshi-vinyl-release",
-    visible: {
-      link: true,
-      event: true,
-      image: true,
-    },
-    options: {
-      isTicketsAvailable: true,
-    },
-    children: (
-      <Image
-        src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
-        alt="Issun-bōshi  Vinyl release"
-        width={220}
-        height={220}
-        className="animate-slow-spin mt-20 -ml-20"
-      />
-    ),
-  },
-  {
     id: "road-zagreb-nov-2025",
     title: "Road! 𐔧 Endemit",
     annotation: "[GUEST PERFORMANCE]",
@@ -57,6 +31,32 @@ const events: EventProps[] = [
   },
 
   // Past events
+  {
+    id: "issun-boshi-vinyl-release",
+    title: "Issun-bōshi vinyl release",
+    dateString: "20 Sep 2025",
+    location: "Grad Kodeljevo",
+    artists: ["INLAND", "MMALI"],
+    imageSrc: "/images/issun-boshi-vinyl-release/cover-without-border.jpg",
+    href: "/events/issun-boshi-vinyl-release",
+    visible: {
+      link: true,
+      event: true,
+      image: true,
+    },
+    options: {
+      isPastEvent: true,
+    },
+    children: (
+      <Image
+        src="/images/issun-boshi-vinyl-release/album/issun-boshi-record.webp"
+        alt="Issun-bōshi  Vinyl release"
+        width={220}
+        height={220}
+        className="animate-slow-spin mt-20 -ml-20"
+      />
+    ),
+  },
   {
     id: "endemit-festival",
     title: "ENDEMIT FESTIVAL",

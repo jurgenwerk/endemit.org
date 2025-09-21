@@ -1,7 +1,7 @@
-import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import Headline from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/Headline";
 import Link from "next/link";
 import type { Metadata } from "next";
-import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
+import CoverFooter from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/CoverFooter";
 
 export const metadata: Metadata = {
   title: "Location",

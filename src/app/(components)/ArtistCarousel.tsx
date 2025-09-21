@@ -4,7 +4,7 @@ import {
   ArtistWithTimestamp,
   artistConfig,
   eventConfig,
-} from "@/app/events/issun-boshi-vinyl-release/(config)";
+} from "@/app/events/(past)/issun-boshi-vinyl-release/(config)";
 import {
   useEffect,
   useState,

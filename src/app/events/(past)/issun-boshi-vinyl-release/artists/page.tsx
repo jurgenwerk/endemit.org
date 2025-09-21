@@ -1,9 +1,9 @@
-import Headline from "@/app/events/issun-boshi-vinyl-release/(components)/Headline";
+import Headline from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/Headline";
 import type { Metadata } from "next";
-import ArtistList from "@/app/events/issun-boshi-vinyl-release/(components)/ArtistList";
-import CustomArtistCarousel from "@/app/events/issun-boshi-vinyl-release/(components)/CustomArtistCarousel";
+import ArtistList from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/ArtistList";
+import CustomArtistCarousel from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/CustomArtistCarousel";
 import React from "react";
-import CoverFooter from "@/app/events/issun-boshi-vinyl-release/(components)/CoverFooter";
+import CoverFooter from "@/app/events/(past)/issun-boshi-vinyl-release/(components)/CoverFooter";
 
 export const metadata: Metadata = {
   title: "Artists",

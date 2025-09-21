@@ -52,10 +52,10 @@ export default function IssunBoshiVinylReleaseLayout({
             href: "/events/issun-boshi-vinyl-release/artists",
           },
 
-          {
-            label: "Tickets",
-            href: "/events/issun-boshi-vinyl-release/tickets",
-          },
+          // {
+          //   label: "Tickets",
+          //   href: "/events/issun-boshi-vinyl-release/tickets",
+          // },
           {
             label: "Location",
             href: "/events/issun-boshi-vinyl-release/location",
