@@ -61,11 +61,11 @@ export default function IssunBoshiVinylReleaseLayout({
             href: "/events/issun-boshi-vinyl-release/location",
           },
         ]}
-        footerAction={{
-          label: "Tickets",
-          href: "/events/issun-boshi-vinyl-release/tickets",
-          style: "button",
-        }}
+        // footerAction={{
+        //   label: "Tickets",
+        //   href: "/events/issun-boshi-vinyl-release/tickets",
+        //   style: "button",
+        // }}
         footerInfo={{
           lines: ["Grad Kodeljevo", "20 Sep 2025"],
           href: "/events/issun-boshi-vinyl-release/location",
