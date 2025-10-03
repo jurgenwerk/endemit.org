@@ -2,7 +2,7 @@
 
 A modern web application for Endemit events and music curation, built with Next.js 15, React 19, TypeScript, and Tailwind CSS.
 
-![Endemit web home screen](public/images/project-screenshot.png)
+![Endemit web home screen](public/images/docs/project-screenshot.png)
 
 ## ⭐ Masthead
 
@@ -40,12 +40,12 @@ Open [http://127.0.0.1:3000](http://localhost:3000) to view the application.
 
 | Script                  | Description                                  |
 | ----------------------- | -------------------------------------------- |
-| `pnpm run dev`          | Starts the development server with Turbopack |
-| `pnpm run build`        | Builds the application for production        |
-| `pnpm run start`        | Starts the production server                 |
-| `pnpm run lint`         | Runs ESLint to check code quality            |
-| `pnpm run format`       | Formats code using Prettier                  |
-| `pnpm run format:check` | Checks if code is properly formatted         |
+| `pnpm dev`          | Starts the development server with Turbopack |
+| `pnpm build`        | Builds the application for production        |
+| `pnpm start`        | Starts the production server                 |
+| `pnpm lint`         | Runs ESLint to check code quality            |
+| `pnpm format`       | Formats code using Prettier                  |
+| `pnpm format:check` | Checks if code is properly formatted         |
 
 ## 🏗️ Build & Deployment
 

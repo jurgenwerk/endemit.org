@@ -3,17 +3,18 @@ import Image from "next/image";
 
 const events: EventProps[] = [
   {
-    id: "road-zagreb-nov-2025",
+    id: "road-endemit-zagreb-october-2025",
     title: "Road! 𐔧 Endemit",
     annotation: "[GUEST PERFORMANCE]",
     dateString: "11 Oct 2025",
     location: "Depo Klub, Zagreb",
-    artists: ["BEKO", "MMALI", "RHAEGAL"],
-    href: "https://www.facebook.com/road3345/",
+    artists: ["MMALI", "RHAEGAL", "BEKO"],
+    imageSrc: "/images/guest-events/road-x-endemit-zagreb-sept-2025.png",
+    href: "https://www.facebook.com/events/depo-klub/road-017-x-endemit/2502233476829808/",
     visible: {
       link: true,
       event: true,
-      image: false,
+      image: true,
     },
   },
   {
