@@ -109,7 +109,7 @@ export default function EventCard({
               )}
               {options?.isTicketsAvailable && (
                 <div className="mt-4">
-                  <span className="px-2 pt-1 bg-white text-black animate-pulse text-md rounded-md flex w-fit gap-x-2">
+                  <span className="px-2 py-1 bg-white text-black animate-pulse text-md rounded-md flex w-fit gap-x-2 items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="18"
@@ -117,7 +117,7 @@ export default function EventCard({
                       viewBox="0 0 24 24"
                       fill="none"
                       role="img"
-                      color="#000000"
+                      color="currentColor"
                     >
                       <path
                         fillRule="evenodd"

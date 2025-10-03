@@ -22,6 +22,7 @@ export default function FestivalLayout({
   return (
     <body className="m-auto overflow-y-scroll bg-gray-1100">
       <Sidebar
+        activeColor="text-violet-400"
         navigationItems={[
           {
             label: "Events",

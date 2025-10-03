@@ -1,0 +1,246 @@
+{
+  "format": "page",
+  "id": "product",
+  "label": "Product",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "SKU"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": "Name of the product"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "Descriptive text to highlight the features of the product",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading4,strong,em,hyperlink,list-item,o-list-item"
+        }
+      },
+      "images": {
+        "type": "Group",
+        "config": {
+          "label": "Images",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "related_products": {
+        "type": "Group",
+        "config": {
+          "label": "Related products",
+          "repeat": true,
+          "fields": {
+            "related_product": {
+              "type": "Link",
+              "config": {
+                "label": "Related product",
+                "select": "document",
+                "repeat": false,
+                "customtypes": [
+                  {
+                    "id": "product",
+                    "fields": ["title"]
+                  }
+                ]
+              }
+            },
+            "call_to_action": {
+              "type": "Text",
+              "config": {
+                "label": "Call to action",
+                "placeholder": "Example, \"Goes great with\", \"To wear with your shirt\""
+              }
+            }
+          }
+        }
+      },
+      "special_notice": {
+        "type": "Text",
+        "config": {
+          "label": "Special notice",
+          "placeholder": "Optional - Special notice or disclaimer goes here"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    },
+    "Product attributes": {
+      "product_type": {
+        "type": "Select",
+        "config": {
+          "label": "Product type",
+          "placeholder": "Is this a physical or digital item",
+          "options": ["Physical", "Digital"],
+          "default_value": "Physical"
+        }
+      },
+      "product_category": {
+        "type": "Select",
+        "config": {
+          "label": "Product category",
+          "placeholder": "Which category best describes the product",
+          "options": [
+            "Merch",
+            "Music",
+            "Album",
+            "Item",
+            "Donation",
+            "Ticket",
+            "License",
+            "Currency",
+            "Other"
+          ],
+          "default_value": "Merch"
+        }
+      },
+      "product_status": {
+        "type": "Select",
+        "config": {
+          "label": "Product status",
+          "placeholder": "What is the current product status",
+          "options": [
+            "Available",
+            "Preorder",
+            "Coming soon",
+            "Out of stock",
+            "Sold out"
+          ],
+          "default_value": "Available"
+        }
+      },
+      "product_visibility": {
+        "type": "Select",
+        "config": {
+          "label": "Product visibility",
+          "placeholder": "Is the product visible on site?",
+          "options": ["Visible", "Hidden"],
+          "default_value": "Visible"
+        }
+      },
+      "price": {
+        "type": "Number",
+        "config": {
+          "label": "Price",
+          "placeholder": "Price of the product in EUR"
+        }
+      },
+      "weight": {
+        "type": "Number",
+        "config": {
+          "label": "Weight (g)",
+          "placeholder": "Weight of the product in grams"
+        }
+      },
+      "variants": {
+        "type": "Group",
+        "config": {
+          "label": "Variants",
+          "repeat": true,
+          "fields": {
+            "variant_value": {
+              "type": "Select",
+              "config": {
+                "label": "Variant value",
+                "placeholder": "What is the variants value",
+                "options": ["XS", "S", "M", "L", "XL", "XXL", "Black", "White"]
+              }
+            },
+            "variant_type": {
+              "type": "Select",
+              "config": {
+                "label": "Variant type",
+                "placeholder": "What type of a variant is it",
+                "options": ["Size", "Colour"],
+                "default_value": "Size"
+              }
+            }
+          }
+        }
+      },
+      "regional_eligibility": {
+        "type": "Group",
+        "config": {
+          "label": "Regional eligibility ",
+          "repeat": true,
+          "fields": {
+            "region": {
+              "type": "Select",
+              "config": {
+                "label": "Region",
+                "placeholder": "Region of availability",
+                "options": ["Slovenia", "EU", "UK", "USA", "Serbia", "Bosnia"]
+              }
+            },
+            "quantity_limit": {
+              "type": "Number",
+              "config": {
+                "label": "Quantity limit",
+                "placeholder": "Optional - Limit of quantity per sale"
+              }
+            }
+          }
+        }
+      },
+      "slices2": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
+  }
+}

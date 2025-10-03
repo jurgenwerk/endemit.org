@@ -1,6 +1,10 @@
 @font-face {
   font-family: "DIN";
   src: url("/fonts/DIN_Condensed_Bold.ttf") format("truetype");
+  /* Fixes bottom padding in the font file*/
+  ascent-override: 80%;
+  descent-override: 20%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -8,19 +12,20 @@
   src: url("/fonts/Metamorphous-Regular.ttf") format("truetype");
 }
 
+.font-metamorphous {
+  font-family: "Metamorphous-Regular";
+}
+
 @font-face {
   font-family: "Typo";
   font-weight: 500;
   src: url("/fonts/Typo_Round_Regular.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Typo";
   font-weight: 300;
   src: url("/fonts/Typo_Round_Light.otf") format("opentype");
-}
-
-.font-metamorphous {
-  font-family: "Metamorphous-Regular";
 }
 
 .font-typo {
