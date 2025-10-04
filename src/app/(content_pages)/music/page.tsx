@@ -35,6 +35,48 @@ export default function Music() {
         frameBorder="no"
         className="rounded-md mt-4"
         allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2178144495&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+      ></iframe>
+      <div
+        style={{
+          fontSize: "10px",
+          color: "#cccccc",
+          lineBreak: "anywhere",
+          wordBreak: "normal",
+          overflow: "hidden",
+          fontFamily:
+            "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+          fontWeight: 100,
+          marginTop: "6px",
+        }}
+      >
+        <a
+          href="https://soundcloud.com/ende-mit"
+          title="Endemit"
+          target="_blank"
+          style={{ color: "#cccccc", textDecoration: "none" }}
+        >
+          Endemit
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://soundcloud.com/ende-mit/emit-003"
+          title="Emit 003"
+          target="_blank"
+          style={{ color: "#cccccc", textDecoration: "none" }}
+        >
+          Emit 003 · Amanda Mussi · Oct 4 2025 (recorded live at Cvetke v
+          Jeseni, at Kader Kodeljevo, Nov 29 2024)
+        </a>
+      </div>
+
+      <iframe
+        width="100%"
+        height="166"
+        scrolling="no"
+        frameBorder="no"
+        className="rounded-md mt-8"
+        allow="autoplay"
         src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2164932096&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
       ></iframe>
       <div
@@ -44,8 +86,6 @@ export default function Music() {
           lineBreak: "anywhere",
           wordBreak: "normal",
           overflow: "hidden",
-          whiteSpace: "nowrap",
-          textOverflow: "ellipsis",
           fontFamily:
             "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
           fontWeight: 100,
@@ -67,7 +107,7 @@ export default function Music() {
           target="_blank"
           style={{ color: "#cccccc", textDecoration: "none" }}
         >
-          Obscur · Emit 002 · Sep 6 2025
+          Emit 002 · Obscur · Sep 6 2025
         </a>
       </div>
 
@@ -87,8 +127,6 @@ export default function Music() {
           lineBreak: "anywhere",
           wordBreak: "normal",
           overflow: "hidden",
-          whiteSpace: "nowrap",
-          textOverflow: "ellipsis",
           fontFamily:
             "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
           fontWeight: 100,
@@ -110,7 +148,7 @@ export default function Music() {
           target="_blank"
           style={{ color: "#cccccc", textDecoration: "none" }}
         >
-          Rhaegal · Emit 001 · Aug 23 2025
+          Emit 001 · Rhaegal · Aug 23 2025
         </a>
       </div>
     </div>
