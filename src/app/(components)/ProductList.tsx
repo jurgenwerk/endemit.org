@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useShoppingCart } from "use-shopping-cart";
 import Head from "next/head";
-import type { StripeProduct } from "@/app/api/v1/products/types";
+import type { Product } from "@/app/(types)/product";
+import { useCartActions, useCartItems } from "@/app/(stores)/CartStore";
 
 interface ProductCardProps {
-  product: StripeProduct;
-  onAddToCart: (product: StripeProduct) => void;
+  product: Product;
+  onAddToCart: (product: Product) => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
@@ -26,7 +26,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
         )}
 
         <div className="product-meta">
-          <p className="price">€{(product.price / 100).toFixed(2)}</p>
+          <p className="price">€{product.price.toFixed(2)}</p>
           {/*{product?.metaData?.weight > 0 && (*/}
           {/*  <p className="weight">Weight: {product.metaData.weight}g</p>*/}
           {/*)}*/}
@@ -48,10 +48,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
 };
 
 const ProductsPage: React.FC = () => {
-  const [products, setProducts] = useState<StripeProduct[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const { addItem } = useShoppingCart();
+
+  const { addItem } = useCartActions();
 
   useEffect(() => {
     fetchProducts();
@@ -68,7 +69,7 @@ const ProductsPage: React.FC = () => {
         throw new Error("Failed to fetch products");
       }
 
-      const data: StripeProduct[] = await response.json();
+      const data: Product[] = await response.json();
       setProducts(data);
     } catch (err) {
       const errorMessage =
@@ -80,16 +81,8 @@ const ProductsPage: React.FC = () => {
     }
   };
 
-  const handleAddToCart = (product: StripeProduct): void => {
-    addItem({
-      id: product.id,
-      name: product.name,
-      price: product.price,
-      currency: product.currency,
-      image: product.images[0] || "",
-      weight: product.metaData.weight,
-      priceId: product.priceId,
-    });
+  const handleAddToCart = (product: Product): void => {
+    addItem(product);
   };
 
   if (loading) {

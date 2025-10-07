@@ -1,27 +1,27 @@
 "use client";
 
-import { useShoppingCart } from "use-shopping-cart";
+import { useCart } from "@/app/(stores)/CartStore";
 
 const SimpleCart: React.FC = () => {
   const {
-    cartCount,
-    cartDetails,
-    totalPrice,
+    items,
+    removeItem,
     incrementItem,
     decrementItem,
-    removeItem,
     clearCart,
-    redirectToCheckout, // Add this
-  } = useShoppingCart();
+    totalPrice,
+    totalItems,
+  } = useCart();
 
   const handleCheckout = async () => {
     try {
-      const result = await redirectToCheckout();
-      if (result?.error) {
-        console.error("Checkout error:", result.error);
-        // Handle error (show toast, alert, etc.)
-        alert("Something went wrong with checkout. Please try again.");
-      }
+      // NEJC TODO
+      // const result = await redirectToCheckout();
+      // if (result?.error) {
+      //   console.error("Checkout error:", result.error);
+      //   // Handle error (show toast, alert, etc.)
+      //   alert("Something went wrong with checkout. Please try again.");
+      // }
     } catch (error) {
       console.error("Checkout error:", error);
       alert("Something went wrong with checkout. Please try again.");
@@ -30,12 +30,12 @@ const SimpleCart: React.FC = () => {
 
   return (
     <div className="border border-gray-300 p-4 m-4 rounded-lg bg-white shadow-sm w-full text-black">
-      <h3 className="text-lg font-semibold mb-3">Cart ({cartCount} items)</h3>
+      <h3 className="text-lg font-semibold mb-3">Cart ({totalItems} items)</h3>
       <p className="text-xl font-bold mb-4 text-gray-800">
-        Total: €{((totalPrice ?? 0) / 100).toFixed(2)}
+        Total: €{(totalPrice ?? 0).toFixed(2)}
       </p>
 
-      {Object.values(cartDetails ?? {}).length > 0 && (
+      {totalItems > 0 && (
         <div className="mt-6 space-y-2">
           <button
             onClick={handleCheckout}
@@ -53,11 +53,11 @@ const SimpleCart: React.FC = () => {
         </div>
       )}
 
-      {Object.values(cartDetails ?? {}).length === 0 ? (
+      {totalItems === 0 ? (
         <p className="text-gray-500 italic">Your cart is empty</p>
       ) : (
         <div className="space-y-3">
-          {Object.values(cartDetails ?? {}).map(item => (
+          {items.map(item => (
             <div
               key={item.id}
               className="flex items-center justify-between p-3 bg-gray-50 rounded-md"
@@ -65,7 +65,7 @@ const SimpleCart: React.FC = () => {
               <div className="flex-1">
                 <h4 className="font-medium text-gray-900">{item.name}</h4>
                 <p className="text-sm text-gray-600">
-                  €{(item.price / 100).toFixed(2)} each
+                  €{item.price.toFixed(2)} each
                 </p>
               </div>
 
@@ -94,7 +94,7 @@ const SimpleCart: React.FC = () => {
 
                 <div className="text-right min-w-[4rem]">
                   <p className="font-semibold">
-                    €{((item.price * item.quantity) / 100).toFixed(2)}
+                    €{(item.price * item.quantity).toFixed(2)}
                   </p>
                 </div>
 

@@ -9,7 +9,7 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "SKU"
+          "label": "slug"
         }
       },
       "title": {

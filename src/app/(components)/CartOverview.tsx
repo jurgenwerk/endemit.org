@@ -1,18 +1,20 @@
 "use client";
 
-import { useShoppingCart } from "use-shopping-cart";
 import Button from "@/app/(components)/Button";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import ToteBagIcon from "@/app/(components)/TotebagIcon";
+import { useCartItemCount, useCartTotal } from "@/app/(stores)/CartStore";
 
 interface Props {
   variant?: "compact" | "detailed";
 }
 
 const CartOverview = ({ variant = "detailed" }: Props) => {
-  const { cartCount, totalPrice } = useShoppingCart();
+  const itemCount = useCartItemCount();
+  const totalPrice = useCartTotal();
+
   const [shouldBounce, setShouldBounce] = useState(false);
   const [prevTotal, setPrevTotal] = useState(totalPrice);
 
@@ -29,7 +31,7 @@ const CartOverview = ({ variant = "detailed" }: Props) => {
     setPrevTotal(totalPrice);
   }, [totalPrice, prevTotal]);
 
-  const isEmpty = cartCount === undefined || cartCount === 0;
+  const isEmpty = itemCount === undefined || itemCount === 0;
 
   return (
     <div
@@ -48,7 +50,7 @@ const CartOverview = ({ variant = "detailed" }: Props) => {
             !isEmpty ? "text-blue-400" : "text-gray-400"
           )}
         >
-          €{((totalPrice ?? 0) / 100).toFixed(2)}
+          €{(totalPrice ?? 0).toFixed(2)}
         </div>
         <div className="text-sm ">
           <span className="text-gray-100 group-hover:text-gray-400 group-hover:scale-105 transition duration-200 inline-block">
@@ -60,15 +62,15 @@ const CartOverview = ({ variant = "detailed" }: Props) => {
                 shouldBounce ? "animate-ping" : ""
               )}
             >
-              {cartCount || 0}
+              {itemCount || 0}
             </div>
           </span>{" "}
         </div>
       </Link>
-      {variant === "detailed" && cartCount !== undefined && cartCount > 0 && (
+      {variant === "detailed" && itemCount !== undefined && itemCount > 0 && (
         <>
           <div className="items-center space-x-3 text-white inline-flex">
-            <div className="text-sm ">{cartCount || 0} items in your cart</div>
+            <div className="text-sm ">{itemCount || 0} items in your cart</div>
           </div>
           <div className="mt-3">
             <Button

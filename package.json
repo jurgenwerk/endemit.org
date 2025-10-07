@@ -1,6 +1,6 @@
 {
   "name": "endemit-v3",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -27,7 +27,7 @@
     "react-scroll-parallax": "^3.4.5",
     "sharp": "^0.34.2",
     "stripe": "^18.5.0",
-    "use-shopping-cart": "^3.2.0"
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
