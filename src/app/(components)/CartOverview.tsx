@@ -6,6 +6,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import ToteBagIcon from "@/app/(components)/TotebagIcon";
 import { useCartItemCount, useCartTotal } from "@/app/(stores)/CartStore";
+import { priceFormat } from "@/app/(lib)/formatting";
 
 interface Props {
   variant?: "compact" | "detailed";
@@ -50,7 +51,7 @@ const CartOverview = ({ variant = "detailed" }: Props) => {
             !isEmpty ? "text-blue-400" : "text-gray-400"
           )}
         >
-          €{(totalPrice ?? 0).toFixed(2)}
+          {priceFormat(totalPrice ?? 0)}
         </div>
         <div className="text-sm ">
           <span className="text-gray-100 group-hover:text-gray-400 group-hover:scale-105 transition duration-200 inline-block">

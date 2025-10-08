@@ -105,7 +105,7 @@ export default function Sidebar({
     if (item.isActive) {
       return item.isActive(pathname);
     }
-    return pathname === item.href;
+    return pathname === item.href || pathname.startsWith(item.href + "/");
   };
 
   const close = () => {

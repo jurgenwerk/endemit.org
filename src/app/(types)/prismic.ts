@@ -54,7 +54,6 @@ export interface ProductVariant {
 
 export interface RegionalEligibility {
   region: ProductRegion;
-  quantity_limit: number;
 }
 
 export interface PrismicProductReference {
@@ -99,6 +98,7 @@ export interface PrismicProductData {
   product_status: ProductStatus;
   product_visibility: ProductVisibility;
   price: number;
+  quantity_limit: number;
   weight: number;
   variants: ProductVariant[];
   regional_eligibility: RegionalEligibility[];

@@ -47,18 +47,24 @@ export enum VariantType {
 export enum ProductRegion {
   SLOVENIA = "Slovenia",
   EU = "EU",
+  NON_EU_EUROPE = "Non-EU Europe",
   UK = "UK",
-  USA = "USA",
-  SERBIA = "Serbia",
-  BOSNIA = "Bosnia",
+  NORTH_AMERICA = "North America",
+  AUSTRALIA = "Australia",
+  JAPAN = "Japan",
 }
+
+export type ProductImage = {
+  src: string;
+  alt?: string;
+};
 
 export interface Product {
   id: string;
   uid: string;
   name: string;
   description: string;
-  images: string[];
+  images: ProductImage[];
   price: number;
   currency: string;
   type: ProductType;
@@ -72,7 +78,6 @@ export interface Product {
   }>;
   regionalEligibility: Array<{
     region: ProductRegion;
-    quantity_limit: number;
   }>;
   relatedProducts: Array<{
     id: string;

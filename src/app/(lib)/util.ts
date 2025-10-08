@@ -1,6 +1,8 @@
 import { EventProps } from "@/app/(components)/EventCard";
 import events from "@/app/(config)/events.config";
 import { PrismicRichTextBlock } from "@/app/(types)/prismic";
+import { Country } from "@/app/(types)/country";
+import countryConfig from "@/app/(config)/countries.config";
 
 export const formatTime = (date: Date) => {
   return date.toLocaleTimeString("en-US", {
@@ -79,3 +81,17 @@ export function richTextToHTML(richText: PrismicRichTextBlock[]): string {
     })
     .join("");
 }
+
+export const getRegionFromCountry = (country: Country) => {
+  const countryData = countryConfig[country];
+
+  if (countryData) {
+    return countryData.region;
+  } else {
+    return null;
+  }
+};
+
+export const getPriceInCents = (price: number): number => {
+  return Math.round(price * 100);
+};

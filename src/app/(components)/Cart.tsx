@@ -1,17 +1,11 @@
 "use client";
 
 import { useCart } from "@/app/(stores)/CartStore";
+import { priceFormat } from "@/app/(lib)/formatting";
+import ProductQtyControl from "@/app/(components)/ProductQtyControl";
 
-const SimpleCart: React.FC = () => {
-  const {
-    items,
-    removeItem,
-    incrementItem,
-    decrementItem,
-    clearCart,
-    totalPrice,
-    totalItems,
-  } = useCart();
+export default function SimpleCart() {
+  const { items, removeItem, clearCart, totalPrice, totalItems } = useCart();
 
   const handleCheckout = async () => {
     try {
@@ -32,7 +26,7 @@ const SimpleCart: React.FC = () => {
     <div className="border border-gray-300 p-4 m-4 rounded-lg bg-white shadow-sm w-full text-black">
       <h3 className="text-lg font-semibold mb-3">Cart ({totalItems} items)</h3>
       <p className="text-xl font-bold mb-4 text-gray-800">
-        Total: €{(totalPrice ?? 0).toFixed(2)}
+        Total: {priceFormat(totalPrice)}
       </p>
 
       {totalItems > 0 && (
@@ -65,36 +59,16 @@ const SimpleCart: React.FC = () => {
               <div className="flex-1">
                 <h4 className="font-medium text-gray-900">{item.name}</h4>
                 <p className="text-sm text-gray-600">
-                  €{item.price.toFixed(2)} each
+                  {priceFormat(item.price)} each
                 </p>
               </div>
 
+              <ProductQtyControl item={item} />
+
               <div className="flex items-center space-x-3">
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={() => decrementItem(item.id)}
-                    className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
-                    aria-label="Decrease quantity"
-                  >
-                    −
-                  </button>
-
-                  <span className="w-8 text-center font-medium">
-                    {item.quantity}
-                  </span>
-
-                  <button
-                    onClick={() => incrementItem(item.id)}
-                    className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
-                    aria-label="Increase quantity"
-                  >
-                    +
-                  </button>
-                </div>
-
                 <div className="text-right min-w-[4rem]">
                   <p className="font-semibold">
-                    €{(item.price * item.quantity).toFixed(2)}
+                    {priceFormat(item.price * item.quantity)}
                   </p>
                 </div>
 
@@ -112,6 +86,4 @@ const SimpleCart: React.FC = () => {
       )}
     </div>
   );
-};
-
-export default SimpleCart;
+}

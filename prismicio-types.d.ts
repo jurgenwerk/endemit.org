@@ -149,23 +149,19 @@ export interface ProductDocumentDataRegionalEligibilityItem {
    * Region field in *Product → Regional eligibility *
    *
    * - **Field Type**: Select
-   * - **Placeholder**: Region of availability
+   * - **Placeholder**: Region of availability, choose none if available everywhere
    * - **API ID Path**: product.regional_eligibility[].region
    * - **Documentation**: https://prismic.io/docs/fields/select
    */
   region: prismic.SelectField<
-    "Slovenia" | "EU" | "UK" | "USA" | "Serbia" | "Bosnia"
+    | "Slovenia"
+    | "EU"
+    | "Non-EU Europe"
+    | "UK"
+    | "North America"
+    | "Australia"
+    | "Japan"
   >;
-
-  /**
-   * Quantity limit field in *Product → Regional eligibility *
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: Optional - Limit of quantity per sale
-   * - **API ID Path**: product.regional_eligibility[].quantity_limit
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  quantity_limit: prismic.NumberField;
 }
 
 type ProductDocumentDataSlices2Slice = never;
@@ -343,6 +339,17 @@ interface ProductDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/number
    */
   price: prismic.NumberField;
+
+  /**
+   * Quantity limit field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Leave empty if no limit
+   * - **API ID Path**: product.quantity_limit
+   * - **Tab**: Product attributes
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  quantity_limit: prismic.NumberField;
 
   /**
    * Weight (g) field in *Product*

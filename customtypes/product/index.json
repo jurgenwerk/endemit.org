@@ -177,6 +177,13 @@
           "placeholder": "Price of the product in EUR"
         }
       },
+      "quantity_limit": {
+        "type": "Number",
+        "config": {
+          "label": "Quantity limit",
+          "placeholder": "Leave empty if no limit"
+        }
+      },
       "weight": {
         "type": "Number",
         "config": {
@@ -220,15 +227,16 @@
               "type": "Select",
               "config": {
                 "label": "Region",
-                "placeholder": "Region of availability",
-                "options": ["Slovenia", "EU", "UK", "USA", "Serbia", "Bosnia"]
-              }
-            },
-            "quantity_limit": {
-              "type": "Number",
-              "config": {
-                "label": "Quantity limit",
-                "placeholder": "Optional - Limit of quantity per sale"
+                "placeholder": "Region of availability, choose none if available everywhere",
+                "options": [
+                  "Slovenia",
+                  "EU",
+                  "Non-EU Europe",
+                  "UK",
+                  "North America",
+                  "Australia",
+                  "Japan"
+                ]
               }
             }
           }
