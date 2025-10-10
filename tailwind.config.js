@@ -20,6 +20,12 @@ module.exports = {
       animation: {
         "slow-spin": "spin 2s linear infinite",
       },
+      screens: {
+        "8xl": "1600px",
+      },
+      maxWidth: {
+        "8xl": "1600px",
+      },
     },
   },
   plugins: [],

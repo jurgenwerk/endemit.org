@@ -1,4 +1,4 @@
-import ArtistCarousel from "@/app/(components)/ArtistCarousel";
+import ArtistCarousel from "@/components/artist/ArtistCarousel";
 
 export default function CustomArtistCarousel() {
   return (

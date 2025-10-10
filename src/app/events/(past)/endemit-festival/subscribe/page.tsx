@@ -1,4 +1,4 @@
-import FestivalSubscribe from "@/app/(components)/FestivalSubscribe";
+import FestivalSubscribe from "@/components/newsletter/FestivalSubscribe";
 
 export default function Subscribe() {
   return (

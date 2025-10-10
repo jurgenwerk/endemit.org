@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Sidebar from "@/app/(components)/Sidebar";
-import EventFooter from "@/app/(components)/EventFooter";
+import Sidebar from "@/components/Sidebar";
+import EventFooter from "@/components/event/EventFooter";
 
 export const metadata: Metadata = {
   title: "Ius Primae Noctis",

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./(styles)/globals.css";
+import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "@/app/providers";
 
@@ -82,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="[color-scheme:dark]">
+    <html lang="en">
       <Analytics />
       <Providers>{children}</Providers>
     </html>

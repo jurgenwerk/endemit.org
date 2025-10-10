@@ -5,7 +5,7 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": {
+    "About": {
       "uid": {
         "type": "UID",
         "config": {
@@ -19,13 +19,31 @@
           "placeholder": "Name of the product"
         }
       },
-      "description": {
-        "type": "StructuredText",
+      "product_category": {
+        "type": "Select",
         "config": {
-          "label": "Description",
-          "placeholder": "Descriptive text to highlight the features of the product",
-          "allowTargetBlank": true,
-          "multi": "paragraph,heading4,strong,em,hyperlink,list-item,o-list-item"
+          "label": "Product category",
+          "placeholder": "Which category best describes the product",
+          "options": [
+            "Merch",
+            "Music",
+            "Albums",
+            "Donations",
+            "Tickets",
+            "Licenses",
+            "Currencies",
+            "Other"
+          ],
+          "default_value": "Merch"
+        }
+      },
+      "product_type": {
+        "type": "Select",
+        "config": {
+          "label": "Product type",
+          "placeholder": "Is this a physical or digital item",
+          "options": ["Physical", "Digital"],
+          "default_value": "Physical"
         }
       },
       "images": {
@@ -45,6 +63,24 @@
           }
         }
       },
+      "video": {
+        "type": "Link",
+        "config": {
+          "label": "Video",
+          "placeholder": "Video for product",
+          "select": "media",
+          "allowText": false
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "Descriptive text to highlight the features of the product",
+          "allowTargetBlank": true,
+          "multi": "paragraph,heading4,strong,em,hyperlink,list-item,o-list-item"
+        }
+      },
       "related_products": {
         "type": "Group",
         "config": {
@@ -60,7 +96,20 @@
                 "customtypes": [
                   {
                     "id": "product",
-                    "fields": ["title"]
+                    "fields": [
+                      "title",
+                      {
+                        "id": "images",
+                        "fields": ["image"]
+                      },
+                      "price",
+                      "product_category",
+                      "product_type",
+                      "sorting_weight",
+                      "product_status",
+                      "description",
+                      "product_visibility"
+                    ]
                   }
                 ]
               }
@@ -82,11 +131,164 @@
           "placeholder": "Optional - Special notice or disclaimer goes here"
         }
       },
+      "checkout_description": {
+        "type": "Text",
+        "config": {
+          "label": "Checkout description",
+          "placeholder": "Item description visible in Stripe"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {}
+        }
+      }
+    },
+    "Attributes": {
+      "product_status": {
+        "type": "Select",
+        "config": {
+          "label": "Product status",
+          "placeholder": "What is the current product status",
+          "options": [
+            "Available",
+            "Preorder",
+            "Coming soon",
+            "Out of stock",
+            "Sold out"
+          ],
+          "default_value": "Available"
+        }
+      },
+      "product_visibility": {
+        "type": "Select",
+        "config": {
+          "label": "Product visibility",
+          "placeholder": "Is the product visible on site?",
+          "options": ["Visible", "Hidden"],
+          "default_value": "Visible"
+        }
+      },
+      "price": {
+        "type": "Number",
+        "config": {
+          "label": "Price (EUR)",
+          "placeholder": "Price of the product in EUR"
+        }
+      },
+      "weight": {
+        "type": "Number",
+        "config": {
+          "label": "Weight (g)",
+          "placeholder": "Weight of the product in grams"
+        }
+      },
+      "featured_product": {
+        "type": "Boolean",
+        "config": {
+          "label": "Featured product",
+          "placeholder_false": "false",
+          "placeholder_true": "true",
+          "default_value": false
+        }
+      },
+      "sorting_weight": {
+        "type": "Number",
+        "config": {
+          "label": "Sorting weight",
+          "placeholder": "The higher the number the higher on the list of products"
+        }
+      },
+      "related_to_event": {
+        "type": "Link",
+        "config": {
+          "label": "Related to event",
+          "select": "document",
+          "repeat": false,
+          "customtypes": [
+            {
+              "id": "event",
+              "fields": ["title", "venue_name"]
+            }
+          ]
+        }
+      },
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Variants": {
+      "variants": {
+        "type": "Group",
+        "config": {
+          "label": "Variants",
+          "repeat": true,
+          "fields": {
+            "variant_value": {
+              "type": "Select",
+              "config": {
+                "label": "Variant value",
+                "placeholder": "What is the variants value",
+                "options": ["XS", "S", "M", "L", "XL", "XXL", "Black", "White"]
+              }
+            },
+            "variant_type": {
+              "type": "Select",
+              "config": {
+                "label": "Variant type",
+                "placeholder": "What type of a variant is it",
+                "options": ["Size", "Colour"],
+                "default_value": "Size"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Limitations": {
+      "regional_eligibility": {
+        "type": "Group",
+        "config": {
+          "label": "Regional eligibility ",
+          "repeat": true,
+          "fields": {
+            "region": {
+              "type": "Select",
+              "config": {
+                "label": "Region",
+                "placeholder": "Region of availability, choose none if available everywhere",
+                "options": [
+                  "Slovenia",
+                  "EU",
+                  "Non-EU Europe",
+                  "UK",
+                  "North America",
+                  "Australia",
+                  "Japan"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "quantity_limit": {
+        "type": "Number",
+        "config": {
+          "label": "Quantity limit",
+          "placeholder": "Leave empty if no limit"
+        }
+      },
+      "cutoff_date": {
+        "type": "Timestamp",
+        "config": {
+          "label": "Cutoff date",
+          "placeholder": "When does the product stop being eligible for sale, clear if sales always permitted"
         }
       }
     },
@@ -115,139 +317,6 @@
           "thumbnails": []
         },
         "type": "Image"
-      }
-    },
-    "Product attributes": {
-      "product_type": {
-        "type": "Select",
-        "config": {
-          "label": "Product type",
-          "placeholder": "Is this a physical or digital item",
-          "options": ["Physical", "Digital"],
-          "default_value": "Physical"
-        }
-      },
-      "product_category": {
-        "type": "Select",
-        "config": {
-          "label": "Product category",
-          "placeholder": "Which category best describes the product",
-          "options": [
-            "Merch",
-            "Music",
-            "Album",
-            "Item",
-            "Donation",
-            "Ticket",
-            "License",
-            "Currency",
-            "Other"
-          ],
-          "default_value": "Merch"
-        }
-      },
-      "product_status": {
-        "type": "Select",
-        "config": {
-          "label": "Product status",
-          "placeholder": "What is the current product status",
-          "options": [
-            "Available",
-            "Preorder",
-            "Coming soon",
-            "Out of stock",
-            "Sold out"
-          ],
-          "default_value": "Available"
-        }
-      },
-      "product_visibility": {
-        "type": "Select",
-        "config": {
-          "label": "Product visibility",
-          "placeholder": "Is the product visible on site?",
-          "options": ["Visible", "Hidden"],
-          "default_value": "Visible"
-        }
-      },
-      "price": {
-        "type": "Number",
-        "config": {
-          "label": "Price",
-          "placeholder": "Price of the product in EUR"
-        }
-      },
-      "quantity_limit": {
-        "type": "Number",
-        "config": {
-          "label": "Quantity limit",
-          "placeholder": "Leave empty if no limit"
-        }
-      },
-      "weight": {
-        "type": "Number",
-        "config": {
-          "label": "Weight (g)",
-          "placeholder": "Weight of the product in grams"
-        }
-      },
-      "variants": {
-        "type": "Group",
-        "config": {
-          "label": "Variants",
-          "repeat": true,
-          "fields": {
-            "variant_value": {
-              "type": "Select",
-              "config": {
-                "label": "Variant value",
-                "placeholder": "What is the variants value",
-                "options": ["XS", "S", "M", "L", "XL", "XXL", "Black", "White"]
-              }
-            },
-            "variant_type": {
-              "type": "Select",
-              "config": {
-                "label": "Variant type",
-                "placeholder": "What type of a variant is it",
-                "options": ["Size", "Colour"],
-                "default_value": "Size"
-              }
-            }
-          }
-        }
-      },
-      "regional_eligibility": {
-        "type": "Group",
-        "config": {
-          "label": "Regional eligibility ",
-          "repeat": true,
-          "fields": {
-            "region": {
-              "type": "Select",
-              "config": {
-                "label": "Region",
-                "placeholder": "Region of availability, choose none if available everywhere",
-                "options": [
-                  "Slovenia",
-                  "EU",
-                  "Non-EU Europe",
-                  "UK",
-                  "North America",
-                  "Australia",
-                  "Japan"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "slices2": {
-        "type": "Slices",
-        "fieldset": "Slice Zone",
-        "config": {
-          "choices": {}
-        }
       }
     }
   }

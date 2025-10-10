@@ -7,7 +7,7 @@ import {
   eventConfig,
 } from "@/app/events/(past)/issun-boshi-vinyl-release/(config)";
 
-import ArtistCard from "@/app/(components)/ArtistCard";
+import ArtistCard from "@/components/artist/ArtistCard";
 
 export default function ArtistList() {
   const [sortBy, setSortBy] = useState<SortOption>("default");

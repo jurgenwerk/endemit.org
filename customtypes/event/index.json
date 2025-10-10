@@ -1,0 +1,194 @@
+{
+  "format": "page",
+  "id": "event",
+  "label": "Event",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "About": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "slug"
+        }
+      },
+      "cover": {
+        "type": "Image",
+        "config": {
+          "label": "Cover",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "Venue": {
+      "venue_name": {
+        "type": "Text",
+        "config": {
+          "label": "Venue name",
+          "placeholder": ""
+        }
+      },
+      "venue_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Venue logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "venue_address": {
+        "type": "Text",
+        "config": {
+          "label": "Venue address",
+          "placeholder": ""
+        }
+      },
+      "venue_map_link": {
+        "type": "Link",
+        "config": {
+          "label": "Venue map link",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": false,
+          "allowText": false,
+          "repeat": true
+        }
+      }
+    },
+    "Schedule": {
+      "date_start": {
+        "type": "Timestamp",
+        "config": {
+          "label": "Start",
+          "placeholder": "When does the event start"
+        }
+      },
+      "date_end": {
+        "type": "Timestamp",
+        "config": {
+          "label": "End",
+          "placeholder": "When does the event end"
+        }
+      },
+      "artists": {
+        "type": "Group",
+        "config": {
+          "label": "Artists",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "Name",
+                "placeholder": "What is the artists name"
+              }
+            },
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "Description",
+                "placeholder": "Bio or text about this artist"
+              }
+            },
+            "start_time": {
+              "type": "Timestamp",
+              "config": {
+                "label": "Start time",
+                "placeholder": "When does the artist start"
+              }
+            },
+            "duration": {
+              "type": "Number",
+              "config": {
+                "label": "Duration (minutes)",
+                "placeholder": "Duration in minutes 60 = 1 hour, 120 = 2 hours,..."
+              }
+            },
+            "stage": {
+              "type": "Text",
+              "config": {
+                "label": "Stage",
+                "placeholder": "(Optional) name of the stage where artist will be. Leave blank if only 1 stage per venue"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Attributes": {
+      "event_type": {
+        "type": "Select",
+        "config": {
+          "label": "Event type",
+          "placeholder": "",
+          "options": ["Single day", "Festival", "Guest appearance"]
+        }
+      },
+      "visibility": {
+        "type": "Select",
+        "config": {
+          "label": "Visibility",
+          "placeholder": "",
+          "options": ["Visible", "Hidden"]
+        }
+      },
+      "colour": {
+        "type": "Color",
+        "config": {
+          "label": "Colour",
+          "placeholder": "Event colour"
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

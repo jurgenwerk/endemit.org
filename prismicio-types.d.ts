@@ -69,6 +69,262 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
+type EventDocumentDataSlicesSlice = never;
+
+/**
+ * Item in *Event → Artists*
+ */
+export interface EventDocumentDataArtistsItem {
+  /**
+   * Name field in *Event → Artists*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: What is the artists name
+   * - **API ID Path**: event.artists[].name
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Image field in *Event → Artists*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.artists[].image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Description field in *Event → Artists*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Bio or text about this artist
+   * - **API ID Path**: event.artists[].description
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  description: prismic.KeyTextField;
+
+  /**
+   * Start time field in *Event → Artists*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: When does the artist start
+   * - **API ID Path**: event.artists[].start_time
+   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   */
+  start_time: prismic.TimestampField;
+
+  /**
+   * Duration (minutes) field in *Event → Artists*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Duration in minutes 60 = 1 hour, 120 = 2 hours,...
+   * - **API ID Path**: event.artists[].duration
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  duration: prismic.NumberField;
+
+  /**
+   * Stage field in *Event → Artists*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: (Optional) name of the stage where artist will be. Leave blank if only 1 stage per venue
+   * - **API ID Path**: event.artists[].stage
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  stage: prismic.KeyTextField;
+}
+
+/**
+ * Content for Event documents
+ */
+interface EventDocumentData {
+  /**
+   * Cover field in *Event*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.cover
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  cover: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Event*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.title
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Event*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.slices[]
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<EventDocumentDataSlicesSlice> /**
+   * Venue name field in *Event*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.venue_name
+   * - **Tab**: Venue
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  venue_name: prismic.KeyTextField;
+
+  /**
+   * Venue logo field in *Event*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.venue_logo
+   * - **Tab**: Venue
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  venue_logo: prismic.ImageField<never>;
+
+  /**
+   * Venue address field in *Event*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.venue_address
+   * - **Tab**: Venue
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  venue_address: prismic.KeyTextField;
+
+  /**
+   * Venue map link field in *Event*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.venue_map_link
+   * - **Tab**: Venue
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  venue_map_link: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  > /**
+   * Start field in *Event*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: When does the event start
+   * - **API ID Path**: event.date_start
+   * - **Tab**: Schedule
+   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   */;
+  date_start: prismic.TimestampField;
+
+  /**
+   * End field in *Event*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: When does the event end
+   * - **API ID Path**: event.date_end
+   * - **Tab**: Schedule
+   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   */
+  date_end: prismic.TimestampField;
+
+  /**
+   * Artists field in *Event*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.artists[]
+   * - **Tab**: Schedule
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  artists: prismic.GroupField<Simplify<EventDocumentDataArtistsItem>> /**
+   * Event type field in *Event*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.event_type
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */;
+  event_type: prismic.SelectField<
+    "Single day" | "Festival" | "Guest appearance"
+  >;
+
+  /**
+   * Visibility field in *Event*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.visibility
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  visibility: prismic.SelectField<"Visible" | "Hidden">;
+
+  /**
+   * Colour field in *Event*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: Event colour
+   * - **API ID Path**: event.colour
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/color
+   */
+  colour: prismic.ColorField /**
+   * Meta Title field in *Event*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: event.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Event*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: event.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Event*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Event document from Prismic
+ *
+ * - **API ID**: `event`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type EventDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<EventDocumentData>, "event", Lang>;
+
 /**
  * Item in *Product → Images*
  */
@@ -97,7 +353,22 @@ export interface ProductDocumentDataRelatedProductsItem {
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
   related_product: ContentRelationshipFieldWithData<
-    [{ id: "product"; fields: ["title"] }]
+    [
+      {
+        id: "product";
+        fields: [
+          "title",
+          { id: "images"; fields: ["image"] },
+          "price",
+          "product_category",
+          "product_type",
+          "sorting_weight",
+          "product_status",
+          "description",
+          "product_visibility",
+        ];
+      },
+    ]
   >;
 
   /**
@@ -112,6 +383,8 @@ export interface ProductDocumentDataRelatedProductsItem {
 }
 
 type ProductDocumentDataSlicesSlice = never;
+
+type ProductDocumentDataSlices1Slice = never;
 
 /**
  * Item in *Product → Variants*
@@ -164,8 +437,6 @@ export interface ProductDocumentDataRegionalEligibilityItem {
   >;
 }
 
-type ProductDocumentDataSlices2Slice = never;
-
 /**
  * Content for Product documents
  */
@@ -176,21 +447,44 @@ interface ProductDocumentData {
    * - **Field Type**: Text
    * - **Placeholder**: Name of the product
    * - **API ID Path**: product.title
-   * - **Tab**: Main
+   * - **Tab**: About
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Description field in *Product*
+   * Product category field in *Product*
    *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Descriptive text to highlight the features of the product
-   * - **API ID Path**: product.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   * - **Field Type**: Select
+   * - **Placeholder**: Which category best describes the product
+   * - **Default Value**: Merch
+   * - **API ID Path**: product.product_category
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/select
    */
-  description: prismic.RichTextField;
+  product_category: prismic.SelectField<
+    | "Merch"
+    | "Music"
+    | "Albums"
+    | "Donations"
+    | "Tickets"
+    | "Licenses"
+    | "Currencies"
+    | "Other",
+    "filled"
+  >;
+
+  /**
+   * Product type field in *Product*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Is this a physical or digital item
+   * - **Default Value**: Physical
+   * - **API ID Path**: product.product_type
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  product_type: prismic.SelectField<"Physical" | "Digital", "filled">;
 
   /**
    * Images field in *Product*
@@ -198,10 +492,32 @@ interface ProductDocumentData {
    * - **Field Type**: Group
    * - **Placeholder**: *None*
    * - **API ID Path**: product.images[]
-   * - **Tab**: Main
+   * - **Tab**: About
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   images: prismic.GroupField<Simplify<ProductDocumentDataImagesItem>>;
+
+  /**
+   * Video field in *Product*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: Video for product
+   * - **API ID Path**: product.video
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   */
+  video: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * Description field in *Product*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Descriptive text to highlight the features of the product
+   * - **API ID Path**: product.description
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  description: prismic.RichTextField;
 
   /**
    * Related products field in *Product*
@@ -209,7 +525,7 @@ interface ProductDocumentData {
    * - **Field Type**: Group
    * - **Placeholder**: *None*
    * - **API ID Path**: product.related_products[]
-   * - **Tab**: Main
+   * - **Tab**: About
    * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
    */
   related_products: prismic.GroupField<
@@ -222,10 +538,21 @@ interface ProductDocumentData {
    * - **Field Type**: Text
    * - **Placeholder**: Optional - Special notice or disclaimer goes here
    * - **API ID Path**: product.special_notice
-   * - **Tab**: Main
+   * - **Tab**: About
    * - **Documentation**: https://prismic.io/docs/fields/text
    */
   special_notice: prismic.KeyTextField;
+
+  /**
+   * Checkout description field in *Product*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Item description visible in Stripe
+   * - **API ID Path**: product.checkout_description
+   * - **Tab**: About
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  checkout_description: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Product*
@@ -233,10 +560,146 @@ interface ProductDocumentData {
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
    * - **API ID Path**: product.slices[]
-   * - **Tab**: Main
+   * - **Tab**: About
    * - **Documentation**: https://prismic.io/docs/slices
    */
   slices: prismic.SliceZone<ProductDocumentDataSlicesSlice> /**
+   * Product status field in *Product*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: What is the current product status
+   * - **Default Value**: Available
+   * - **API ID Path**: product.product_status
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */;
+  product_status: prismic.SelectField<
+    "Available" | "Preorder" | "Coming soon" | "Out of stock" | "Sold out",
+    "filled"
+  >;
+
+  /**
+   * Product visibility field in *Product*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: Is the product visible on site?
+   * - **Default Value**: Visible
+   * - **API ID Path**: product.product_visibility
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  product_visibility: prismic.SelectField<"Visible" | "Hidden", "filled">;
+
+  /**
+   * Price (EUR) field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Price of the product in EUR
+   * - **API ID Path**: product.price
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  price: prismic.NumberField;
+
+  /**
+   * Weight (g) field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Weight of the product in grams
+   * - **API ID Path**: product.weight
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  weight: prismic.NumberField;
+
+  /**
+   * Featured product field in *Product*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: product.featured_product
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  featured_product: prismic.BooleanField;
+
+  /**
+   * Sorting weight field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: The higher the number the higher on the list of products
+   * - **API ID Path**: product.sorting_weight
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  sorting_weight: prismic.NumberField;
+
+  /**
+   * Related to event field in *Product*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.related_to_event
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  related_to_event: ContentRelationshipFieldWithData<
+    [{ id: "event"; fields: ["title", "venue_name"] }]
+  >;
+
+  /**
+   * Slice Zone field in *Product*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.slices1[]
+   * - **Tab**: Attributes
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices1: prismic.SliceZone<ProductDocumentDataSlices1Slice> /**
+   * Variants field in *Product*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.variants[]
+   * - **Tab**: Variants
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */;
+  variants: prismic.GroupField<Simplify<ProductDocumentDataVariantsItem>> /**
+   * Regional eligibility  field in *Product*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.regional_eligibility[]
+   * - **Tab**: Limitations
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */;
+  regional_eligibility: prismic.GroupField<
+    Simplify<ProductDocumentDataRegionalEligibilityItem>
+  >;
+
+  /**
+   * Quantity limit field in *Product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: Leave empty if no limit
+   * - **API ID Path**: product.quantity_limit
+   * - **Tab**: Limitations
+   * - **Documentation**: https://prismic.io/docs/fields/number
+   */
+  quantity_limit: prismic.NumberField;
+
+  /**
+   * Cutoff date field in *Product*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: When does the product stop being eligible for sale, clear if sales always permitted
+   * - **API ID Path**: product.cutoff_date
+   * - **Tab**: Limitations
+   * - **Documentation**: https://prismic.io/docs/fields/timestamp
+   */
+  cutoff_date: prismic.TimestampField /**
    * Meta Title field in *Product*
    *
    * - **Field Type**: Text
@@ -267,135 +730,7 @@ interface ProductDocumentData {
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/fields/image
    */
-  meta_image: prismic.ImageField<never> /**
-   * Product type field in *Product*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Is this a physical or digital item
-   * - **Default Value**: Physical
-   * - **API ID Path**: product.product_type
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */;
-  product_type: prismic.SelectField<"Physical" | "Digital", "filled">;
-
-  /**
-   * Product category field in *Product*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Which category best describes the product
-   * - **Default Value**: Merch
-   * - **API ID Path**: product.product_category
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  product_category: prismic.SelectField<
-    | "Merch"
-    | "Music"
-    | "Album"
-    | "Item"
-    | "Donation"
-    | "Ticket"
-    | "License"
-    | "Currency"
-    | "Other",
-    "filled"
-  >;
-
-  /**
-   * Product status field in *Product*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: What is the current product status
-   * - **Default Value**: Available
-   * - **API ID Path**: product.product_status
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  product_status: prismic.SelectField<
-    "Available" | "Preorder" | "Coming soon" | "Out of stock" | "Sold out",
-    "filled"
-  >;
-
-  /**
-   * Product visibility field in *Product*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: Is the product visible on site?
-   * - **Default Value**: Visible
-   * - **API ID Path**: product.product_visibility
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  product_visibility: prismic.SelectField<"Visible" | "Hidden", "filled">;
-
-  /**
-   * Price field in *Product*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: Price of the product in EUR
-   * - **API ID Path**: product.price
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  price: prismic.NumberField;
-
-  /**
-   * Quantity limit field in *Product*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: Leave empty if no limit
-   * - **API ID Path**: product.quantity_limit
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  quantity_limit: prismic.NumberField;
-
-  /**
-   * Weight (g) field in *Product*
-   *
-   * - **Field Type**: Number
-   * - **Placeholder**: Weight of the product in grams
-   * - **API ID Path**: product.weight
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/number
-   */
-  weight: prismic.NumberField;
-
-  /**
-   * Variants field in *Product*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product.variants[]
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-   */
-  variants: prismic.GroupField<Simplify<ProductDocumentDataVariantsItem>>;
-
-  /**
-   * Regional eligibility  field in *Product*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product.regional_eligibility[]
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-   */
-  regional_eligibility: prismic.GroupField<
-    Simplify<ProductDocumentDataRegionalEligibilityItem>
-  >;
-
-  /**
-   * Slice Zone field in *Product*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: product.slices2[]
-   * - **Tab**: Product attributes
-   * - **Documentation**: https://prismic.io/docs/slices
-   */
-  slices2: prismic.SliceZone<ProductDocumentDataSlices2Slice>;
+  meta_image: prismic.ImageField<never>;
 }
 
 /**
@@ -414,7 +749,7 @@ export type ProductDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = ProductDocument;
+export type AllDocumentTypes = EventDocument | ProductDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -437,14 +772,18 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      EventDocument,
+      EventDocumentData,
+      EventDocumentDataSlicesSlice,
+      EventDocumentDataArtistsItem,
       ProductDocument,
       ProductDocumentData,
       ProductDocumentDataImagesItem,
       ProductDocumentDataRelatedProductsItem,
       ProductDocumentDataSlicesSlice,
+      ProductDocumentDataSlices1Slice,
       ProductDocumentDataVariantsItem,
       ProductDocumentDataRegionalEligibilityItem,
-      ProductDocumentDataSlices2Slice,
       AllDocumentTypes,
     };
   }
