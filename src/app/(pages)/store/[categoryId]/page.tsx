@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { PrismicProductDocument } from "@/types/prismic";
-import { formatProduct } from "@/domain/cms.service";
+import { getFormattedProduct } from "@/domain/cms/cms.actions";
 import { categoryFromSlug } from "@/lib/util";
 import ProductSection from "@/components/product/ProductSection";
 import Breadcrumb from "@/components/Breadcrumb";
-import { prismicClient, prismic } from "@/services/prismic";
+import { prismicClient, prismic } from "@/services/prismic/prismic";
 export const revalidate = 3600; // Revalidate every hour
 
 export default async function ProductPage({
@@ -27,11 +27,13 @@ export default async function ProductPage({
     filters: [prismic.filter.at("my.product.product_category", categoryName)],
   })) as PrismicProductDocument[];
 
-  const formattedProducts = products.map(product => formatProduct(product));
+  const formattedProducts = products.map(product =>
+    getFormattedProduct(product)
+  );
   const productsExistInCategory = formattedProducts.length > 0;
 
   return (
-    <div className="lg:max-w-3xl mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16 ">
+    <div className=" mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16 ">
       <h1 className="text-3xl font-bold text-white mb-8">
         {categoryName} ({products.length})
       </h1>

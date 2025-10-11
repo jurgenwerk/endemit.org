@@ -1,0 +1,73 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Order {
+  id               String      @id @default(cuid())
+  stripeSession    String      @unique
+  email            String
+  subtotal         Int // cents
+  totalAmount      Int // cents
+  shippingAmount   Int? // cents
+  shippingRequired Boolean
+  shippingAddress  Json?
+  items            Json
+  metadata         Json?
+  status           OrderStatus @default(CREATED)
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  tickets Ticket[]
+
+  @@index([stripeSession])
+  @@index([email])
+}
+
+model Ticket {
+  id               String       @id @default(cuid())
+  orderId          String
+  order            Order        @relation(fields: [orderId], references: [id])
+  eventId          String
+  eventName        String
+  ticketHolderName String
+  ticketPayerEmail String
+  ticketHash       String       @unique
+  qrContent        Json?
+  metadata         Json?
+  attended         Boolean      @default(false)
+  status           TicketStatus @default(PENDING)
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  @@index([ticketHash])
+  @@index([eventId])
+  @@index([ticketPayerEmail])
+  @@index([orderId])
+}
+
+enum OrderStatus {
+  CREATED
+  PROCESSING
+  PAID
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  EXPIRED
+  REFUND_REQUESTED
+  REFUNDED
+}
+
+enum TicketStatus {
+  PENDING
+  CANCELLED
+  SCANNED // Scanning at the entrance
+  VALIDATED // Manual marking in app
+  BANNED
+  REFUND_REQUESTED
+  REFUNDED
+}

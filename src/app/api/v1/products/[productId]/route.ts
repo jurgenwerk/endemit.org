@@ -1,7 +1,7 @@
 import { PrismicProductDocument } from "@/types/prismic";
 import { NextResponse } from "next/server";
-import { formatProduct } from "@/domain/cms.service";
-import { prismicClient } from "@/services/prismic";
+import { getFormattedProduct } from "@/domain/cms/cms.actions";
+import { prismicClient } from "@/services/prismic/prismic";
 
 export async function GET(
   request: Request,
@@ -15,7 +15,7 @@ export async function GET(
       productId
     )) as PrismicProductDocument;
 
-    const formattedProduct = formatProduct(product);
+    const formattedProduct = getFormattedProduct(product);
 
     return NextResponse.json(formattedProduct, { status: 200 });
   } catch (error) {

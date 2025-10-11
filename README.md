@@ -160,3 +160,10 @@ This project is private and proprietary to Endemit.
 ---
 
 **Built with ❤️ by the Endemit crew**
+
+
+// pnpm dlx inngest-cli@latest dev
+// prisma, slicemachine
+// prismic, dev server
+// stripe, hooks
+// resend

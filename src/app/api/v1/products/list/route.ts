@@ -1,7 +1,7 @@
 import { PrismicProductDocument } from "@/types/prismic";
 import { NextResponse } from "next/server";
-import { formatProduct } from "@/domain/cms.service";
-import { prismicClient } from "@/services/prismic";
+import { getFormattedProduct } from "@/domain/cms/cms.actions";
+import { prismicClient } from "@/services/prismic/prismic";
 
 export async function GET() {
   try {
@@ -15,7 +15,7 @@ export async function GET() {
     );
 
     const productsWithCompositionType = productsWithRequiredAttributes.map(
-      product => formatProduct(product)
+      product => getFormattedProduct(product)
     );
 
     return NextResponse.json(productsWithCompositionType, { status: 200 });

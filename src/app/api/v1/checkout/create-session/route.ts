@@ -1,21 +1,25 @@
 import { PrismicProductDocument } from "@/types/prismic";
 import { NextResponse } from "next/server";
-import { formatProduct, getVariantSingleProducts } from "@/domain/cms.service";
-import { isProductSellableByStatus } from "@/domain/product.service";
+import {
+  getFormattedProduct,
+  getVariantSingleProducts,
+} from "@/domain/cms/cms.actions";
 import { CartItem } from "@/types/cart";
 import assert from "node:assert";
-import { ShippingAddress } from "@/types/checkout";
+import { CustomStripeLineItem, ShippingAddress } from "@/types/checkout";
 import { Product, ProductCompositionType } from "@/types/product";
-import { stripe } from "@/services/stripe";
-import Stripe from "stripe";
-import { prismicClient } from "@/services/prismic";
-import {
-  getOrderWeight,
-  includesShippableProduct,
-} from "@/domain/checkout.service";
-import shippingService from "@/domain/shipping.service";
+import { stripe } from "@/services/stripe/stripe";
+import { prismicClient } from "@/services/prismic/prismic";
+import { getOrderWeight } from "@/domain/checkout/checkout.actions";
+import shippingService from "@/domain/shipping/shipping.service";
 import { Country } from "@/types/country";
-import { formatNumber } from "@/lib/formatting";
+import { createOrder } from "@/domain/order/order.actions";
+import { includesShippableProduct } from "@/domain/checkout/checkout.rules";
+import {
+  isProductSellableByStatus,
+  isProductTicket,
+} from "@/domain/product/product.rules";
+import { CheckoutValidationService } from "@/domain/validation/validation.service";
 
 export async function POST(request: Request) {
   try {
@@ -24,8 +28,10 @@ export async function POST(request: Request) {
     assert(body.items && body.items.length > 0, "The items array is empty");
 
     const email = body.email;
+    const formData = body.formData;
     const termsAndConditions = body.termsAndConditions;
     const shouldHaveShippingAddress = includesShippableProduct(items);
+    const complementaryTicketData = body.complementaryTicketData;
     const shippingAddress = body.shippingAddress as ShippingAddress | undefined;
 
     assert(
@@ -35,12 +41,19 @@ export async function POST(request: Request) {
     assert(email, "Email is required");
     assert(termsAndConditions, "Terms and conditions must be accepted");
 
+    const isFormValid = CheckoutValidationService.validateForm({
+      formData,
+      requiresShippingAddress: shouldHaveShippingAddress,
+      items,
+    });
+    assert(isFormValid, "Form validation failed");
+
     const products = (await prismicClient.getAllByType("product", {
       pageSize: 100,
     })) as PrismicProductDocument[];
 
     const productsWithCompositionType = products.map(product =>
-      formatProduct(product)
+      getFormattedProduct(product)
     );
 
     // Determine valid products based on sellable status and composition
@@ -60,11 +73,12 @@ export async function POST(request: Request) {
 
     // Ensure all items are valid products with valid prices
     const checkoutItems: CartItem[] = [];
+    const orderWeight = getOrderWeight(items);
 
     items.forEach(item => {
       const product = validProducts.find(p => p.id === item.id);
       if (product) {
-        checkoutItems.push({ ...item, price: product.price });
+        checkoutItems.push({ ...item, price: product.price, type: item.type });
       } else {
         console.warn(`Item with id ${item.id} is not valid for checkout`);
       }
@@ -76,22 +90,46 @@ export async function POST(request: Request) {
       "One or more items have invalid prices"
     );
 
-    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] =
-      checkoutItems.map(item => ({
+    const lineItems: CustomStripeLineItem[] = checkoutItems.map(item => {
+      const isTicket = isProductTicket(item);
+
+      let ticketHolders = [];
+
+      if (isTicket) {
+        ticketHolders = Array.from(
+          { length: item.quantity },
+          (_, index) => `ticket-${item.id}-${index + 1}-name`
+        ).map(key => {
+          return complementaryTicketData[key];
+        });
+      }
+
+      console.log({ ticketHolders });
+
+      return {
         price_data: {
           currency: "eur",
           product_data: {
             name: item.name,
             description: item.checkoutDescription ?? undefined,
             images: item.images.length > 0 ? [item.images[0].src] : undefined,
+            metadata: {
+              productType: item.type,
+              productCategory: item.category,
+              ticketHolders: isTicket ? JSON.stringify(ticketHolders) : null,
+              relatedEvent: item.relatedEvent
+                ? JSON.stringify(item.relatedEvent)
+                : null,
+              uid: item.uid,
+            },
           },
           unit_amount: Math.round(item.price * 100), // Stripe expects amount in cents
         },
         quantity: item.quantity,
-      }));
+      };
+    });
 
     if (shouldHaveShippingAddress && shippingAddress) {
-      const orderWeight = getOrderWeight(items);
       const shippingCalculation = shippingService.calculateShippingCost(
         shippingAddress.country as Country,
         orderWeight
@@ -101,9 +139,12 @@ export async function POST(request: Request) {
           currency: "eur",
           product_data: {
             name: `Shipping to ${shippingCalculation.country.name}`,
-            description: `Shipping cost to ${shippingAddress.country} for a package weighing ${formatNumber(orderWeight, 3)}kg`,
+            description: `Shipping to ${shippingAddress.name}, ${shippingAddress.postalCode} ${shippingAddress.city}, ${shippingCalculation.country.name}`,
+            images: [
+              "https://images.prismic.io/endemit/aOk-rp5xUNkB11YE_delivery.png?auto=format,compress",
+            ],
           },
-          unit_amount: Math.round(shippingCalculation.cost * 100), // Stripe expects amount in cents
+          unit_amount: Math.round(shippingCalculation.cost * 100), // in cents
         },
         quantity: 1,
       });
@@ -114,7 +155,6 @@ export async function POST(request: Request) {
       requiresShipping: shouldHaveShippingAddress.toString(),
     };
 
-    // TODO
     if (shippingAddress) {
       metadata.shippingName = shippingAddress.name;
       metadata.shippingAddressLine1 = shippingAddress.address;
@@ -135,7 +175,28 @@ export async function POST(request: Request) {
       metadata,
     });
 
-    // TODO: Add to database with session.id reference
+    const shippingCost =
+      shouldHaveShippingAddress && shippingAddress
+        ? shippingService.calculateShippingCost(
+            shippingAddress.country as Country,
+            orderWeight
+          ).cost
+        : 0;
+
+    const subtotal = checkoutItems.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+
+    await createOrder({
+      stripeSessionId: session.id,
+      email,
+      subtotal,
+      shippingCost,
+      shippingRequired: shouldHaveShippingAddress,
+      shippingAddress: shippingAddress,
+      checkoutItems: lineItems,
+    });
 
     return NextResponse.json(
       {

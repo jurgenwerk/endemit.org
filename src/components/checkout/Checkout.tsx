@@ -7,15 +7,24 @@ import CheckoutForm from "./CheckoutForm";
 import CheckoutItemList from "./CheckoutItemList";
 import { useShippingCost } from "@/hooks/useShippingCosts";
 import {
-  CheckoutService,
+  calculateTotals,
   getOrderWeight,
+  roundUpTotal,
+} from "@/domain/checkout/checkout.actions";
+import { useCheckoutForm } from "@/hooks/useCheckoutForm";
+import {
+  includesDonationProduct,
   includesNonRefundableProduct,
   includesShippableProduct,
-} from "@/domain/checkout.service";
-import { useCheckoutForm } from "@/hooks/useCheckoutForm";
+} from "@/domain/checkout/checkout.rules";
+import { useProducts } from "@/stores/ProductStore";
+import { isProductSellableByStatus } from "@/domain/product/product.rules";
+import { Product } from "@/types/product";
+import { formatPrice } from "@/lib/formatting";
 
 export default function Checkout() {
   const {
+    addItem,
     items,
     removeItem,
     clearCart,
@@ -25,15 +34,25 @@ export default function Checkout() {
     isLoading,
   } = useCart();
 
+  const { getProductByUid } = useProducts();
+  const donationProduct = getProductByUid("donation-to-association");
+
   const [isClient, setIsClient] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const requiresShippingAddress = includesShippableProduct(items);
   const includesNonRefundable = includesNonRefundableProduct(items);
+  const includesDonationInCart = includesDonationProduct(items);
+
   const orderWeight = getOrderWeight(items);
 
-  const { formData, errorMessages, isFormValid, handleFormValueChange } =
-    useCheckoutForm(requiresShippingAddress);
+  const {
+    formData,
+    errorMessages,
+    isFormValid,
+    handleFormValueChange,
+    handleTicketFormValueChange,
+  } = useCheckoutForm(requiresShippingAddress, items);
 
   const {
     shippingCost,
@@ -41,10 +60,12 @@ export default function Checkout() {
     error: shippingError,
   } = useShippingCost(formData.country, orderWeight, requiresShippingAddress);
 
-  const { subTotal, total } = CheckoutService.calculateTotals(
-    totalPrice,
-    shippingCost
-  );
+  const { subTotal, total } = calculateTotals(totalPrice, shippingCost);
+
+  const roundedTotal = roundUpTotal(total);
+  const donationAmount = Math.round(roundedTotal - total);
+  const showDonationCTA =
+    items.length > 0 && !includesDonationInCart && donationAmount > 0;
 
   useEffect(() => {
     setIsClient(true);
@@ -62,6 +83,15 @@ export default function Checkout() {
       await checkout(formData);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Checkout failed");
+    }
+  };
+
+  const handleAddDonationToCart = (
+    product: Product,
+    productQty: number = 1
+  ) => {
+    if (product && isProductSellableByStatus(product)) {
+      addItem(product, productQty);
     }
   };
 
@@ -111,7 +141,28 @@ export default function Checkout() {
             items={items}
           />
 
-          <CheckoutItemList items={items} onRemoveItem={removeItem} />
+          <CheckoutItemList
+            items={items}
+            onRemoveItem={removeItem}
+            formData={formData}
+            errorMessages={errorMessages}
+            onFormChange={handleTicketFormValueChange}
+          />
+
+          {showDonationCTA && donationProduct && (
+            <div>
+              Add {formatPrice(donationAmount)} donation to your total and round
+              up to {formatPrice(roundedTotal)}? Donations support our voluntary
+              work and help us keep ticket prices low.
+              <button
+                onClick={() =>
+                  handleAddDonationToCart(donationProduct, donationAmount)
+                }
+              >
+                Add {formatPrice(donationAmount)} donation
+              </button>
+            </div>
+          )}
 
           <div className="mt-6 space-y-2">
             {isFormValid && (

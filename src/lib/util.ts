@@ -4,6 +4,8 @@ import { PrismicRichTextBlock } from "@/types/prismic";
 import { Country } from "@/types/country";
 import countryConfig from "@/config/countries.config";
 import { ProductCategory } from "@/types/product";
+import { isProductTicket } from "@/domain/product/product.rules";
+import { CartItem } from "@/types/cart";
 
 export const getTimeUntil = (currentTime: Date, date: Date) => {
   const diff = date.getTime() - currentTime.getTime();
@@ -105,4 +107,18 @@ export const categoriesWithSlugs = Object.values(ProductCategory).map(
 export const categoryFromSlug = (slug: string) => {
   const category = categoriesWithSlugs.find(cat => cat.slug === slug);
   return category ? category.name : null;
+};
+
+export const getComplementaryTicketModel = (
+  items: CartItem[],
+  defaultValue: string | boolean = ""
+) => {
+  return items
+    .filter(item => isProductTicket(item))
+    .flatMap(item =>
+      Array.from({ length: item.quantity }, (_, index) => ({
+        [`ticket-${item.id}-${index + 1}-name`]: defaultValue,
+      }))
+    )
+    .reduce((acc, curr) => ({ ...acc, ...curr }), {});
 };

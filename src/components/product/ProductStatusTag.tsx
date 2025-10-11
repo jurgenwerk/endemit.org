@@ -1,6 +1,6 @@
 import { ProductStatus } from "@/types/product";
 import clsx from "clsx";
-import { getStatusColor } from "@/domain/product.service";
+import { getStatusColor } from "@/domain/product/product.actions";
 
 interface Props {
   status: ProductStatus;

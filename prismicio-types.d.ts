@@ -645,7 +645,18 @@ interface ProductDocumentData {
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
   related_to_event: ContentRelationshipFieldWithData<
-    [{ id: "event"; fields: ["title", "venue_name"] }]
+    [
+      {
+        id: "event";
+        fields: [
+          "title",
+          "venue_name",
+          "date_start",
+          "venue_address",
+          "venue_logo",
+        ];
+      },
+    ]
   >;
 
   /**

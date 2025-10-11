@@ -76,6 +76,9 @@ export interface PrismicEventReference {
   data: {
     title: string;
     venue_name: string;
+    venue_address: string;
+    venue_logo: PrismicImage;
+    date_start: string;
   };
   link_type: "Document";
   isBroken: boolean;

@@ -1,12 +1,12 @@
 import { PrismicProductDocument } from "@/types/prismic";
-import { formatProduct } from "@/domain/cms.service";
+import { getFormattedProduct } from "@/domain/cms/cms.actions";
 import { formatPrice } from "@/lib/formatting";
 import { createSlug } from "@/lib/util";
 import Breadcrumb from "@/components/Breadcrumb";
 import ProductStatusTag from "@/components/product/ProductStatusTag";
 import ImageGallery from "@/components/ImageGallery";
 import ProductConfigure from "@/components/product/ProductConfigure";
-import { prismicClient } from "@/services/prismic";
+import { prismicClient } from "@/services/prismic/prismic";
 
 export const revalidate = 3600; // Revalidate cache every hour
 
@@ -74,10 +74,10 @@ export default async function ProductPage({
     };
   }
 
-  const product = formatProduct(prismicProduct);
+  const product = getFormattedProduct(prismicProduct);
 
   return (
-    <div className="lg:max-w-3xl mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16 ">
+    <div className=" mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16 ">
       <div>
         <h1 className="text-3xl font-bold text-white mb-0 pb-0">
           {product.name}

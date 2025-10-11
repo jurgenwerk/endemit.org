@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import {
-  getVisibleProducts,
-  isProductFeatured,
-  isProductTicket,
-} from "@/domain/product.service";
+import { getVisibleProducts } from "@/domain/product/product.actions";
 import { ProductCategory } from "@/types/product";
 import ProductSection from "@/components/product/ProductSection";
+import {
+  isProductFeatured,
+  isProductTicket,
+} from "@/domain/product/product.rules";
 
 export const metadata: Metadata = {
   title: "Store",
@@ -41,7 +41,7 @@ export default async function Store() {
   );
 
   return (
-    <div className="lg:max-w-3xl mx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16">
+    <div className="lmx-auto space-y-8 sm:max-w-full pt-24 px-4 lg:pt-16">
       <h1 className="text-3xl font-bold text-white mb-8">STORE</h1>
 
       <div>

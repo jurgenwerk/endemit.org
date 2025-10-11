@@ -8,7 +8,14 @@ import { CheckoutFormData } from "@/types/checkout";
 
 interface CheckoutFormProps {
   formData: CheckoutFormData;
-  errorMessages: Record<string, string | undefined>;
+  errorMessages: Record<
+    string,
+    | string
+    | {
+        [p: string]: string;
+      }
+    | undefined
+  >;
   onFormChange: (name: string, value: string | boolean) => void;
   requiresShippingAddress: boolean;
   includesNonRefundable: boolean;
@@ -31,11 +38,20 @@ export default function CheckoutForm({
         <div className="bg-white">
           <Input
             name="email"
-            label="Email"
+            label="E-mail"
             type="email"
             value={formData.email}
             onChange={onFormChange}
-            errorMessage={errorMessages.email}
+            errorMessage={errorMessages.email as string}
+            required={true}
+          />
+          <Input
+            name="emailRepeat"
+            label="Repeat e-mail"
+            type="email"
+            value={formData.emailRepeat}
+            onChange={onFormChange}
+            errorMessage={errorMessages.emailRepeat as string}
             required={true}
           />
         </div>
@@ -51,7 +67,7 @@ export default function CheckoutForm({
               type="text"
               value={formData.name}
               onChange={onFormChange}
-              errorMessage={errorMessages.name}
+              errorMessage={errorMessages.name as string}
               required={true}
             />
             <Input
@@ -60,7 +76,7 @@ export default function CheckoutForm({
               type="text"
               value={formData.address}
               onChange={onFormChange}
-              errorMessage={errorMessages.address}
+              errorMessage={errorMessages.address as string}
               required={true}
             />
             <Input
@@ -69,7 +85,7 @@ export default function CheckoutForm({
               type="text"
               value={formData.city}
               onChange={onFormChange}
-              errorMessage={errorMessages.city}
+              errorMessage={errorMessages.city as string}
               required={true}
             />
             <Input
@@ -78,7 +94,7 @@ export default function CheckoutForm({
               type="text"
               value={formData.postalCode}
               onChange={onFormChange}
-              errorMessage={errorMessages.postalCode}
+              errorMessage={errorMessages.postalCode as string}
               required={true}
             />
             <Input
@@ -87,15 +103,15 @@ export default function CheckoutForm({
               type="text"
               value={formData.phone}
               onChange={onFormChange}
-              errorMessage={errorMessages.phone}
+              errorMessage={errorMessages.phone as string}
               required={true}
-              prefix={destinationCountry.callingCode}
+              prefix={destinationCountry.callingCode as string}
             />
             <CountrySelect
               name="country"
               onChange={onFormChange}
               value={formData.country}
-              errorMessage={errorMessages.country}
+              errorMessage={errorMessages.country as string}
               required={true}
             />
             Is your country not listed? Please{" "}
@@ -107,7 +123,7 @@ export default function CheckoutForm({
       <div>
         <CheckboxInput
           value={formData.termsAndConditions}
-          errorMessage={errorMessages.termsAndConditions}
+          errorMessage={errorMessages.termsAndConditions as string}
           name="termsAndConditions"
           onChange={onFormChange}
           required={true}

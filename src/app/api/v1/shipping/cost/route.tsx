@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import shippingService from "@/domain/shipping.service";
+import shippingService from "@/domain/shipping/shipping.service";
 import { Country } from "@/types/country";
 
 export async function GET(request: NextRequest) {

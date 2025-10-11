@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { CartItem, CartStore } from "@/types/cart";
 import { Product } from "@/types/product";
-import { canProductExistInCart } from "@/domain/product.service";
+import { canProductExistInCart } from "@/domain/product/product.actions";
 import { getApiPath } from "@/lib/api";
 
 interface CreateCheckoutSessionResponse {
@@ -123,7 +123,13 @@ export const useCartStore = create<CartStore>()(
         set({ isLoading: true });
 
         try {
-          const { email, termsAndConditions, ...rest } = formData;
+          const {
+            email,
+            emailRepeat,
+            complementaryTicketData,
+            termsAndConditions,
+            ...shippingAddress
+          } = formData;
           const response = await fetch(getApiPath("checkout/create-session"), {
             method: "POST",
             headers: {
@@ -132,8 +138,11 @@ export const useCartStore = create<CartStore>()(
             body: JSON.stringify({
               items,
               email,
+              emailRepeat,
+              complementaryTicketData,
               termsAndConditions,
-              shippingAddress: rest ?? undefined,
+              shippingAddress,
+              formData,
             }),
           });
 

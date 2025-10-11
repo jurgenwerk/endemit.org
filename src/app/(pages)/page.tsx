@@ -29,6 +29,7 @@ export default function Home() {
         >
           <video
             src="https://endemit.cdn.prismic.io/endemit/aOeRpJ5xUNkB1yBT_temp_product_video.mp4"
+            className={"w-full object-cover object-center aspect-square"}
             autoPlay={true}
             muted={true}
             loop={true}

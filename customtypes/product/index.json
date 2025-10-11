@@ -210,7 +210,13 @@
           "customtypes": [
             {
               "id": "event",
-              "fields": ["title", "venue_name"]
+              "fields": [
+                "title",
+                "venue_name",
+                "date_start",
+                "venue_address",
+                "venue_logo"
+              ]
             }
           ]
         }

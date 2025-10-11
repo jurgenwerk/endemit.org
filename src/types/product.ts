@@ -64,6 +64,16 @@ export type ProductImage = {
   alt?: string;
 };
 
+export type ProductRelatedEvent = {
+  id: string;
+  uid: string;
+  title: string;
+  venueName: string;
+  venueAddress: string;
+  venueLogo: string;
+  date: string;
+};
+
 export interface Product {
   id: string;
   uid: string;
@@ -103,12 +113,7 @@ export interface Product {
     sortingWeight: number;
     callToAction: string;
   }> | null;
-  relatedEvent: {
-    id: string;
-    uid: string;
-    title: string;
-    venueName: string;
-  } | null;
+  relatedEvent: ProductRelatedEvent | null;
   specialNotice: string;
   checkoutDescription: string;
   meta: {

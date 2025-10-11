@@ -1,9 +1,9 @@
 import { Product, ProductCompositionType } from "@/types/product";
 import { richTextToPlainText } from "@/lib/util";
 import { PrismicProductDocument } from "@/types/prismic";
-import { getProductId, getProductName } from "@/domain/product.service";
+import { getProductId, getProductName } from "@/domain/product/product.actions";
 
-export const formatProduct = (product: PrismicProductDocument) => {
+export const getFormattedProduct = (product: PrismicProductDocument) => {
   const hasVariants =
     product.data.variants.length > 0 &&
     !!product.data.variants[0].variant_value;
@@ -64,6 +64,9 @@ export const formatProduct = (product: PrismicProductDocument) => {
           uid: product.data.related_to_event.uid,
           title: product.data.related_to_event.data.title,
           venueName: product.data.related_to_event.data.venue_name,
+          venueAddress: product.data.related_to_event.data.venue_address,
+          venueLogo: product.data.related_to_event.data.venue_logo.url,
+          date: product.data.related_to_event.data.date_start,
         }
       : null,
     specialNotice: product.data.special_notice,

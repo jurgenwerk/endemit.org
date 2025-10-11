@@ -5,12 +5,12 @@ import { useState } from "react";
 import clsx from "clsx";
 import { useCartActions, useCartItems } from "@/stores/CartStore";
 import { Product } from "@/types/product";
+import { getVariantSingleProducts } from "@/domain/cms/cms.actions";
+import Button from "@/components/Button";
 import {
   isProductConfigurable,
   isProductSellableByStatus,
-} from "@/domain/product.service";
-import { getVariantSingleProducts } from "@/domain/cms.service";
-import Button from "@/components/Button";
+} from "@/domain/product/product.rules";
 
 interface Props {
   product: Product;
@@ -51,6 +51,7 @@ export default function ProductConfigure({
   };
 
   const handleCloseCartNotice = () => {
+    setProductQty(defaultQty);
     setShowCartStatus(false);
   };
 

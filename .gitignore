@@ -57,3 +57,5 @@ next-env.d.ts
 
 # osx
 /icon?
+
+/src/generated/prisma
