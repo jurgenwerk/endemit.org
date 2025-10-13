@@ -3,21 +3,6 @@ import Image from "next/image";
 
 const events: EventProps[] = [
   {
-    id: "road-endemit-zagreb-october-2025",
-    title: "Road! 𐔧 Endemit",
-    annotation: "[GUEST PERFORMANCE]",
-    dateString: "11 Oct 2025",
-    location: "Depo Klub, Zagreb",
-    artists: ["MMALI", "RHAEGAL", "BEKO"],
-    imageSrc: "/images/guest-events/road-x-endemit-zagreb-sept-2025.png",
-    href: "https://www.facebook.com/events/depo-klub/road-017-x-endemit/2502233476829808/",
-    visible: {
-      link: true,
-      event: true,
-      image: true,
-    },
-  },
-  {
     id: "tba-nov-2025",
     title: "TBA",
     annotation: "[MORE INFO SOON]",
@@ -32,6 +17,24 @@ const events: EventProps[] = [
   },
 
   // Past events
+  {
+    id: "road-endemit-zagreb-october-2025",
+    title: "Road! 𐔧 Endemit",
+    annotation: "[GUEST PERFORMANCE]",
+    dateString: "11 Oct 2025",
+    location: "Depo Klub, Zagreb",
+    artists: ["MMALI", "RHAEGAL", "BEKO"],
+    imageSrc: "/images/guest-events/road-x-endemit-zagreb-sept-2025.png",
+    href: "https://www.facebook.com/events/depo-klub/road-017-x-endemit/2502233476829808/",
+    visible: {
+      link: true,
+      event: true,
+      image: true,
+    },
+    options: {
+      isPastEvent: true,
+    },
+  },
   {
     id: "issun-boshi-vinyl-release",
     title: "Issun-bōshi vinyl release",
